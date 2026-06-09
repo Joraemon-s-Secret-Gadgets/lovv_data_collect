@@ -223,3 +223,9 @@ __marimo__/
 *.tfstate.backup
 *.tfplan
 *.terraform.lock.hcl
+
+# Generated data artifacts
+/data/**
+!/data/
+!/data/**/
+!/data/**/.gitkeep
