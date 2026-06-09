@@ -1,0 +1,44 @@
+[
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%96%91%EA%B5%B0",
+    "collected_at": "2026-06-07T22:00:55+09:00",
+    "field_status": {
+      "prefecture_id": "collected",
+      "name_ko": "collected",
+      "name_ja": "missing",
+      "name_en": "collected",
+      "region": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "prefecture_id": "KR-42",
+    "name_ko": "강원특별자치도",
+    "name_ja": "",
+    "name_en": "Gangwon State",
+    "region": "Gangwon"
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%9A%B8%EB%A6%89%EA%B5%B0",
+    "collected_at": "2026-06-07T22:01:28+09:00",
+    "field_status": {
+      "prefecture_id": "collected",
+      "name_ko": "collected",
+      "name_ja": "missing",
+      "name_en": "collected",
+      "region": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "prefecture_id": "KR-47",
+    "name_ko": "경상북도",
+    "name_ja": "",
+    "name_en": "Gyeongsangbuk-do",
+    "region": "Yeongnam"
+  }
+]
