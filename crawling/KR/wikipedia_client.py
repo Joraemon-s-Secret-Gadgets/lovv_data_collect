@@ -183,9 +183,17 @@ def _parse_geohack_from_href(href: str) -> tuple[float, float] | None:
         parsed = urllib.parse.urlparse(href)
         query = urllib.parse.parse_qs(parsed.query)
         params_list = query.get("params")
-        if not params_list:
-            return None
-        params = params_list[0]
+        params = params_list[0] if params_list else href
+        decimal_match = re.search(r"(-?\d+(?:\.\d+)?)_([NS])_(-?\d+(?:\.\d+)?)_([EW])", params)
+        if decimal_match:
+            lat = float(decimal_match.group(1))
+            lon = float(decimal_match.group(3))
+            if decimal_match.group(2) == "S":
+                lat *= -1
+            if decimal_match.group(4) == "W":
+                lon *= -1
+            return lat, lon
+
         match = re.search(
             r"([0-9.]+)_([0-9.]+)?_?([0-9.]+)?_?([NS])_([0-9.]+)_([0-9.]+)?_?([0-9.]+)?_?([EW])",
             params,

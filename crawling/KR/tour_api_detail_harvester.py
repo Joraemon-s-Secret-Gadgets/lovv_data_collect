@@ -18,8 +18,7 @@ import hashlib
 import json
 import re
 import subprocess
-import tempfile
-from typing import Any, Iterable
+from typing import Any
 
 
 UPSTREAM_DEFAULT_URL = "https://github.com/Gloveman/tour-api-korea"
@@ -68,6 +67,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Directory where city detail JSON files are saved.",
     )
     parser.add_argument(
+        "--detail-dir",
+        type=Path,
+        help=(
+            "Optional raw/detail directory containing {contentid}.json detail files. "
+            "Defaults to <repo-path>/data/raw/detail."
+        ),
+    )
+    parser.add_argument(
         "--seed-json",
         type=Path,
         help=(
@@ -114,12 +121,11 @@ def resolve_repo_path(repo_path: Path | None, repo_url: str, repo_branch: str) -
             raise FileNotFoundError(f"repo_path does not exist: {repo_path}")
         return repo_path
 
-    temp_dir = Path(tempfile.gettempdir()) / "tour_api_korea_sync"
-    temp_dir.mkdir(parents=True, exist_ok=True)
-    target = temp_dir / "repo"
+    target = Path(".cache") / "tour_api_korea_repo"
     marker = target / ".git"
 
     if not marker.exists():
+        target.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(
             ["git", "clone", "--depth", "1", "-b", repo_branch, repo_url, str(target)],
             check=True,
@@ -213,14 +219,22 @@ def _contains_city_signature(payload: Any, city: CityTarget) -> bool:
 def _is_city_detail_payload(payload: Any) -> bool:
     if not isinstance(payload, dict):
         return False
-    return "attractions" in payload or "festivals" in payload or "visitor_stats" in payload
+    return (
+        "attractions" in payload
+        or "festivals" in payload
+        or "visitor_stats" in payload
+        or "items" in payload
+        or "records" in payload
+    )
 
 
 def find_city_source_paths(repo_root: Path, city: CityTarget) -> list[Path]:
     candidates: list[Path] = []
+    seen_paths: set[str] = set()
     basenames = _candidate_basenames(city)
     lookup_roots = [
         repo_root / "data/raw/final",
+        repo_root / "data/raw/list_by_city",
         repo_root / "data/city",
         repo_root / "data",
     ]
@@ -229,9 +243,12 @@ def find_city_source_paths(repo_root: Path, city: CityTarget) -> list[Path]:
         if not root.exists():
             continue
         for basename in basenames:
-            candidate_file = root / f"{basename}.json"
-            if candidate_file.exists():
-                candidates.append(candidate_file)
+            for filename in (f"{basename}.json", f"{basename}_filtered.json"):
+                candidate_file = root / filename
+                normalized_path = str(candidate_file.resolve()).lower()
+                if candidate_file.exists() and normalized_path not in seen_paths:
+                    candidates.append(candidate_file)
+                    seen_paths.add(normalized_path)
 
     if not candidates:
         # Fallback: scan all jsons and inspect payload signatures.
@@ -240,8 +257,14 @@ def find_city_source_paths(repo_root: Path, city: CityTarget) -> list[Path]:
                 payload = _read_json(path)
             except Exception:
                 continue
-            if _contains_city_signature(payload, city) and _is_city_detail_payload(payload):
+            normalized_path = str(path.resolve()).lower()
+            if (
+                normalized_path not in seen_paths
+                and _contains_city_signature(payload, city)
+                and _is_city_detail_payload(payload)
+            ):
                 candidates.append(path)
+                seen_paths.add(normalized_path)
 
     return candidates
 
@@ -251,48 +274,136 @@ def _hash_payload(payload: Any) -> str:
     return hashlib.sha256(payload_bytes).hexdigest()
 
 
-def normalize_city_detail(city: CityTarget, payload: Any, source_path: Path | None, seed_path: Path | None) -> dict[str, Any]:
-    source_city_name_en = str(
-        (
-            payload.get("meta", {}).get("city_name_en")
-            if isinstance(payload, dict) and isinstance(payload.get("meta"), dict)
-            else None
-        )
-        or city.city_name_en
-    )
-    source_city_name_ko = str(
-        (
-            payload.get("meta", {}).get("city_name_ko")
-            if isinstance(payload, dict) and isinstance(payload.get("meta"), dict)
-            else None
-        )
-        or city.city_name_ko
-    )
+def _as_record_list(value: Any) -> list[dict[str, Any]]:
+    if not isinstance(value, list):
+        return []
+    return [item for item in value if isinstance(item, dict)]
 
-    attractions = []
-    festivals = []
+
+def _source_records(payload: dict[str, Any]) -> list[dict[str, Any]]:
+    for key in ("items", "records", "data"):
+        records = _as_record_list(payload.get(key))
+        if records:
+            return records
+    return []
+
+
+def _split_records_by_entity(payload: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    attractions = _as_record_list(payload.get("attractions"))
+    festivals = _as_record_list(payload.get("festivals"))
+    if attractions or festivals:
+        return attractions, festivals
+
+    for item in _source_records(payload):
+        content_type_id = str(item.get("contenttypeid") or item.get("content_type_id") or "")
+        if content_type_id == "15":
+            festivals.append(item)
+        else:
+            attractions.append(item)
+    return attractions, festivals
+
+
+def _load_detail(detail_dir: Path | None, content_id: str) -> dict[str, Any]:
+    if detail_dir is None or not content_id:
+        return {}
+    detail_path = detail_dir / f"{content_id}.json"
+    if not detail_path.exists():
+        return {}
+    try:
+        payload = _read_json(detail_path)
+    except Exception:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def _attach_cached_details(items: list[dict[str, Any]], detail_dir: Path | None) -> list[dict[str, Any]]:
+    enriched_items: list[dict[str, Any]] = []
+    for item in items:
+        enriched = dict(item)
+        if not isinstance(enriched.get("detail"), dict):
+            content_id = str(enriched.get("contentid") or enriched.get("contentId") or "")
+            detail = _load_detail(detail_dir, content_id)
+            if detail:
+                enriched["detail"] = detail
+        enriched_items.append(enriched)
+    return enriched_items
+
+
+def _field_status(value: Any) -> str:
+    if value is None:
+        return "missing"
+    if isinstance(value, str) and not value.strip():
+        return "missing"
+    if isinstance(value, list) and not value:
+        return "missing"
+    if isinstance(value, dict) and not value:
+        return "missing"
+    return "collected"
+
+
+def _coordinates_status(item: dict[str, Any]) -> str:
+    longitude = item.get("mapx") or item.get("longitude")
+    latitude = item.get("mapy") or item.get("latitude")
+    try:
+        lon = float(longitude)
+        lat = float(latitude)
+    except (TypeError, ValueError):
+        return "missing"
+    if lon == 0 or lat == 0:
+        return "needs_review"
+    if not (124 <= lon <= 132 and 33 <= lat <= 39):
+        return "needs_review"
+    return "collected"
+
+
+def _enrich_item_status(item: dict[str, Any]) -> dict[str, Any]:
+    enriched = dict(item)
+    if isinstance(enriched.get("field_status"), dict):
+        return enriched
+
+    detail = enriched.get("detail") if isinstance(enriched.get("detail"), dict) else {}
+    common = detail.get("common") if isinstance(detail.get("common"), dict) else {}
+    intro = detail.get("intro") if isinstance(detail.get("intro"), dict) else {}
+
+    tel = enriched.get("tel") or common.get("tel") or intro.get("infocenter")
+    enriched["field_status"] = {
+        "name": _field_status(enriched.get("title") or common.get("title")),
+        "address": _field_status(enriched.get("addr1") or common.get("addr1")),
+        "coordinates": _coordinates_status(enriched),
+        "image": _field_status(enriched.get("firstimage") or common.get("firstimage")),
+        "tel": _field_status(tel),
+        "theme": _field_status(enriched.get("_assigned_theme")),
+        "detail": _field_status(detail),
+    }
+    return enriched
+
+
+def normalize_city_detail(
+    city: CityTarget,
+    payload: Any,
+    source_path: Path | None,
+    seed_path: Path | None,
+    detail_dir: Path | None = None,
+) -> dict[str, Any]:
     city_payload = payload if isinstance(payload, dict) else {}
+    meta = dict(city_payload.get("meta") or {})
+    meta.setdefault("city_name_ko", city.city_name_ko)
+    meta.setdefault("city_name_en", city.city_name_en)
+    meta["city_id"] = city.city_id
+    meta["prefecture_id"] = city.prefecture_id
+    meta["source_path"] = str(source_path) if source_path else None
+    meta["seed_source"] = str(seed_path) if seed_path else None
 
-    for item in city_payload.get("attractions", []) or []:
-        if not isinstance(item, dict):
-            continue
-        attractions.append(item)
-
-    for item in city_payload.get("festivals", []) or []:
-        if not isinstance(item, dict):
-            continue
-        festivals.append(item)
+    attractions, festivals = _split_records_by_entity(city_payload)
+    attractions = _attach_cached_details(attractions, detail_dir)
+    festivals = _attach_cached_details(festivals, detail_dir)
+    attractions = [_enrich_item_status(item) for item in attractions]
+    festivals = [_enrich_item_status(item) for item in festivals]
 
     return {
-        "city_id": city.city_id,
-        "prefecture_id": city.prefecture_id,
-        "city_name_en": source_city_name_en,
-        "city_name_ko": source_city_name_ko,
-        "source_path": str(source_path) if source_path else None,
-        "seed_source": str(seed_path) if seed_path else None,
+        "meta": meta,
         "attractions_count_filtered": city_payload.get("attractions_count_filtered", len(attractions)),
         "festivals_count_filtered": city_payload.get("festivals_count_filtered", len(festivals)),
-        "meta": city_payload.get("meta", {}),
         "attractions": attractions,
         "festivals": festivals,
         "quality": {
@@ -309,9 +420,11 @@ def extract_city_details(
     overwrite: bool = False,
     dry_run: bool = False,
     seed_json: Path | None = None,
+    detail_dir: Path | None = None,
 ) -> list[dict[str, Any]]:
     output_dir.mkdir(parents=True, exist_ok=True)
     seed_payload: Any = _read_json(seed_json) if seed_json else None
+    resolved_detail_dir = detail_dir or repo_path / "data/raw/detail"
 
     if seed_payload is not None and not isinstance(seed_payload, dict):
         raise ValueError("seed-json must be a JSON object.")
@@ -336,8 +449,7 @@ def extract_city_details(
         if not payload:
             payload = {}
 
-        result = normalize_city_detail(city, payload, source_path, seed_json)
-        result["source_path"] = str(source_path) if source_path else result["source_path"]
+        result = normalize_city_detail(city, payload, source_path, seed_json, resolved_detail_dir)
         results.append(result)
 
         if dry_run:
@@ -392,6 +504,7 @@ def main(argv: list[str] | None = None) -> int:
             overwrite=args.overwrite,
             dry_run=args.dry_run,
             seed_json=args.seed_json,
+            detail_dir=args.detail_dir,
         )
     except Exception as exc:
         print(f"[ERROR] Extraction failed: {exc}")

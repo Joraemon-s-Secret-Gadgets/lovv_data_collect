@@ -13,6 +13,7 @@ from crawling.KR.tour_api_detail_harvester import (
     _contains_city_signature,
     normalize_city_detail,
     extract_city_details,
+    find_city_source_paths,
 )
 
 
@@ -60,16 +61,97 @@ class TourApiDetailHarvesterTest(unittest.TestCase):
             },
             "attractions_count_filtered": 2,
             "festivals_count_filtered": 1,
-            "attractions": [{"contentid": "1"}],
+            "attractions": [{"contentid": "1", "title": "개목사(안동)"}],
             "festivals": [{"contentid": "2"}],
         }
         result = normalize_city_detail(city, payload, Path("sample.json"), None)
-        self.assertEqual("KR-47-ANDONG", result["city_id"])
-        self.assertEqual("ANDONG", result["city_name_en"])
+        self.assertEqual("KR-47-ANDONG", result["meta"]["city_id"])
+        self.assertEqual("ANDONG", result["meta"]["city_name_en"])
         self.assertEqual(2, result["attractions_count_filtered"])
         self.assertEqual(1, result["festivals_count_filtered"])
         self.assertEqual(1, len(result["attractions"]))
         self.assertEqual(1, len(result["festivals"]))
+        self.assertEqual("collected", result["attractions"][0]["field_status"]["name"])
+
+    def test_normalize_city_detail_splits_raw_items_by_content_type(self) -> None:
+        city = CityTarget(
+            city_id="KR-47-ANDONG",
+            city_name_ko="안동시",
+            city_name_en="ANDONG",
+            prefecture_id="KR-47",
+        )
+        payload = {
+            "meta": {"city_name_en": "ANDONG", "city_name_ko": "안동시"},
+            "items": [
+                {
+                    "contentid": "a1",
+                    "contenttypeid": "12",
+                    "title": "관광지",
+                    "addr1": "경상북도 안동시",
+                    "mapx": "128.1",
+                    "mapy": "36.1",
+                    "_assigned_theme": "역사·전통",
+                    "detail": {"common": {"title": "관광지"}},
+                },
+                {
+                    "contentid": "f1",
+                    "contenttypeid": "15",
+                    "title": "축제",
+                    "addr1": "경상북도 안동시",
+                    "mapx": "128.2",
+                    "mapy": "36.2",
+                    "detail": {"common": {"title": "축제"}},
+                },
+            ],
+        }
+        result = normalize_city_detail(city, payload, None, None)
+        self.assertEqual(1, len(result["attractions"]))
+        self.assertEqual(1, len(result["festivals"]))
+        self.assertEqual("a1", result["attractions"][0]["contentid"])
+        self.assertEqual("f1", result["festivals"][0]["contentid"])
+        self.assertEqual("collected", result["attractions"][0]["field_status"]["coordinates"])
+
+    def test_normalize_city_detail_attaches_cached_detail_files(self) -> None:
+        city = CityTarget(
+            city_id="KR-47-ANDONG",
+            city_name_ko="안동시",
+            city_name_en="ANDONG",
+            prefecture_id="KR-47",
+        )
+        payload = {
+            "meta": {"city_name_en": "ANDONG", "city_name_ko": "안동시"},
+            "attractions": [
+                {
+                    "contentid": "126157",
+                    "contenttypeid": "12",
+                    "title": "개목사(안동)",
+                    "addr1": "경상북도 안동시",
+                    "mapx": "128.6679838568",
+                    "mapy": "36.6579094974",
+                }
+            ],
+            "festivals": [],
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            detail_dir = Path(tmpdir) / "detail"
+            detail_dir.mkdir()
+            (detail_dir / "126157.json").write_text(
+                json.dumps(
+                    {
+                        "common": {"contentid": "126157", "title": "개목사(안동)"},
+                        "intro": {"infocenter": "054-000-0000"},
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            result = normalize_city_detail(city, payload, None, None, detail_dir)
+
+        detail = result["attractions"][0]["detail"]
+        self.assertEqual("126157", detail["common"]["contentid"])
+        self.assertEqual("054-000-0000", detail["intro"]["infocenter"])
+        self.assertEqual("collected", result["attractions"][0]["field_status"]["detail"])
 
     def test_extract_city_details_outputs_json_file(self) -> None:
         city = CityTarget(
@@ -109,9 +191,38 @@ class TourApiDetailHarvesterTest(unittest.TestCase):
             self.assertTrue(output_path.exists())
 
             saved = json.loads(output_path.read_text(encoding="utf-8"))
-            self.assertEqual("KR-47-ANDONG", saved["city_id"])
-            self.assertEqual("ANDONG", saved["city_name_en"])
+            self.assertEqual("KR-47-ANDONG", saved["meta"]["city_id"])
+            self.assertEqual("ANDONG", saved["meta"]["city_name_en"])
             self.assertEqual(1, len(saved["attractions"]))
+
+    def test_find_city_source_paths_supports_list_by_city_filtered_files(self) -> None:
+        city = CityTarget(
+            city_id="KR-47-ANDONG",
+            city_name_ko="안동시",
+            city_name_en="ANDONG",
+            prefecture_id="KR-47",
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir) / "repo"
+            list_by_city = repo_root / "data/raw/list_by_city"
+            list_by_city.mkdir(parents=True)
+            expected = list_by_city / "andong_filtered.json"
+            expected.write_text(
+                json.dumps(
+                    {
+                        "meta": {"city_name_en": "ANDONG", "city_name_ko": "안동시"},
+                        "attractions": [],
+                        "festivals": [],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+
+            matches = find_city_source_paths(repo_root, city)
+
+        self.assertEqual([expected], matches)
 
 
 if __name__ == "__main__":
