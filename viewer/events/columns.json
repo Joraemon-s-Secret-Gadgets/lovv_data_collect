@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /api/columns",
+  "rawPath": "/api/columns",
+  "rawQueryString": "",
+  "headers": {
+    "origin": "http://127.0.0.1:8787"
+  },
+  "queryStringParameters": {},
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/api/columns"
+    }
+  }
+}

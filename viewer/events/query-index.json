@@ -1,0 +1,22 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /api/query-index",
+  "rawPath": "/api/query-index",
+  "rawQueryString": "indexName=GSI1&partitionValue=CITY%23Andong&sortMode=begins_with&sortValue=ATTRACTION%23&limit=25",
+  "headers": {
+    "origin": "http://127.0.0.1:8787"
+  },
+  "queryStringParameters": {
+    "indexName": "GSI1",
+    "partitionValue": "CITY#Andong",
+    "sortMode": "begins_with",
+    "sortValue": "ATTRACTION#",
+    "limit": "25"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/api/query-index"
+    }
+  }
+}

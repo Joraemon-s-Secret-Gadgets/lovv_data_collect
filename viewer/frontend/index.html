@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TourKoreaDomainData 조회기</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">DynamoDB 조회기</p>
+          <h1>TourKoreaDomainData</h1>
+        </div>
+        <div class="connection-strip" aria-live="polite">
+          <span id="connectionStatus" class="status-dot status-muted"></span>
+          <span id="connectionText">대기</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="control-panel" aria-labelledby="search-heading">
+          <div class="panel-heading">
+            <h2 id="search-heading">검색</h2>
+            <span id="tableNameLabel">TourKoreaDomainData</span>
+          </div>
+
+          <form id="searchForm" class="search-form">
+            <label class="field field-wide">
+              <span>검색어</span>
+              <input id="searchInput" type="search" maxlength="200" autocomplete="off" />
+            </label>
+
+            <label class="field">
+              <span>검색 방식</span>
+              <select id="modeSelect">
+                <option value="contains">포함</option>
+                <option value="equals">정확히 일치</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>표시 개수</span>
+              <select id="limitSelect">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+
+            <div class="button-row">
+              <button id="searchButton" type="submit">검색</button>
+              <button id="clearButton" type="button" class="secondary-button">초기화</button>
+            </div>
+          </form>
+
+          <div class="token-row">
+            <label class="field field-token">
+              <span>API 토큰</span>
+              <input id="tokenInput" type="password" autocomplete="off" />
+            </label>
+            <button id="saveTokenButton" type="button" class="secondary-button">적용</button>
+          </div>
+
+          <div class="gsi-block" aria-labelledby="gsi-heading">
+            <div class="panel-heading compact-heading">
+              <h2 id="gsi-heading">GSI 조회</h2>
+              <span id="indexCount">0</span>
+            </div>
+            <form id="gsiForm" class="gsi-form">
+              <label class="field field-wide">
+                <span>인덱스</span>
+                <select id="indexSelect"></select>
+              </label>
+              <label class="field field-wide">
+                <span id="partitionKeyLabel">파티션 키 값</span>
+                <input id="partitionValueInput" type="text" autocomplete="off" />
+              </label>
+              <label class="field field-wide" id="sortModeField">
+                <span id="sortKeyLabel">정렬 키 조건</span>
+                <select id="sortModeSelect">
+                  <option value="">사용 안 함</option>
+                  <option value="equals">정확히 일치</option>
+                  <option value="begins_with">시작값</option>
+                  <option value="between">범위</option>
+                  <option value="gt">초과</option>
+                  <option value="gte">이상</option>
+                  <option value="lt">미만</option>
+                  <option value="lte">이하</option>
+                </select>
+              </label>
+              <label class="field field-wide" id="sortValueField">
+                <span>정렬 키 값</span>
+                <input id="sortValueInput" type="text" autocomplete="off" />
+              </label>
+              <label class="field field-wide" id="sortValueToField">
+                <span>범위 끝 값</span>
+                <input id="sortValueToInput" type="text" autocomplete="off" />
+              </label>
+              <button id="gsiQueryButton" type="submit">GSI 조회</button>
+            </form>
+          </div>
+
+          <div class="columns-block" aria-labelledby="columns-heading">
+            <div class="panel-heading compact-heading">
+              <h2 id="columns-heading">컬럼</h2>
+              <span id="columnCount">0</span>
+            </div>
+            <div id="columnPills" class="pill-grid" role="list"></div>
+          </div>
+        </section>
+
+        <section class="result-panel" aria-labelledby="results-heading">
+          <div class="result-heading">
+            <div>
+              <h2 id="results-heading">조회 결과</h2>
+              <p id="resultMeta">0건</p>
+            </div>
+            <button id="loadMoreButton" type="button" class="secondary-button" hidden>더 보기</button>
+          </div>
+
+          <div id="stateMessage" class="state-message" role="status" aria-live="polite"></div>
+
+          <div class="table-wrap">
+            <table aria-label="DynamoDB 검색 결과">
+              <thead>
+                <tr id="resultHead"></tr>
+              </thead>
+              <tbody id="resultBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

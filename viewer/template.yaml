@@ -1,0 +1,108 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Read-only DynamoDB web viewer API for TourKoreaDomainData.
+
+Parameters:
+  DynamoTableName:
+    Type: String
+    Default: TourKoreaDomainData
+    Description: DynamoDB table to inspect.
+  AllowedCorsOrigin:
+    Type: CommaDelimitedList
+    Default: http://127.0.0.1:8787,http://localhost:8787
+    Description: Comma-separated origins allowed to call the viewer API.
+  ViewerAccessToken:
+    Type: String
+    NoEcho: true
+    Default: ""
+    Description: Optional bearer token required by the viewer API.
+  MaxScanPages:
+    Type: Number
+    Default: 4
+    MinValue: 1
+    MaxValue: 20
+    Description: Maximum DynamoDB scan pages per request.
+  ScanPageSize:
+    Type: Number
+    Default: 100
+    MinValue: 1
+    MaxValue: 500
+    Description: DynamoDB scan page size per request.
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures:
+      - arm64
+    Timeout: 15
+    MemorySize: 256
+    Tracing: Active
+
+Resources:
+  ViewerApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins: !Ref AllowedCorsOrigin
+        AllowHeaders:
+          - Authorization
+          - Content-Type
+        AllowMethods:
+          - GET
+          - OPTIONS
+
+  DynamoDbViewerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: backend/
+      Handler: app.lambda_handler
+      Environment:
+        Variables:
+          DYNAMODB_TABLE_NAME: !Ref DynamoTableName
+          ALLOWED_CORS_ORIGIN: !Join [",", !Ref AllowedCorsOrigin]
+          VIEWER_ACCESS_TOKEN: !Ref ViewerAccessToken
+          MAX_SCAN_PAGES: !Ref MaxScanPages
+          SCAN_PAGE_SIZE: !Ref ScanPageSize
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - dynamodb:DescribeTable
+                - dynamodb:Query
+                - dynamodb:Scan
+              Resource:
+                - !Sub arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DynamoTableName}
+                - !Sub arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DynamoTableName}/index/*
+      Events:
+        Columns:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ViewerApi
+            Path: /api/columns
+            Method: GET
+        Search:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ViewerApi
+            Path: /api/search
+            Method: GET
+        Indexes:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ViewerApi
+            Path: /api/indexes
+            Method: GET
+        QueryIndex:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref ViewerApi
+            Path: /api/query-index
+            Method: GET
+
+Outputs:
+  ViewerApiUrl:
+    Description: DynamoDB viewer API base URL.
+    Value: !Sub https://${ViewerApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}
+  DynamoTableName:
+    Description: DynamoDB table used by the viewer.
+    Value: !Ref DynamoTableName

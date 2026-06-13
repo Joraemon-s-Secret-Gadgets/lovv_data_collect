@@ -1,0 +1,42 @@
+[
+  {
+    "PK": "CITY#Andong",
+    "SK": "PROFILE",
+    "city_key": "CITY#Andong",
+    "province_key": "PROVINCE#경상북도",
+    "domain_sort_key": "PROFILE#CITY",
+    "entity_type": "city",
+    "country": "KR",
+    "city_name": "안동",
+    "province": "경상북도",
+    "theme_tags": ["sea", "coffee", "festival"],
+    "updated_at": "2026-06-13T00:00:00Z"
+  },
+  {
+    "PK": "CITY#Andong",
+    "SK": "ATTRACTION#126508",
+    "city_key": "CITY#Andong",
+    "province_key": "PROVINCE#경상북도",
+    "domain_sort_key": "ATTRACTION#126508",
+    "entity_type": "attraction",
+    "country": "KR",
+    "city_name": "안동",
+    "title": "하회마을",
+    "category": "heritage",
+    "source": "tourapi",
+    "quality_status": "approved"
+  },
+  {
+    "PK": "CITY#Andong",
+    "SK": "FESTIVAL#ANDONG-MASK",
+    "city_key": "CITY#Andong",
+    "province_key": "PROVINCE#경상북도",
+    "domain_sort_key": "FESTIVAL#ANDONG-MASK",
+    "entity_type": "festival",
+    "country": "KR",
+    "city_name": "안동",
+    "title": "안동국제탈춤페스티벌",
+    "season": "autumn",
+    "quality_status": "needs_review"
+  }
+]

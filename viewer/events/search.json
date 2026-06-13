@@ -1,0 +1,21 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /api/search",
+  "rawPath": "/api/search",
+  "rawQueryString": "q=%EA%B0%95%EB%A6%89&column=city_name&mode=contains&limit=25",
+  "headers": {
+    "origin": "http://127.0.0.1:8787"
+  },
+  "queryStringParameters": {
+    "q": "강릉",
+    "column": "city_name",
+    "mode": "contains",
+    "limit": "25"
+  },
+  "requestContext": {
+    "http": {
+      "method": "GET",
+      "path": "/api/search"
+    }
+  }
+}
