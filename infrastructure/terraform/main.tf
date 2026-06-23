@@ -143,6 +143,20 @@ resource "aws_dynamodb_table" "tourkorea_domain_data" {
     projection_type = "ALL"
   }
 
+  # 축제 월별 조회 GSI (Bedrock Metadata Enrichment)
+  # entity_type="festival" + gsi_sk begins_with "FESTIVAL#{month:02d}" 로 range query
+  attribute {
+    name = "gsi_sk"
+    type = "S"
+  }
+
+  global_secondary_index {
+    name            = "FestivalMonthIndex"
+    hash_key        = "entity_type"
+    range_key       = "gsi_sk"
+    projection_type = "ALL"
+  }
+
   point_in_time_recovery {
     enabled = true
   }
@@ -232,6 +246,18 @@ resource "aws_iam_role_policy" "pipeline_lambda_policy" {
           "bedrock:InvokeModel"
         ]
         Resource = "arn:aws:bedrock:${var.aws_region}::foundation-model/amazon.titan-embed-text-v2:0"
+      },
+      {
+        # Bedrock Converse API for attraction enrichment & festival theme classification
+        Effect = "Allow"
+        Action = [
+          "bedrock:InvokeModel",
+          "bedrock:InvokeModelWithResponseStream"
+        ]
+        Resource = [
+          "arn:aws:bedrock:${var.aws_region}::foundation-model/anthropic.claude-3-haiku-20240307-v1:0",
+          "arn:aws:bedrock:${var.aws_region}::foundation-model/anthropic.claude-3-5-sonnet-20241022-v2:0"
+        ]
       },
       {
         Effect = "Allow"
