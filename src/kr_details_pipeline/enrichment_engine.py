@@ -32,7 +32,7 @@ class ValidationError(Exception):
 # Module-level constants
 # ---------------------------------------------------------------------------
 
-DEFAULT_MODEL_ID = "anthropic.claude-3-haiku-20240307-v1:0"
+DEFAULT_MODEL_ID = "openai.gpt-oss-120b-1:0"
 PROMPT_VERSION = "attraction-metadata-v2"
 MAX_PROMPT_LENGTH = 12_000
 MAX_RETRIES = 2
@@ -518,7 +518,36 @@ def enrich_attraction(
             )
 
             # Parse JSON from response
-            raw_text = response["output"]["message"]["content"][0]["text"]
+            # Handle models that return reasoningContent before text (e.g., GPT-OSS)
+            content_parts = response["output"]["message"]["content"]
+            raw_text = ""
+            for part in content_parts:
+                if "text" in part:
+                    raw_text = part["text"].strip()
+                    break
+            if not raw_text:
+                logger.warning(
+                    "Empty text response for item %s",
+                    item.get("content_id", "unknown"),
+                )
+                return EnrichmentResult(
+                    status="failed",
+                    metadata_enrichment={
+                        "status": "failed",
+                        "error_code": "validation_error",
+                        "failed_at": datetime.now(timezone.utc).strftime(
+                            "%Y-%m-%dT%H:%M:%SZ"
+                        ),
+                    },
+                )
+            # Strip markdown code fences if present (e.g. ```json ... ```)
+            if raw_text.startswith("```"):
+                import re
+                fenced = re.fullmatch(
+                    r"```(?:json)?\s*(.*?)\s*```", raw_text, flags=re.DOTALL | re.IGNORECASE
+                )
+                if fenced:
+                    raw_text = fenced.group(1)
             try:
                 parsed = json.loads(raw_text)
             except (json.JSONDecodeError, TypeError, KeyError) as exc:

@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 # Module-level constants
 # ---------------------------------------------------------------------------
 
-DEFAULT_MODEL_ID = "anthropic.claude-3-haiku-20240307-v1:0"
+DEFAULT_MODEL_ID = "openai.gpt-oss-120b-1:0"
 PROMPT_VERSION = "festival-theme-v1"
 SCHEMA_VERSION = "1"
 MAX_RETRIES = 2
