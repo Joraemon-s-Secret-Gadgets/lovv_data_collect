@@ -1,0 +1,1147 @@
+{
+  "11": {
+    "city_name_ko": "강남구",
+    "city_name_en": "GANGNAM",
+    "province_id": "KR-11"
+  },
+  "110": {
+    "city_name_ko": "도봉구",
+    "city_name_en": "DOBONG",
+    "province_id": "KR-11"
+  },
+  "111": {
+    "city_name_ko": "동대문구",
+    "city_name_en": "DONGDAEMUN",
+    "province_id": "KR-11"
+  },
+  "112": {
+    "city_name_ko": "동작구",
+    "city_name_en": "DONGJAK",
+    "province_id": "KR-11"
+  },
+  "113": {
+    "city_name_ko": "마포구",
+    "city_name_en": "MAPO",
+    "province_id": "KR-11"
+  },
+  "114": {
+    "city_name_ko": "서대문구",
+    "city_name_en": "SEODAEMUN",
+    "province_id": "KR-11"
+  },
+  "115": {
+    "city_name_ko": "서초구",
+    "city_name_en": "SEOCHO",
+    "province_id": "KR-11"
+  },
+  "116": {
+    "city_name_ko": "성동구",
+    "city_name_en": "SEONGDONG",
+    "province_id": "KR-11"
+  },
+  "117": {
+    "city_name_ko": "성북구",
+    "city_name_en": "SEONGBUK",
+    "province_id": "KR-11"
+  },
+  "118": {
+    "city_name_ko": "송파구",
+    "city_name_en": "SONGPA",
+    "province_id": "KR-11"
+  },
+  "119": {
+    "city_name_ko": "양천구",
+    "city_name_en": "YANGCHEON",
+    "province_id": "KR-11"
+  },
+  "12": {
+    "city_name_ko": "강동구",
+    "city_name_en": "GANGDONG",
+    "province_id": "KR-11"
+  },
+  "120": {
+    "city_name_ko": "영등포구",
+    "city_name_en": "YEONGDEUNGPO",
+    "province_id": "KR-11"
+  },
+  "121": {
+    "city_name_ko": "용산구",
+    "city_name_en": "YONGSAN",
+    "province_id": "KR-11"
+  },
+  "122": {
+    "city_name_ko": "은평구",
+    "city_name_en": "EUNPYEONG",
+    "province_id": "KR-11"
+  },
+  "123": {
+    "city_name_ko": "종로구",
+    "city_name_en": "JONGNO",
+    "province_id": "KR-11"
+  },
+  "124": {
+    "city_name_ko": "중구",
+    "city_name_en": "JUNG-SEOUL",
+    "province_id": "KR-11"
+  },
+  "125": {
+    "city_name_ko": "중랑구",
+    "city_name_en": "JUNGNANG",
+    "province_id": "KR-11"
+  },
+  "13": {
+    "city_name_ko": "강북구",
+    "city_name_en": "GANGBUK",
+    "province_id": "KR-11"
+  },
+  "14": {
+    "city_name_ko": "강서구",
+    "city_name_en": "GANGSEO-SEOUL",
+    "province_id": "KR-11"
+  },
+  "15": {
+    "city_name_ko": "관악구",
+    "city_name_en": "GWANAK",
+    "province_id": "KR-11"
+  },
+  "16": {
+    "city_name_ko": "광진구",
+    "city_name_en": "GWANGJIN",
+    "province_id": "KR-11"
+  },
+  "17": {
+    "city_name_ko": "구로구",
+    "city_name_en": "GURO",
+    "province_id": "KR-11"
+  },
+  "18": {
+    "city_name_ko": "금천구",
+    "city_name_en": "GEUMCHEON",
+    "province_id": "KR-11"
+  },
+  "19": {
+    "city_name_ko": "노원구",
+    "city_name_en": "NOWON",
+    "province_id": "KR-11"
+  },
+  "21": {
+    "city_name_ko": "강화군",
+    "city_name_en": "GANGHWA",
+    "province_id": "KR-28"
+  },
+  "210": {
+    "city_name_ko": "중구",
+    "city_name_en": "JUNG-INCHEON",
+    "province_id": "KR-28"
+  },
+  "22": {
+    "city_name_ko": "계양구",
+    "city_name_en": "GYEYANG",
+    "province_id": "KR-28"
+  },
+  "23": {
+    "city_name_ko": "미추홀구",
+    "city_name_en": "MICHUHOL",
+    "province_id": "KR-28"
+  },
+  "24": {
+    "city_name_ko": "남동구",
+    "city_name_en": "NAMDONG",
+    "province_id": "KR-28"
+  },
+  "25": {
+    "city_name_ko": "동구",
+    "city_name_en": "DONG-INCHEON",
+    "province_id": "KR-28"
+  },
+  "26": {
+    "city_name_ko": "부평구",
+    "city_name_en": "BUPYEONG",
+    "province_id": "KR-28"
+  },
+  "27": {
+    "city_name_ko": "서구",
+    "city_name_en": "SEO-INCHEON",
+    "province_id": "KR-28"
+  },
+  "28": {
+    "city_name_ko": "연수구",
+    "city_name_en": "YEONSU",
+    "province_id": "KR-28"
+  },
+  "29": {
+    "city_name_ko": "옹진군",
+    "city_name_en": "ONGJIN",
+    "province_id": "KR-28"
+  },
+  "31": {
+    "city_name_ko": "대덕구",
+    "city_name_en": "DAEDEOK",
+    "province_id": "KR-30"
+  },
+  "311": {
+    "city_name_ko": "가평군",
+    "city_name_en": "GAPYEONG",
+    "province_id": "KR-41"
+  },
+  "3110": {
+    "city_name_ko": "동두천시",
+    "city_name_en": "DONGDUCHEON",
+    "province_id": "KR-41"
+  },
+  "3111": {
+    "city_name_ko": "부천시",
+    "city_name_en": "BUCHEON",
+    "province_id": "KR-41"
+  },
+  "3112": {
+    "city_name_ko": "성남시",
+    "city_name_en": "SEONGNAM",
+    "province_id": "KR-41"
+  },
+  "3113": {
+    "city_name_ko": "수원시",
+    "city_name_en": "SUWON",
+    "province_id": "KR-41"
+  },
+  "3114": {
+    "city_name_ko": "시흥시",
+    "city_name_en": "SIHEUNG",
+    "province_id": "KR-41"
+  },
+  "3115": {
+    "city_name_ko": "안산시",
+    "city_name_en": "ANSAN",
+    "province_id": "KR-41"
+  },
+  "3116": {
+    "city_name_ko": "안성시",
+    "city_name_en": "ANSEONG",
+    "province_id": "KR-41"
+  },
+  "3117": {
+    "city_name_ko": "안양시",
+    "city_name_en": "ANYANG",
+    "province_id": "KR-41"
+  },
+  "3118": {
+    "city_name_ko": "양주시",
+    "city_name_en": "YANGJU",
+    "province_id": "KR-41"
+  },
+  "3119": {
+    "city_name_ko": "양평군",
+    "city_name_en": "YANGPYEONG",
+    "province_id": "KR-41"
+  },
+  "312": {
+    "city_name_ko": "고양시",
+    "city_name_en": "GOYANG",
+    "province_id": "KR-41"
+  },
+  "3120": {
+    "city_name_ko": "여주시",
+    "city_name_en": "YEOJU",
+    "province_id": "KR-41"
+  },
+  "3121": {
+    "city_name_ko": "연천군",
+    "city_name_en": "YEONCHEON",
+    "province_id": "KR-41"
+  },
+  "3122": {
+    "city_name_ko": "오산시",
+    "city_name_en": "OSAN",
+    "province_id": "KR-41"
+  },
+  "3123": {
+    "city_name_ko": "용인시",
+    "city_name_en": "YONGIN",
+    "province_id": "KR-41"
+  },
+  "3124": {
+    "city_name_ko": "의왕시",
+    "city_name_en": "UIWANG",
+    "province_id": "KR-41"
+  },
+  "3125": {
+    "city_name_ko": "의정부시",
+    "city_name_en": "UIJEONGBU",
+    "province_id": "KR-41"
+  },
+  "3126": {
+    "city_name_ko": "이천시",
+    "city_name_en": "ICHEON",
+    "province_id": "KR-41"
+  },
+  "3127": {
+    "city_name_ko": "파주시",
+    "city_name_en": "PAJU",
+    "province_id": "KR-41"
+  },
+  "3128": {
+    "city_name_ko": "평택시",
+    "city_name_en": "PYEONGTAEK",
+    "province_id": "KR-41"
+  },
+  "3129": {
+    "city_name_ko": "포천시",
+    "city_name_en": "POCHEON",
+    "province_id": "KR-41"
+  },
+  "313": {
+    "city_name_ko": "과천시",
+    "city_name_en": "GWACHEON",
+    "province_id": "KR-41"
+  },
+  "3130": {
+    "city_name_ko": "하남시",
+    "city_name_en": "HANAM",
+    "province_id": "KR-41"
+  },
+  "3131": {
+    "city_name_ko": "화성시",
+    "city_name_en": "HWASEONG",
+    "province_id": "KR-41"
+  },
+  "314": {
+    "city_name_ko": "광명시",
+    "city_name_en": "GWANGMYEONG",
+    "province_id": "KR-41"
+  },
+  "315": {
+    "city_name_ko": "광주시",
+    "city_name_en": "GWANGJU-GYEONGGI",
+    "province_id": "KR-41"
+  },
+  "316": {
+    "city_name_ko": "구리시",
+    "city_name_en": "GURI",
+    "province_id": "KR-41"
+  },
+  "317": {
+    "city_name_ko": "군포시",
+    "city_name_en": "GUNPO",
+    "province_id": "KR-41"
+  },
+  "318": {
+    "city_name_ko": "김포시",
+    "city_name_en": "GIMPO",
+    "province_id": "KR-41"
+  },
+  "319": {
+    "city_name_ko": "남양주시",
+    "city_name_en": "NAMYANGJU",
+    "province_id": "KR-41"
+  },
+  "32": {
+    "city_name_ko": "동구",
+    "city_name_en": "DONG-DAEJEON",
+    "province_id": "KR-30"
+  },
+  "321": {
+    "city_name_ko": "강릉시",
+    "city_name_en": "GANGNEUNG",
+    "province_id": "KR-42"
+  },
+  "3210": {
+    "city_name_ko": "인제군",
+    "city_name_en": "INJE",
+    "province_id": "KR-42"
+  },
+  "3211": {
+    "city_name_ko": "정선군",
+    "city_name_en": "JEONGSEON",
+    "province_id": "KR-42"
+  },
+  "3212": {
+    "city_name_ko": "철원군",
+    "city_name_en": "CHEORWON",
+    "province_id": "KR-42"
+  },
+  "3213": {
+    "city_name_ko": "춘천시",
+    "city_name_en": "CHUNCHEON",
+    "province_id": "KR-42"
+  },
+  "3214": {
+    "city_name_ko": "태백시",
+    "city_name_en": "TAEBAEK",
+    "province_id": "KR-42"
+  },
+  "3215": {
+    "city_name_ko": "평창군",
+    "city_name_en": "PYEONGCHANG",
+    "province_id": "KR-42"
+  },
+  "3216": {
+    "city_name_ko": "홍천군",
+    "city_name_en": "HONGCHEON",
+    "province_id": "KR-42"
+  },
+  "3217": {
+    "city_name_ko": "화천군",
+    "city_name_en": "HWACHEON",
+    "province_id": "KR-42"
+  },
+  "3218": {
+    "city_name_ko": "횡성군",
+    "city_name_en": "HOENGSEONG",
+    "province_id": "KR-42"
+  },
+  "322": {
+    "city_name_ko": "고성군",
+    "city_name_en": "GOSEONG-GANGWON",
+    "province_id": "KR-42"
+  },
+  "323": {
+    "city_name_ko": "동해시",
+    "city_name_en": "DONGHAE",
+    "province_id": "KR-42"
+  },
+  "324": {
+    "city_name_ko": "삼척시",
+    "city_name_en": "SAMCHEOK",
+    "province_id": "KR-42"
+  },
+  "325": {
+    "city_name_ko": "속초시",
+    "city_name_en": "SOKCHO",
+    "province_id": "KR-42"
+  },
+  "326": {
+    "city_name_ko": "양구군",
+    "city_name_en": "YANGGU",
+    "province_id": "KR-42"
+  },
+  "327": {
+    "city_name_ko": "양양군",
+    "city_name_en": "YANGYANG",
+    "province_id": "KR-42"
+  },
+  "328": {
+    "city_name_ko": "영월군",
+    "city_name_en": "YEONGWOL",
+    "province_id": "KR-42"
+  },
+  "329": {
+    "city_name_ko": "원주시",
+    "city_name_en": "WONJU",
+    "province_id": "KR-42"
+  },
+  "33": {
+    "city_name_ko": "서구",
+    "city_name_en": "SEO-DAEJEON",
+    "province_id": "KR-30"
+  },
+  "331": {
+    "city_name_ko": "괴산군",
+    "city_name_en": "GOESAN",
+    "province_id": "KR-43"
+  },
+  "3310": {
+    "city_name_ko": "청주시",
+    "city_name_en": "CHEONGJU",
+    "province_id": "KR-43"
+  },
+  "3311": {
+    "city_name_ko": "충주시",
+    "city_name_en": "CHUNGJU",
+    "province_id": "KR-43"
+  },
+  "3312": {
+    "city_name_ko": "증평군",
+    "city_name_en": "JEUNGPYEONG",
+    "province_id": "KR-43"
+  },
+  "332": {
+    "city_name_ko": "단양군",
+    "city_name_en": "DANYANG",
+    "province_id": "KR-43"
+  },
+  "333": {
+    "city_name_ko": "보은군",
+    "city_name_en": "BOEUN",
+    "province_id": "KR-43"
+  },
+  "334": {
+    "city_name_ko": "영동군",
+    "city_name_en": "YEONGDONG",
+    "province_id": "KR-43"
+  },
+  "335": {
+    "city_name_ko": "옥천군",
+    "city_name_en": "OKCHEON",
+    "province_id": "KR-43"
+  },
+  "336": {
+    "city_name_ko": "음성군",
+    "city_name_en": "EUMSEONG",
+    "province_id": "KR-43"
+  },
+  "337": {
+    "city_name_ko": "제천시",
+    "city_name_en": "JECHEON",
+    "province_id": "KR-43"
+  },
+  "338": {
+    "city_name_ko": "진천군",
+    "city_name_en": "JINCHEON",
+    "province_id": "KR-43"
+  },
+  "34": {
+    "city_name_ko": "유성구",
+    "city_name_en": "YUSEONG",
+    "province_id": "KR-30"
+  },
+  "341": {
+    "city_name_ko": "공주시",
+    "city_name_en": "GONGJU",
+    "province_id": "KR-44"
+  },
+  "3411": {
+    "city_name_ko": "예산군",
+    "city_name_en": "YESAN",
+    "province_id": "KR-44"
+  },
+  "3412": {
+    "city_name_ko": "천안시",
+    "city_name_en": "CHEONAN",
+    "province_id": "KR-44"
+  },
+  "3413": {
+    "city_name_ko": "청양군",
+    "city_name_en": "CHEONGYANG",
+    "province_id": "KR-44"
+  },
+  "3414": {
+    "city_name_ko": "태안군",
+    "city_name_en": "TAEAN",
+    "province_id": "KR-44"
+  },
+  "3415": {
+    "city_name_ko": "홍성군",
+    "city_name_en": "HONGSEONG",
+    "province_id": "KR-44"
+  },
+  "3416": {
+    "city_name_ko": "계룡시",
+    "city_name_en": "GYERYONG",
+    "province_id": "KR-44"
+  },
+  "342": {
+    "city_name_ko": "금산군",
+    "city_name_en": "GEUMSAN",
+    "province_id": "KR-44"
+  },
+  "343": {
+    "city_name_ko": "논산시",
+    "city_name_en": "NONSAN",
+    "province_id": "KR-44"
+  },
+  "344": {
+    "city_name_ko": "당진시",
+    "city_name_en": "DANGJIN",
+    "province_id": "KR-44"
+  },
+  "345": {
+    "city_name_ko": "보령시",
+    "city_name_en": "BORYEONG",
+    "province_id": "KR-44"
+  },
+  "346": {
+    "city_name_ko": "부여군",
+    "city_name_en": "BUYEO",
+    "province_id": "KR-44"
+  },
+  "347": {
+    "city_name_ko": "서산시",
+    "city_name_en": "SEOSAN",
+    "province_id": "KR-44"
+  },
+  "348": {
+    "city_name_ko": "서천군",
+    "city_name_en": "SEOCHEON",
+    "province_id": "KR-44"
+  },
+  "349": {
+    "city_name_ko": "아산시",
+    "city_name_en": "ASAN",
+    "province_id": "KR-44"
+  },
+  "35": {
+    "city_name_ko": "중구",
+    "city_name_en": "JUNG-DAEJEON",
+    "province_id": "KR-30"
+  },
+  "351": {
+    "city_name_ko": "경산시",
+    "city_name_en": "GYEONGSAN",
+    "province_id": "KR-47"
+  },
+  "3510": {
+    "city_name_ko": "성주군",
+    "city_name_en": "SEONGJU",
+    "province_id": "KR-47"
+  },
+  "3511": {
+    "city_name_ko": "안동시",
+    "city_name_en": "ANDONG",
+    "province_id": "KR-47"
+  },
+  "3512": {
+    "city_name_ko": "영덕군",
+    "city_name_en": "YEONGDEOK",
+    "province_id": "KR-47"
+  },
+  "3513": {
+    "city_name_ko": "영양군",
+    "city_name_en": "YEONGYANG",
+    "province_id": "KR-47"
+  },
+  "3514": {
+    "city_name_ko": "영주시",
+    "city_name_en": "YEONGJU",
+    "province_id": "KR-47"
+  },
+  "3515": {
+    "city_name_ko": "영천시",
+    "city_name_en": "YEONGCHEON",
+    "province_id": "KR-47"
+  },
+  "3516": {
+    "city_name_ko": "예천군",
+    "city_name_en": "YECHEON",
+    "province_id": "KR-47"
+  },
+  "3517": {
+    "city_name_ko": "울릉군",
+    "city_name_en": "ULLEUNG",
+    "province_id": "KR-47"
+  },
+  "3518": {
+    "city_name_ko": "울진군",
+    "city_name_en": "ULJIN",
+    "province_id": "KR-47"
+  },
+  "3519": {
+    "city_name_ko": "의성군",
+    "city_name_en": "UISEONG",
+    "province_id": "KR-47"
+  },
+  "352": {
+    "city_name_ko": "경주시",
+    "city_name_en": "GYEONGJU",
+    "province_id": "KR-47"
+  },
+  "3520": {
+    "city_name_ko": "청도군",
+    "city_name_en": "CHEONGDO",
+    "province_id": "KR-47"
+  },
+  "3521": {
+    "city_name_ko": "청송군",
+    "city_name_en": "CHEONGSONG",
+    "province_id": "KR-47"
+  },
+  "3522": {
+    "city_name_ko": "칠곡군",
+    "city_name_en": "CHILGOK",
+    "province_id": "KR-47"
+  },
+  "3523": {
+    "city_name_ko": "포항시",
+    "city_name_en": "POHANG",
+    "province_id": "KR-47"
+  },
+  "353": {
+    "city_name_ko": "고령군",
+    "city_name_en": "GORYEONG",
+    "province_id": "KR-47"
+  },
+  "354": {
+    "city_name_ko": "구미시",
+    "city_name_en": "GUMI",
+    "province_id": "KR-47"
+  },
+  "356": {
+    "city_name_ko": "김천시",
+    "city_name_en": "GIMCHEON",
+    "province_id": "KR-47"
+  },
+  "357": {
+    "city_name_ko": "문경시",
+    "city_name_en": "MUNGYEONG",
+    "province_id": "KR-47"
+  },
+  "358": {
+    "city_name_ko": "봉화군",
+    "city_name_en": "BONGHWA",
+    "province_id": "KR-47"
+  },
+  "359": {
+    "city_name_ko": "상주시",
+    "city_name_en": "SANGJU",
+    "province_id": "KR-47"
+  },
+  "361": {
+    "city_name_ko": "거제시",
+    "city_name_en": "GEOJE",
+    "province_id": "KR-48"
+  },
+  "3610": {
+    "city_name_ko": "양산시",
+    "city_name_en": "YANGSAN",
+    "province_id": "KR-48"
+  },
+  "3612": {
+    "city_name_ko": "의령군",
+    "city_name_en": "UIRYEONG",
+    "province_id": "KR-48"
+  },
+  "3613": {
+    "city_name_ko": "진주시",
+    "city_name_en": "JINJU",
+    "province_id": "KR-48"
+  },
+  "3615": {
+    "city_name_ko": "창녕군",
+    "city_name_en": "CHANGNYEONG",
+    "province_id": "KR-48"
+  },
+  "3616": {
+    "city_name_ko": "창원시",
+    "city_name_en": "CHANGWON",
+    "province_id": "KR-48"
+  },
+  "3617": {
+    "city_name_ko": "통영시",
+    "city_name_en": "TONGYEONG",
+    "province_id": "KR-48"
+  },
+  "3618": {
+    "city_name_ko": "하동군",
+    "city_name_en": "HADONG",
+    "province_id": "KR-48"
+  },
+  "3619": {
+    "city_name_ko": "함안군",
+    "city_name_en": "HAMAN",
+    "province_id": "KR-48"
+  },
+  "362": {
+    "city_name_ko": "거창군",
+    "city_name_en": "GEOCHANG",
+    "province_id": "KR-48"
+  },
+  "3620": {
+    "city_name_ko": "함양군",
+    "city_name_en": "HAMYANG",
+    "province_id": "KR-48"
+  },
+  "3621": {
+    "city_name_ko": "합천군",
+    "city_name_en": "HAPCHEON",
+    "province_id": "KR-48"
+  },
+  "363": {
+    "city_name_ko": "고성군",
+    "city_name_en": "GOSEONG-GYEONGNAM",
+    "province_id": "KR-48"
+  },
+  "364": {
+    "city_name_ko": "김해시",
+    "city_name_en": "GIMHAE",
+    "province_id": "KR-48"
+  },
+  "365": {
+    "city_name_ko": "남해군",
+    "city_name_en": "NAMHAE",
+    "province_id": "KR-48"
+  },
+  "367": {
+    "city_name_ko": "밀양시",
+    "city_name_en": "MIRYANG",
+    "province_id": "KR-48"
+  },
+  "368": {
+    "city_name_ko": "사천시",
+    "city_name_en": "SACHEON",
+    "province_id": "KR-48"
+  },
+  "369": {
+    "city_name_ko": "산청군",
+    "city_name_en": "SANCHEONG",
+    "province_id": "KR-48"
+  },
+  "371": {
+    "city_name_ko": "고창군",
+    "city_name_en": "GOCHANG",
+    "province_id": "KR-45"
+  },
+  "3710": {
+    "city_name_ko": "임실군",
+    "city_name_en": "IMSIL",
+    "province_id": "KR-45"
+  },
+  "3711": {
+    "city_name_ko": "장수군",
+    "city_name_en": "JANGSU",
+    "province_id": "KR-45"
+  },
+  "3712": {
+    "city_name_ko": "전주시",
+    "city_name_en": "JEONJU",
+    "province_id": "KR-45"
+  },
+  "3713": {
+    "city_name_ko": "정읍시",
+    "city_name_en": "JEONGEUP",
+    "province_id": "KR-45"
+  },
+  "3714": {
+    "city_name_ko": "진안군",
+    "city_name_en": "JINAN",
+    "province_id": "KR-45"
+  },
+  "372": {
+    "city_name_ko": "군산시",
+    "city_name_en": "GUNSAN",
+    "province_id": "KR-45"
+  },
+  "373": {
+    "city_name_ko": "김제시",
+    "city_name_en": "GIMJE",
+    "province_id": "KR-45"
+  },
+  "374": {
+    "city_name_ko": "남원시",
+    "city_name_en": "NAMWON",
+    "province_id": "KR-45"
+  },
+  "375": {
+    "city_name_ko": "무주군",
+    "city_name_en": "MUJU",
+    "province_id": "KR-45"
+  },
+  "376": {
+    "city_name_ko": "부안군",
+    "city_name_en": "BUAN",
+    "province_id": "KR-45"
+  },
+  "377": {
+    "city_name_ko": "순창군",
+    "city_name_en": "SUNCHANG",
+    "province_id": "KR-45"
+  },
+  "378": {
+    "city_name_ko": "완주군",
+    "city_name_en": "WANJU",
+    "province_id": "KR-45"
+  },
+  "379": {
+    "city_name_ko": "익산시",
+    "city_name_en": "IKSAN",
+    "province_id": "KR-45"
+  },
+  "381": {
+    "city_name_ko": "강진군",
+    "city_name_en": "GANGJIN",
+    "province_id": "KR-46"
+  },
+  "3810": {
+    "city_name_ko": "보성군",
+    "city_name_en": "BOSEONG",
+    "province_id": "KR-46"
+  },
+  "3811": {
+    "city_name_ko": "순천시",
+    "city_name_en": "SUNCHEON",
+    "province_id": "KR-46"
+  },
+  "3812": {
+    "city_name_ko": "신안군",
+    "city_name_en": "SINAN",
+    "province_id": "KR-46"
+  },
+  "3813": {
+    "city_name_ko": "여수시",
+    "city_name_en": "YEOSU",
+    "province_id": "KR-46"
+  },
+  "3816": {
+    "city_name_ko": "영광군",
+    "city_name_en": "YEONGGWANG",
+    "province_id": "KR-46"
+  },
+  "3817": {
+    "city_name_ko": "영암군",
+    "city_name_en": "YEONGAM",
+    "province_id": "KR-46"
+  },
+  "3818": {
+    "city_name_ko": "완도군",
+    "city_name_en": "WANDO",
+    "province_id": "KR-46"
+  },
+  "3819": {
+    "city_name_ko": "장성군",
+    "city_name_en": "JANGSEONG",
+    "province_id": "KR-46"
+  },
+  "382": {
+    "city_name_ko": "고흥군",
+    "city_name_en": "GOHEUNG",
+    "province_id": "KR-46"
+  },
+  "3820": {
+    "city_name_ko": "장흥군",
+    "city_name_en": "JANGHEUNG",
+    "province_id": "KR-46"
+  },
+  "3821": {
+    "city_name_ko": "진도군",
+    "city_name_en": "JINDO",
+    "province_id": "KR-46"
+  },
+  "3822": {
+    "city_name_ko": "함평군",
+    "city_name_en": "HAMPYEONG",
+    "province_id": "KR-46"
+  },
+  "3823": {
+    "city_name_ko": "해남군",
+    "city_name_en": "HAENAM",
+    "province_id": "KR-46"
+  },
+  "3824": {
+    "city_name_ko": "화순군",
+    "city_name_en": "HWASUN",
+    "province_id": "KR-46"
+  },
+  "383": {
+    "city_name_ko": "곡성군",
+    "city_name_en": "GOKSEONG",
+    "province_id": "KR-46"
+  },
+  "384": {
+    "city_name_ko": "광양시",
+    "city_name_en": "GWANGYANG",
+    "province_id": "KR-46"
+  },
+  "385": {
+    "city_name_ko": "구례군",
+    "city_name_en": "GURYE",
+    "province_id": "KR-46"
+  },
+  "386": {
+    "city_name_ko": "나주시",
+    "city_name_en": "NAJU",
+    "province_id": "KR-46"
+  },
+  "387": {
+    "city_name_ko": "담양군",
+    "city_name_en": "DAMYANG",
+    "province_id": "KR-46"
+  },
+  "388": {
+    "city_name_ko": "목포시",
+    "city_name_en": "MOKPO",
+    "province_id": "KR-46"
+  },
+  "389": {
+    "city_name_ko": "무안군",
+    "city_name_en": "MUAN",
+    "province_id": "KR-46"
+  },
+  "393": {
+    "city_name_ko": "서귀포시",
+    "city_name_en": "SEOGWIPO",
+    "province_id": "KR-50"
+  },
+  "394": {
+    "city_name_ko": "제주시",
+    "city_name_en": "JEJU",
+    "province_id": "KR-50"
+  },
+  "41": {
+    "city_name_ko": "남구",
+    "city_name_en": "NAM-DAEGU",
+    "province_id": "KR-27"
+  },
+  "42": {
+    "city_name_ko": "달서구",
+    "city_name_en": "DALSEO",
+    "province_id": "KR-27"
+  },
+  "43": {
+    "city_name_ko": "달성군",
+    "city_name_en": "DALSEONG",
+    "province_id": "KR-27"
+  },
+  "44": {
+    "city_name_ko": "동구",
+    "city_name_en": "DONG-DAEGU",
+    "province_id": "KR-27"
+  },
+  "45": {
+    "city_name_ko": "북구",
+    "city_name_en": "BUK-DAEGU",
+    "province_id": "KR-27"
+  },
+  "46": {
+    "city_name_ko": "서구",
+    "city_name_en": "SEO-DAEGU",
+    "province_id": "KR-27"
+  },
+  "47": {
+    "city_name_ko": "수성구",
+    "city_name_en": "SUSEONG",
+    "province_id": "KR-27"
+  },
+  "48": {
+    "city_name_ko": "중구",
+    "city_name_en": "JUNG-DAEGU",
+    "province_id": "KR-27"
+  },
+  "49": {
+    "city_name_ko": "군위군",
+    "city_name_en": "GUNWI",
+    "province_id": "KR-27"
+  },
+  "51": {
+    "city_name_ko": "광산구",
+    "city_name_en": "GWANGSAN",
+    "province_id": "KR-29"
+  },
+  "52": {
+    "city_name_ko": "남구",
+    "city_name_en": "NAM-GWANGJU",
+    "province_id": "KR-29"
+  },
+  "53": {
+    "city_name_ko": "동구",
+    "city_name_en": "DONG-GWANGJU",
+    "province_id": "KR-29"
+  },
+  "54": {
+    "city_name_ko": "북구",
+    "city_name_en": "BUK-GWANGJU",
+    "province_id": "KR-29"
+  },
+  "55": {
+    "city_name_ko": "서구",
+    "city_name_en": "SEO-GWANGJU",
+    "province_id": "KR-29"
+  },
+  "61": {
+    "city_name_ko": "강서구",
+    "city_name_en": "GANGSEO-BUSAN",
+    "province_id": "KR-26"
+  },
+  "610": {
+    "city_name_ko": "사하구",
+    "city_name_en": "SAHA",
+    "province_id": "KR-26"
+  },
+  "611": {
+    "city_name_ko": "서구",
+    "city_name_en": "SEO-BUSAN",
+    "province_id": "KR-26"
+  },
+  "612": {
+    "city_name_ko": "수영구",
+    "city_name_en": "SUYEONG",
+    "province_id": "KR-26"
+  },
+  "613": {
+    "city_name_ko": "연제구",
+    "city_name_en": "YEONJE",
+    "province_id": "KR-26"
+  },
+  "614": {
+    "city_name_ko": "영도구",
+    "city_name_en": "YEONGDO",
+    "province_id": "KR-26"
+  },
+  "615": {
+    "city_name_ko": "중구",
+    "city_name_en": "JUNG-BUSAN",
+    "province_id": "KR-26"
+  },
+  "616": {
+    "city_name_ko": "해운대구",
+    "city_name_en": "HAEUNDAE",
+    "province_id": "KR-26"
+  },
+  "62": {
+    "city_name_ko": "금정구",
+    "city_name_en": "GEUMJEONG",
+    "province_id": "KR-26"
+  },
+  "63": {
+    "city_name_ko": "기장군",
+    "city_name_en": "GIJANG",
+    "province_id": "KR-26"
+  },
+  "64": {
+    "city_name_ko": "남구",
+    "city_name_en": "NAM-BUSAN",
+    "province_id": "KR-26"
+  },
+  "65": {
+    "city_name_ko": "동구",
+    "city_name_en": "DONG-BUSAN",
+    "province_id": "KR-26"
+  },
+  "66": {
+    "city_name_ko": "동래구",
+    "city_name_en": "DONGNAE",
+    "province_id": "KR-26"
+  },
+  "67": {
+    "city_name_ko": "부산진구",
+    "city_name_en": "BUSANJIN",
+    "province_id": "KR-26"
+  },
+  "68": {
+    "city_name_ko": "북구",
+    "city_name_en": "BUK-BUSAN",
+    "province_id": "KR-26"
+  },
+  "69": {
+    "city_name_ko": "사상구",
+    "city_name_en": "SASANG",
+    "province_id": "KR-26"
+  },
+  "71": {
+    "city_name_ko": "중구",
+    "city_name_en": "JUNG-ULSAN",
+    "province_id": "KR-31"
+  },
+  "72": {
+    "city_name_ko": "남구",
+    "city_name_en": "NAM-ULSAN",
+    "province_id": "KR-31"
+  },
+  "73": {
+    "city_name_ko": "동구",
+    "city_name_en": "DONG-ULSAN",
+    "province_id": "KR-31"
+  },
+  "74": {
+    "city_name_ko": "북구",
+    "city_name_en": "BUK-ULSAN",
+    "province_id": "KR-31"
+  },
+  "75": {
+    "city_name_ko": "울주군",
+    "city_name_en": "ULJU",
+    "province_id": "KR-31"
+  },
+  "81": {
+    "city_name_ko": "세종특별자치시",
+    "city_name_en": "SEJONG",
+    "province_id": "KR-36"
+  }
+}
