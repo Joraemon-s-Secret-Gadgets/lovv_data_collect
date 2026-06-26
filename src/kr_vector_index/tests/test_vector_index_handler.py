@@ -46,8 +46,8 @@ def test_handler_returns_export_counts(monkeypatch):
         vector_index_handler,
         "export_items",
         lambda client, table_name, city_pk=None: [
-            {"entity_type": "restaurant"},
-            {"entity_type": "restaurant"},
+            {"entity_type": "attraction"},
+            {"entity_type": "attraction"},
             {"entity_type": "festival"},
         ],
     )
@@ -55,7 +55,7 @@ def test_handler_returns_export_counts(monkeypatch):
     response = vector_index_handler.handler({"command": "export-counts"}, context=None)
 
     assert response["statusCode"] == 200
-    assert response["summary"]["entity_counts"] == {"restaurant": 2, "festival": 1}
+    assert response["summary"]["entity_counts"] == {"attraction": 2, "festival": 1}
     assert response["summary"]["item_count"] == 3
 
 
@@ -67,12 +67,12 @@ def test_handler_dry_run_builds_chunks_without_upsert(monkeypatch):
         lambda client, table_name, city_pk=None: [
             {
                 "PK": "CITY#Andong",
-                "SK": "RESTAURANT#100",
-                "entity_type": "restaurant",
+                "SK": "ATTRACTION#100",
+                "entity_type": "attraction",
                 "content_id": "100",
                 "city_id": "KR-Andong",
                 "city_name_en": "Andong",
-                "title": "안동식당",
+                "title": "하회마을",
                 "address": "경상북도 안동시",
                 "quality_status": "passed",
             }
@@ -96,12 +96,12 @@ def test_handler_build_embeds_and_upserts_when_not_dry_run(monkeypatch):
         lambda client, table_name, city_pk=None: [
             {
                 "PK": "CITY#Andong",
-                "SK": "RESTAURANT#100",
-                "entity_type": "restaurant",
+                "SK": "ATTRACTION#100",
+                "entity_type": "attraction",
                 "content_id": "100",
                 "city_id": "KR-Andong",
                 "city_name_en": "Andong",
-                "title": "안동식당",
+                "title": "하회마을",
                 "address": "경상북도 안동시",
                 "quality_status": "passed",
             }

@@ -1,8 +1,8 @@
 """
-CLI entry point for Wikipedia-first city data acquisition.
+Wikipedia 우선 도시 데이터 취득 CLI 진입점.
 
-The reusable implementation lives in focused modules under `crawling.JP`.
-This module keeps the existing command and import surface stable.
+재사용 가능한 구현은 `crawling.JP` 아래의 집중 모듈에 있다.
+이 모듈은 기존 명령과 가져오기 경로를 안정적으로 유지한다.
 """
 
 from __future__ import annotations
@@ -53,5 +53,5 @@ if __name__ == "__main__":
     raise SystemExit(main())
 
 
-# File History
-# 2026-06-04: Converted module to CLI wrapper after splitting reusable code.
+# 파일 이력
+# 2026-06-04: 재사용 코드를 분리한 뒤 모듈을 CLI 래퍼로 전환했다.

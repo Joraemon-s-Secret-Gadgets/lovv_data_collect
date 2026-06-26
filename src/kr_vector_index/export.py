@@ -7,7 +7,7 @@ from typing import Any
 
 from boto3.dynamodb.types import TypeDeserializer
 
-VECTORIZABLE_ENTITY_TYPES = ("city", "city_metadata", "attraction", "restaurant", "festival")
+VECTORIZABLE_ENTITY_TYPES = ("city", "city_metadata", "attraction", "festival")
 
 
 def should_vectorize(item: dict[str, Any]) -> bool:

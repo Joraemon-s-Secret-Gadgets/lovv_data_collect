@@ -3,10 +3,32 @@
 from __future__ import annotations
 
 import json
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 from kr_details_pipeline.transform import build_city_record
+
+
+@dataclass
+class SubtypeMappingResult:
+    """Result of deterministic attraction subtype mapping."""
+
+    success: bool
+    code: str | None  # attraction_subtype_code
+    name: str | None  # attraction_subtype_name
+    source: str | None  # classification_source = "lcls_systm3"
+    version: str | None  # classification_mapping_version = ISO date
+
+
+@dataclass
+class FestivalSourceFields:
+    """Result of festival source classification preservation."""
+
+    source_subtype_name: str | None
+    source_theme: str | None
+    program: str | None
+    subevent: str | None
 
 
 KR_BOUNDS = {
@@ -44,6 +66,9 @@ COMMON_KEYS = {
     "quality_status",
     "review_queues",
     "source_key",
+    "lcls_systm3",
+    "source_type",
+    "raw_s3_uri",
 }
 
 CITY_METADATA_KEYS = {
@@ -96,16 +121,6 @@ VISITOR_STATISTICS_KEYS = {
 }
 
 DOMAIN_KEYS = {
-    "restaurant": COMMON_KEYS
-    | {
-        "restaurant_category",
-        "cuisine_tags",
-        "phone",
-        "opening_hours",
-        "closed_days",
-        "signature_menu",
-        "parking",
-    },
     "attraction": COMMON_KEYS
     | {
         "theme",
@@ -116,6 +131,10 @@ DOMAIN_KEYS = {
         "experience_guide",
         "parking",
         "season_tags",
+        "attraction_subtype_code",
+        "attraction_subtype_name",
+        "classification_source",
+        "classification_mapping_version",
     },
     "festival": COMMON_KEYS
     | {
@@ -130,10 +149,129 @@ DOMAIN_KEYS = {
         "organizer_phone",
         "playtime",
         "fee_text",
+        "source_subtype_name",
+        "source_theme",
+        "program",
+        "subevent",
+        "theme",
+        "theme_tags",
+        "gsi_sk",
     },
     "city_metadata": CITY_METADATA_KEYS,
     "visitor_statistics": VISITOR_STATISTICS_KEYS,
 }
+
+
+def extract_lcls_systm3(record: dict[str, Any], detail: dict[str, Any]) -> str | None:
+    """common.lclsSystm3 우선, 없으면 record 최상위 lclsSystm3 사용.
+
+    Returns the lcls_systm3 classification code by checking:
+    1. detail["common"]["lclsSystm3"] (primary source)
+    2. record["lclsSystm3"] (fallback)
+    Returns None when both sources are absent or empty.
+    """
+    common = detail.get("common") if isinstance(detail.get("common"), dict) else {}
+    value = str(common.get("lclsSystm3") or "").strip()
+    if value:
+        return value
+    value = str(record.get("lclsSystm3") or "").strip()
+    if value:
+        return value
+    return None
+
+
+def _load_classification_dict() -> dict[str, Any]:
+    """Load classification_dict.json from the package directory."""
+    path = Path(__file__).parent / "classification_dict.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def map_attraction_subtype(
+    lcls_systm3: str | None,
+    classification_dict: dict[str, Any],
+) -> SubtypeMappingResult:
+    """결정론적 subtype 매핑. 성공 시 code/name/source/version 반환."""
+    if not lcls_systm3:
+        return SubtypeMappingResult(success=False, code=None, name=None, source=None, version=None)
+
+    mappings = classification_dict.get("mappings", {})
+    entry = mappings.get(lcls_systm3)
+
+    if entry is None or entry.get("type") != "Attraction":
+        return SubtypeMappingResult(success=False, code=None, name=None, source=None, version=None)
+
+    version = classification_dict.get("version", "")
+    return SubtypeMappingResult(
+        success=True,
+        code=entry["code"],
+        name=entry["name"],
+        source="lcls_systm3",
+        version=version,
+    )
+
+
+def preserve_festival_source(
+    lcls_systm3: str | None,
+    classification_dict: dict[str, Any],
+    intro: dict[str, Any],
+) -> FestivalSourceFields:
+    """축제 원천 분류와 프로그램 정보 보존.
+
+    Looks up lcls_systm3 in classification_dict mappings to extract
+    source_subtype_name and source_theme. Also preserves program and
+    subevent from intro fields when non-empty.
+
+    Returns FestivalSourceFields with None for fields that cannot be resolved.
+    """
+    source_subtype_name: str | None = None
+    source_theme: str | None = None
+
+    if lcls_systm3:
+        mappings = classification_dict.get("mappings", {})
+        entry = mappings.get(lcls_systm3)
+        if entry is not None:
+            source_subtype_name = entry.get("name")
+            source_theme = entry.get("theme")
+
+    # Preserve program if non-null and non-empty
+    raw_program = str(intro.get("program") or "").strip()
+    program = raw_program if raw_program else None
+
+    # Preserve subevent if non-null and non-empty
+    raw_subevent = str(intro.get("subevent") or "").strip()
+    subevent = raw_subevent if raw_subevent else None
+
+    return FestivalSourceFields(
+        source_subtype_name=source_subtype_name,
+        source_theme=source_theme,
+        program=program,
+        subevent=subevent,
+    )
+
+
+def build_festival_gsi_sk(content_id: str, event_start_date: str | None) -> str:
+    """Build GSI Sort Key for festival monthly lookup.
+
+    Format: FESTIVAL#{month:02d}#{content_id}
+    - Uses event_start_date month
+    - Defaults to 00 when event_start_date is missing or unparseable
+    - For multi-month festivals, uses start month only
+
+    Args:
+        content_id: Festival content ID.
+        event_start_date: ISO date string (YYYY-MM-DD) or empty/None.
+
+    Returns:
+        GSI SK string, e.g., "FESTIVAL#10#2002"
+    """
+    if event_start_date and len(event_start_date) >= 7:
+        try:
+            month = int(event_start_date[5:7])
+        except (ValueError, IndexError):
+            month = 0
+    else:
+        month = 0
+    return f"FESTIVAL#{month:02d}#{content_id}"
 
 
 def preprocess_city_file(raw_file: Path, output_dir: Path, *, table_name: str = "TourKoreaDomainData") -> dict[str, Any]:
@@ -151,7 +289,6 @@ def preprocess_city_payload(payload: dict[str, Any], *, source_key: str, table_n
     buckets: dict[str, list[dict[str, Any]]] = {
         "city_metadata": [],
         "visitor_statistics": [],
-        "restaurants": [],
         "attractions": [],
         "festivals": [],
         "review": [],
@@ -193,7 +330,6 @@ def preprocess_city_payload(payload: dict[str, Any], *, source_key: str, table_n
         "table_name": table_name,
         "city_metadata": len(buckets["city_metadata"]),
         "visitor_statistics": len(buckets["visitor_statistics"]),
-        "restaurants": len(buckets["restaurants"]),
         "attractions": len(buckets["attractions"]),
         "festivals": len(buckets["festivals"]),
         "review": len(buckets["review"]),
@@ -212,7 +348,6 @@ def write_preprocess_output(result: dict[str, Any], output_dir: Path) -> None:
     for directory in (normalized_dir, load_dir, quality_dir, review_dir, failed_dir):
         directory.mkdir(parents=True, exist_ok=True)
 
-    _write_jsonl(normalized_dir / "restaurants.jsonl", result["restaurants"])
     _write_jsonl(normalized_dir / "attractions.jsonl", result["attractions"])
     _write_jsonl(normalized_dir / "festivals.jsonl", result["festivals"])
     _write_jsonl(normalized_dir / "city_metadata.jsonl", result["city_metadata"])
@@ -343,6 +478,9 @@ def _build_domain_item(
     if not geo_ok:
         issues.append("location_review")
 
+    # Extract source classification fields (Req 1.1, 1.2, 1.3, 1.4, 1.5, 1.6)
+    lcls_systm3 = extract_lcls_systm3(record, detail)
+
     common_item = {
         "entity_type": entity_type,
         "source_key": source_key,
@@ -366,34 +504,28 @@ def _build_domain_item(
         "modified_time": _first_non_empty(str(common.get("modifiedtime") or ""), str(record.get("modifiedtime") or "")),
         "longitude": longitude,
         "latitude": latitude,
+        "lcls_systm3": lcls_systm3,
+        "source_type": "tourapi",
+        "raw_s3_uri": source_key if source_key else "unknown",
         "review_queues": [],
     }
-
-    if entity_type == "restaurant":
-        phone = _first_non_empty(str(record.get("tel") or ""), str(common.get("tel") or ""), str(intro.get("infocenterfood") or ""))
-        if not phone:
-            issues.append("contact_review")
-        category = _first_non_empty(str(record.get("_assigned_theme") or ""), str(record.get("cat3") or ""), str(intro.get("cat3") or ""))
-        return {
-            **common_item,
-            "SK": f"RESTAURANT#{content_id}",
-            "domain_sort_key": f"RESTAURANT#{content_id}",
-            "entity_id": f"REST-{content_id}",
-            "restaurant_category": category,
-            "cuisine_tags": [category] if category else [],
-            "phone": phone,
-            "opening_hours": str(intro.get("opentimefood") or ""),
-            "closed_days": str(intro.get("restdatefood") or ""),
-            "signature_menu": str(intro.get("treatmenu") or ""),
-            "parking": str(intro.get("parkingfood") or ""),
-            "quality_status": _quality_status(issues),
-            "review_queues": _dedupe(issues),
-        }
 
     if entity_type == "festival":
         event_start = _to_iso_date(str(intro.get("eventstartdate") or record.get("eventstartdate") or ""))
         event_end = _to_iso_date(str(intro.get("eventenddate") or record.get("eventenddate") or ""))
         season = _season_from_iso(event_start)
+
+        # Preserve festival source fields (Req 6.1, 6.2, 6.3, 6.4, 6.5)
+        classification_dict = _load_classification_dict()
+        festival_source = preserve_festival_source(lcls_systm3, classification_dict, intro)
+
+        # Handle missing lcls_systm3 or unmapped code → classification_review
+        if not lcls_systm3:
+            issues.append("classification_review")
+        elif festival_source.source_subtype_name is None and festival_source.source_theme is None:
+            # lcls_systm3 exists but not found in classification_dict
+            issues.append("classification_review")
+
         return {
             **common_item,
             "SK": f"FESTIVAL#{content_id}",
@@ -410,6 +542,13 @@ def _build_domain_item(
             "organizer_phone": str(intro.get("sponsor1tel") or ""),
             "playtime": str(intro.get("playtime") or ""),
             "fee_text": str(intro.get("usetimefestival") or ""),
+            "source_subtype_name": festival_source.source_subtype_name,
+            "source_theme": festival_source.source_theme,
+            "program": festival_source.program,
+            "subevent": festival_source.subevent,
+            "theme": festival_source.source_theme or "",
+            "theme_tags": [festival_source.source_theme] if festival_source.source_theme else [],
+            "gsi_sk": build_festival_gsi_sk(content_id, event_start),
             "quality_status": _quality_status(issues),
             "review_queues": _dedupe(issues),
         }
@@ -424,7 +563,16 @@ def _build_domain_item(
             str(intro.get("infocenter") or ""),
             str(intro.get("infocenterculture") or ""),
         )
-        return {
+
+        # Req 1.5: lcls_systm3 null → classification_review
+        if not lcls_systm3:
+            issues.append("classification_review")
+
+        # Req 2.1, 2.2, 2.3: Deterministic subtype mapping
+        classification_dict = _load_classification_dict()
+        subtype_result = map_attraction_subtype(lcls_systm3, classification_dict)
+
+        attraction_item = {
             **common_item,
             "SK": f"ATTRACTION#{content_id}",
             "domain_sort_key": f"ATTRACTION#{content_id}",
@@ -437,9 +585,21 @@ def _build_domain_item(
             "experience_guide": str(intro.get("expguide") or ""),
             "parking": str(intro.get("parking") or ""),
             "season_tags": [],
-            "quality_status": _quality_status(issues),
-            "review_queues": _dedupe(issues),
         }
+
+        if subtype_result.success:
+            attraction_item["attraction_subtype_code"] = subtype_result.code
+            attraction_item["attraction_subtype_name"] = subtype_result.name
+            attraction_item["classification_source"] = subtype_result.source
+            attraction_item["classification_mapping_version"] = subtype_result.version
+        else:
+            # Req 2.3: unmapped code → classification_review
+            if "classification_review" not in issues:
+                issues.append("classification_review")
+
+        attraction_item["quality_status"] = _quality_status(issues)
+        attraction_item["review_queues"] = _dedupe(issues)
+        return attraction_item
 
     return {
         **common_item,
@@ -455,7 +615,7 @@ def _classify_domain(contenttypeid: str, source_array: str) -> str:
     if source_array == "festivals" or contenttypeid == "15":
         return "festival"
     if contenttypeid == "39":
-        return "restaurant"
+        return "excluded"
     if contenttypeid in {"12", "14", "28"}:
         return "attraction"
     return "excluded"

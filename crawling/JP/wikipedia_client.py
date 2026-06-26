@@ -1,8 +1,8 @@
 """
-Wikipedia clients for Japan city acquisition.
+일본 도시 취득용 Wikipedia 클라이언트.
 
-This file handles HTTP access and page extraction helpers for Wikipedia HTML
-pages and the optional MediaWiki API fallback.
+이 파일은 Wikipedia HTML 페이지와 선택적 MediaWiki API 대체 경로를 위한
+HTTP 접근 및 페이지 추출 도우미를 처리한다.
 """
 
 from __future__ import annotations
@@ -18,6 +18,8 @@ from typing import Any, Final, Protocol
 import requests
 from bs4 import BeautifulSoup
 
+from crawling.JP.title_filters import is_non_page_title
+
 
 WIKIPEDIA_API: Final[str] = "https://{lang}.wikipedia.org/w/api.php"
 WIKIPEDIA_PAGE: Final[str] = "https://{lang}.wikipedia.org/wiki/{title}"
@@ -27,6 +29,10 @@ DEFAULT_USER_AGENT: Final[str] = "LovvCityAcquisition/0.1"
 class WikipediaClient(Protocol):
     def fetch_page(self, lang: str, title: str) -> dict[str, Any]:
         ...
+
+
+class MediaWikiRetryStateError(RuntimeError):
+    pass
 
 
 class MediaWikiClient:
@@ -91,7 +97,7 @@ class MediaWikiClient:
                 retry_after = error.headers.get("Retry-After")
                 wait_seconds = float(retry_after) if retry_after and retry_after.isdigit() else 10.0
                 time.sleep(wait_seconds)
-        raise RuntimeError("Unreachable MediaWiki retry state.")
+        raise MediaWikiRetryStateError
 
 
 class WikipediaHtmlClient:
@@ -173,8 +179,8 @@ def _extract_legacy_sections(content: BeautifulSoup) -> tuple[list[str], list[tu
     lead_paragraphs: list[str] = []
     sections: list[tuple[str, list[str]]] = []
     current_section: tuple[str, list[str]] | None = None
-    for node in content.find_all(["p", "h2"], recursive=False):
-        if node.name == "h2":
+    for node in content.find_all(["p", "h2", "h3"], recursive=False):
+        if node.name in {"h2", "h3"}:
             headline = node.find(class_="mw-headline")
             heading = _clean_html_text((headline or node).get_text(""))
             if heading:
@@ -194,14 +200,18 @@ def _extract_legacy_sections(content: BeautifulSoup) -> tuple[list[str], list[tu
 def _extract_parsoid_sections(content: BeautifulSoup) -> tuple[list[str], list[tuple[str, list[str]]]]:
     lead_paragraphs: list[str] = []
     sections: list[tuple[str, list[str]]] = []
-    for section in content.find_all("section", recursive=False):
+    for section in content.find_all("section"):
         section_id = str(section.get("data-mw-section-id") or "")
-        paragraphs = [_clean_html_text(paragraph.get_text("")) for paragraph in section.find_all("p")]
+        paragraphs = [_clean_html_text(paragraph.get_text("")) for paragraph in section.find_all("p", recursive=False)]
         paragraphs = [paragraph for paragraph in paragraphs if paragraph]
         if section_id == "0":
             lead_paragraphs.extend(paragraphs)
             continue
-        heading_node = section.find("h2")
+        heading_node = section.find(["h2", "h3"], recursive=False)
+        if heading_node is None:
+            heading_container = section.find("div", class_=re.compile(r"\bmw-heading\b"), recursive=False)
+            if heading_container is not None:
+                heading_node = heading_container.find(["h2", "h3"], recursive=False)
         heading = _clean_html_text(heading_node.get_text("") if heading_node else str(section.get("aria-labelledby") or ""))
         if heading and paragraphs:
             sections.append((heading, paragraphs))
@@ -236,9 +246,14 @@ def _external_links(soup: BeautifulSoup) -> list[dict[str, str]]:
 
 def _language_links(soup: BeautifulSoup) -> list[dict[str, str]]:
     links: list[dict[str, str]] = []
-    for anchor in soup.find_all("a", href=True, hreflang=True):
+    language_anchors = soup.select("li.interlanguage-link a[href][hreflang]")
+    if not language_anchors:
+        language_anchors = soup.find_all("a", href=True, hreflang=True)
+    for anchor in language_anchors:
         lang = str(anchor["hreflang"])
         title = _title_from_wiki_href(str(anchor["href"]))
+        if is_non_page_title(title):
+            continue
         item = {"lang": lang, "title": title}
         if title and item not in links:
             links.append(item)
@@ -268,23 +283,5 @@ def first_page(payload: dict[str, Any]) -> dict[str, Any]:
     return page
 
 
-def linked_or_same_page(
-    client: WikipediaClient,
-    target_lang: str,
-    fallback_title: str,
-    source_lang: str,
-) -> dict[str, Any]:
-    source_page = first_page(client.fetch_page(source_lang, fallback_title))
-    linked_title = langlink_title(source_page, target_lang) or fallback_title
-    return first_page(client.fetch_page(target_lang, linked_title))
-
-
-def langlink_title(page: dict[str, Any], lang: str) -> str | None:
-    for link in page.get("langlinks", []) or []:
-        if link.get("lang") == lang and link.get("title"):
-            return str(link["title"])
-    return None
-
-
-# File History
-# 2026-06-04: Split Wikipedia access from the CLI module.
+# 파일 이력
+# 2026-06-04: CLI 모듈에서 Wikipedia 접근을 분리했다.

@@ -1,8 +1,7 @@
 """
-Shared data models for Japan city acquisition.
+일본 도시 취득용 공통 데이터 모델.
 
-This file defines reusable record structures used by the Wikipedia client,
-normalizer, and pipeline layers.
+이 파일은 Wikipedia 클라이언트, 정규화, 파이프라인 계층에서 재사용하는 레코드 구조를 정의한다.
 """
 
 from __future__ import annotations
@@ -15,7 +14,7 @@ STATUS_NEEDS_REVIEW = "needs_review"
 STATUS_MISSING = "missing"
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class PrefectureReference:
     prefecture_id: str
     name_ko: str
@@ -24,7 +23,7 @@ class PrefectureReference:
     region: str
 
 
-@dataclass
+@dataclass(slots=True)  # noqa: MUTABLE_OK
 class NormalizedRecord:
     source_name: str
     source_url: str
@@ -36,16 +35,21 @@ class NormalizedRecord:
     verification_note: str | None = None
 
 
-@dataclass
+@dataclass(slots=True)  # noqa: MUTABLE_OK
 class PrefectureRecord(NormalizedRecord):
     prefecture_id: str = ""
     name_ko: str = ""
     name_ja: str = ""
     name_en: str = ""
     region: str = ""
+    latitude: float | None = None
+    longitude: float | None = None
+    description: str = ""
+    geography_description: str = ""
+    climate_table: dict[str, str] | None = None
 
 
-@dataclass
+@dataclass(slots=True)  # noqa: MUTABLE_OK
 class CityRecord(NormalizedRecord):
     city_id: str = ""
     city_name_ko: str = ""
@@ -61,5 +65,5 @@ class CityRecord(NormalizedRecord):
     site_urls: list[str] = field(default_factory=list)
 
 
-# File History
-# 2026-06-04: Split shared acquisition models from the CLI module.
+# 파일 이력
+# 2026-06-04: CLI 모듈에서 공통 취득 모델을 분리했다.

@@ -6,5 +6,5 @@ def test_should_vectorize_excludes_visitor_statistics() -> None:
 
 
 def test_should_vectorize_requires_passed_quality() -> None:
-    assert should_vectorize({"entity_type": "restaurant", "quality_status": "review"}) is False
-    assert should_vectorize({"entity_type": "restaurant", "quality_status": "passed"}) is True
+    assert should_vectorize({"entity_type": "attraction", "quality_status": "review"}) is False
+    assert should_vectorize({"entity_type": "attraction", "quality_status": "passed"}) is True

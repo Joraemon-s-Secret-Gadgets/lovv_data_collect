@@ -1,8 +1,8 @@
 """
-Korean display-name fallbacks for Tokyo municipalities.
+도쿄 지자체용 한국어 표시명 대체값.
 
-This file is used only when Korean Wikipedia does not provide a linked page.
-Fallback values are marked for review by the normalizer.
+이 파일은 한국어 Wikipedia가 연결 문서를 제공하지 않을 때만 사용된다.
+대체값은 정규화 단계에서 검토 대상으로 표시된다.
 """
 
 from __future__ import annotations
@@ -78,5 +78,5 @@ def korean_name_for_japanese_title(title: str) -> str:
     return TOKYO_MUNICIPALITY_KO_NAMES.get(title, "")
 
 
-# File History
-# 2026-06-04: Added Korean fallback names for Tokyo municipalities.
+# 파일 이력
+# 2026-06-04: 도쿄 지자체용 한국어 대체명을 추가했다.

@@ -1,8 +1,7 @@
 """
-Japan prefecture reference data.
+일본 도도부현 참조 데이터.
 
-This file owns prefecture lookup and detection helpers used by city
-normalization.
+이 파일은 도시 정규화에서 사용하는 도도부현 조회와 판별 도우미를 담당한다.
 """
 
 from __future__ import annotations
@@ -83,6 +82,6 @@ def find_prefecture(prefecture_id: str) -> PrefectureReference | None:
     return None
 
 
-# File History
-# 2026-06-04: Split prefecture reference lookup from the CLI module.
+# 파일 이력
+# 2026-06-04: CLI 모듈에서 도도부현 참조 조회를 분리했다.
 

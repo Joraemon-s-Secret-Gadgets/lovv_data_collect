@@ -1,2 +1,2 @@
-"""Data acquisition pipeline modules."""
+"""데이터 취득 파이프라인 모듈."""
 

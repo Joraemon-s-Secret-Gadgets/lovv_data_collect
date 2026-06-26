@@ -1,8 +1,7 @@
 """
-Wikipedia-first city acquisition pipeline orchestration.
+Wikipedia 우선 도시 취득 파이프라인 조율.
 
-This file coordinates page fetches, normalization, target loading, and JSON
-output writing.
+이 파일은 페이지 가져오기, 정규화, 대상 로딩, JSON 출력 쓰기를 조율한다.
 """
 
 from __future__ import annotations
@@ -11,17 +10,30 @@ import json
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Final
 
+from crawling.JP.climate_inheritance import fill_missing_city_climate_tables
 from crawling.JP.models import CityRecord, NormalizedRecord, PrefectureRecord
-from crawling.JP.normalizer import build_city_record, build_prefecture_record
+from crawling.JP.normalizer import build_city_record
+from crawling.JP.prefecture_enrichment import build_prefecture_record_for_city
 from crawling.JP.prefectures import find_prefecture
+from crawling.JP.title_filters import is_valid_linked_title
 from crawling.JP.wikipedia_client import WikipediaClient, WikipediaHtmlClient, first_page
 
 
-TOKYO_PREFECTURE_ID = "JP-13"
+TOKYO_PREFECTURE_ID: Final[str] = "JP-13"
+type PagePayload = dict[str, str | list[dict[str, str | float]]]
 
 
-@dataclass(frozen=True)
+class TargetInputError(ValueError):
+    pass
+
+
+class NonTokyoCityError(ValueError):
+    pass
+
+
+@dataclass(frozen=True, slots=True)
 class PageTarget:
     title: str
     lang: str = "ko"
@@ -38,7 +50,7 @@ def load_targets(
         return [PageTarget(title=title, lang=default_lang, prefecture_id=default_prefecture_id) for title in titles]
     payload = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(payload, list):
-        raise ValueError("Input file must be a JSON array of city page titles or target objects.")
+        raise TargetInputError("Input file must be a JSON array of city page titles or target objects.")
     targets: list[PageTarget] = []
     for item in payload:
         if isinstance(item, str):
@@ -52,7 +64,7 @@ def load_targets(
                 )
             )
         else:
-            raise ValueError("Input file must contain strings or objects with a title field.")
+            raise TargetInputError("Input file must contain strings or objects with a title field.")
     return targets
 
 
@@ -79,21 +91,23 @@ def acquire_city_data(
         )
         city = build_city_record(pages, collected_at, fallback_prefecture_id=target.prefecture_id)
         if city.prefecture_id != TOKYO_PREFECTURE_ID:
-            raise ValueError(
+            raise NonTokyoCityError(
                 f"First implementation target is limited to Tokyo Metropolis cities: {target.lang}:{target.title}"
             )
         city_records.append(city)
 
         prefecture = find_prefecture(city.prefecture_id)
         if prefecture is not None and prefecture.prefecture_id not in prefectures_by_id:
-            prefectures_by_id[prefecture.prefecture_id] = build_prefecture_record(
-                prefecture=prefecture,
-                collected_at=collected_at,
-                source_url=city.source_url,
+            prefectures_by_id[prefecture.prefecture_id] = build_prefecture_record_for_city(
+                wikipedia,
+                prefecture,
+                collected_at,
+                city.source_url,
             )
 
     output_dir.mkdir(parents=True, exist_ok=True)
     prefecture_records = sorted(prefectures_by_id.values(), key=lambda item: item.prefecture_id)
+    city_records = fill_missing_city_climate_tables(city_records, prefecture_records)
     write_json(output_dir / "prefectures.json", prefecture_records)
     write_json(output_dir / "cities.json", city_records)
     return prefecture_records, city_records
@@ -107,10 +121,11 @@ def collect_pages(
 ) -> dict[str, dict]:
     source_page = prefetched_source_page or first_page(client.fetch_page(target.lang, target.title))
     if target.lang == "ko":
-        ja_page = {}
+        ja_page = _linked_title_stub(source_page, "ja")
         if not _has_coordinates(source_page) and not _has_coordinate_template(source_page):
             if not _linked_title_from_source(source_page, "ja"):
                 source_page = first_page(client.fetch_page(target.lang, target.title)) or source_page
+                ja_page = _linked_title_stub(source_page, "ja")
             ja_page = _linked_page_from_source(client, source_page, "ja", target, prefetched_linked_pages)
         pages = {
             "source": source_page,
@@ -141,7 +156,12 @@ def _coerce_targets(titles: list[str] | list[PageTarget], source_lang: str) -> l
         return []
     first = titles[0]
     if isinstance(first, PageTarget):
-        return titles  # type: ignore[return-value]
+        targets: list[PageTarget] = []
+        for title in titles:
+            if not isinstance(title, PageTarget):
+                raise TargetInputError("Input target list must not mix PageTarget objects and raw titles.")
+            targets.append(title)
+        return targets
     return [PageTarget(title=str(title), lang=source_lang) for title in titles]
 
 
@@ -223,7 +243,7 @@ def _linked_page_from_source(
     target_lang: str,
     target: PageTarget,
     prefetched_linked_pages: dict[tuple[str, str], dict] | None = None,
-) -> dict:
+) -> PagePayload:
     linked_title = _linked_title_from_source(source_page, target_lang)
     if linked_title and prefetched_linked_pages:
         prefetched = prefetched_linked_pages.get((target_lang, linked_title))
@@ -238,12 +258,13 @@ def _linked_page_from_source(
 
 def _linked_title_from_source(source_page: dict, target_lang: str) -> str:
     for link in source_page.get("langlinks", []) or []:
-        if link.get("lang") == target_lang and link.get("title"):
-            return str(link["title"])
+        linked_title = str(link.get("title") or "")
+        if link.get("lang") == target_lang and linked_title and is_valid_linked_title(target_lang, linked_title):
+            return linked_title
     return ""
 
 
-def _linked_title_stub(source_page: dict, target_lang: str) -> dict:
+def _linked_title_stub(source_page: dict, target_lang: str) -> PagePayload:
     linked_title = _linked_title_from_source(source_page, target_lang)
     if linked_title:
         return {"title": linked_title}
@@ -255,5 +276,5 @@ def write_json(path: Path, records: list[NormalizedRecord]) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-# File History
-# 2026-06-04: Split pipeline orchestration from the CLI module.
+# 파일 이력
+# 2026-06-04: CLI 모듈에서 파이프라인 오케스트레이션을 분리했다.

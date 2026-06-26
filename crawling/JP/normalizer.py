@@ -1,7 +1,7 @@
 """
-City and prefecture normalization helpers.
+도시 및 도도부현 정규화 도우미.
 
-This file converts Wikipedia page payloads into normalized records.
+이 파일은 Wikipedia 페이지 페이로드를 정규화된 레코드로 변환한다.
 """
 
 from __future__ import annotations
@@ -413,7 +413,7 @@ def _is_official_or_tourism_url(lowered_url: str) -> bool:
     )
 
 
-def _status(value: object, review_if_present: bool = False) -> str:
+def _status(value: str | int | float | list[str] | None, review_if_present: bool = False) -> str:
     if value is None or value == "":
         return STATUS_MISSING
     if review_if_present:
@@ -429,5 +429,5 @@ def _climate_status(value: dict[str, str] | None) -> str:
     return STATUS_COLLECTED
 
 
-# File History
-# 2026-06-04: Split city normalization from the CLI module.
+# 파일 이력
+# 2026-06-04: CLI 모듈에서 도시 정규화를 분리했다.

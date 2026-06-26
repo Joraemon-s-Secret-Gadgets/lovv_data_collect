@@ -215,7 +215,8 @@ class CityWikipediaAcquisitionKRTest(unittest.TestCase):
     def test_detect_province_from_text(self) -> None:
         self.assertEqual("KR-42", detect_province(["이 곳은 강원특별자치도 춘천시입니다."]).prefecture_id)
         self.assertEqual("KR-47", detect_province(["Located in Gyeongsangbuk-do area."]).prefecture_id)
-        self.assertIsNone(detect_province(["서울특별시에 있습니다."]))
+        self.assertEqual("KR-11", detect_province(["서울특별시에 있습니다."]).prefecture_id)
+        self.assertIsNone(detect_province(["관련 없는 텍스트입니다."]))
 
     def test_find_province_by_id(self) -> None:
         self.assertEqual("경상북도", find_province("KR-47").name_ko)

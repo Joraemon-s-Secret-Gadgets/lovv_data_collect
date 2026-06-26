@@ -4,18 +4,18 @@ from kr_vector_index.upsert import build_vector_record, chunked, put_vectors_cli
 
 def test_build_vector_record_matches_s3vectors_shape() -> None:
     chunk = VectorChunk(
-        key="restaurant#100#0",
-        place_id="restaurant#100",
-        embedding_text="식당 문서",
-        metadata={"country": "KR", "entity_type": "restaurant"},
+        key="attraction#100#0",
+        place_id="attraction#100",
+        embedding_text="관광지 문서",
+        metadata={"country": "KR", "entity_type": "attraction"},
     )
 
     record = build_vector_record(chunk, [0.1, 0.2, 0.3])
 
     assert record == {
-        "key": "restaurant#100#0",
+        "key": "attraction#100#0",
         "data": {"float32": [0.1, 0.2, 0.3]},
-        "metadata": {"country": "KR", "entity_type": "restaurant"},
+        "metadata": {"country": "KR", "entity_type": "attraction"},
     }
 
 
@@ -47,7 +47,7 @@ def test_put_vectors_cli_calls_s3vectors_put_vectors(monkeypatch) -> None:
     written = put_vectors_cli(
         [
             {
-                "key": "restaurant#100#0",
+                "key": "attraction#100#0",
                 "data": {"float32": [0.1, 0.2]},
                 "metadata": {"country": "KR"},
             }

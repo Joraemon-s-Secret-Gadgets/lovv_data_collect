@@ -1,4 +1,4 @@
-"""Tests for Wikipedia-first city data acquisition."""
+"""Wikipedia 우선 도시 데이터 취득 테스트."""
 
 from __future__ import annotations
 
@@ -606,5 +606,5 @@ if __name__ == "__main__":
     unittest.main()
 
 
-# File History
-# 2026-06-04: Created tests for Wikipedia-first city acquisition.
+# 파일 이력
+# 2026-06-04: Wikipedia 우선 도시 취득 테스트를 생성했다.

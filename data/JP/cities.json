@@ -2,289 +2,7 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%80%EC%9A%94%EB%8B%A4%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-CHIYODA-TOKYO",
-    "city_name_ko": "지요다구",
-    "city_name_ja": "",
-    "city_name_en": "Chiyoda, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.693944,
-    "longitude": 139.75361,
-    "description": "지요다구(일본어: 千代田区 지요다쿠[*])는 일본 도쿄도의 특별구 가운데 하나이다. 일본의 황궁(궁내청), 입법부, 사법부, 행정부 모든 주요 기관들이 이 지역에 있으며, 정부기관, 공공기관들도 대다수 밀집되어 있다. 또한 마루노우치와 오테마치를 중심으로 일본의 경제와 금융 중심지를 형성하며, 일본 언론의 심장이기도 하다. 한 마디로 도쿄도에서 가장 중요한 지역으로, 도쿄도의 중심인 도심(Downtown)이다. 2019년 6월 기준으로 추계 인구는 64,894명이고 인구밀도는 5,230명/km2로 특별구 중 가장 낮다. 총 면적은 11.66km2이고 고쿄가 12%를 차지한다.",
-    "geography_description": "지요다구는 도쿄 중앙의 심장부에 위치해 있다. 구의 중심 지역은 고쿄가 차지하고 있다. 동쪽은 주오구와 접하고 있고 도쿄역이 위치해 있다. 남쪽은 미나토구와 접하고 히비야 공원과 국회의사당에 둘러싸여 있다. 구의 대부분을 행정 기관들이 차지하고 있다. 서쪽과 북서쪽은 주로 상류층의 거주지로 야스쿠니 신사 또한 이곳에 있다. 북쪽과 북동쪽에는 몇몇 주택 지구와 아키하바라와 같은 상업 지구가 있다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.chiyoda.lg.jp/",
-      "https://web.archive.org/web/20051029083026/http://kugikai.city.chiyoda.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%A3%BC%EC%98%A4%EA%B5%AC_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-CHUO-TOKYO",
-    "city_name_ko": "주오구",
-    "city_name_ja": "",
-    "city_name_en": "Chūō, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.670583,
-    "longitude": 139.771972,
-    "description": "주오구(일본어: 中央区 주오쿠[*])는 일본 도쿄도의 심장부에 있는 특별구 중 하나이다.\n\n에도 시대에는 각 지방으로 가는 길의 기점인 된 다리 니혼바시(日本橋)가 만들어지고 그 주변의 니혼바시 지역은 상업 지역으로 발전했다. 현재도 니혼바시 지역 일본은행 본점, 도쿄 증권거래소 등 일본 경제의 중추와 미쓰코시 본점, 다카시마야 도쿄점 등 일본을 대표하는 백화점이 집중하고 있다.\n\n또 일본을 대표하는 고급 상가인 긴자(銀座), 전국에서 생선류가 모이는 쓰키지 시장도 주오구에 있다.",
-    "geography_description": "주오구는 도쿄의 중심 지역으로 5개의 특별구(지요다구, 미나토구, 다이토구, 스미다구, 고토구)에 둘러싸여 있다.\n\n행정적으로 주오구는 3개의 구역(니혼바시, 교바시, 쓰키시마)으로 나뉜다. 니혼바시와 교바시는 도쿄역 동쪽의 두드러진 상업 지역으로 긴자, 쓰키지와 같은 유명한 지구들이 있다. 쓰키시마는 도쿄만에 의해 분리되어 있으며 콘도 건물이 주를 이룬다.\n\n제2차 세계 대전까지 이 지역은 강과 운하가 교차하던 지역으로 작은 배가 주요 교통 수단으로 사용되었다. 전쟁 후 이 수로들이 새로운 도로와 건물, 고속도로 건설을 위해 매립되었다. 그러나 이전의 수로들은 특별구 내의 많은 지구들의 경계선의 기준이 되었다. 스미다강은 구의 동쪽 경계를 이룬다.\n\n주오구는 도쿄에서 다이토구에 이어 두 번째로 작은 구이다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.chuo.lg.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%82%98%ED%86%A0%EA%B5%AC_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-MINATO-TOKYO",
-    "city_name_ko": "미나토구",
-    "city_name_ja": "",
-    "city_name_en": "Minato, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.658028,
-    "longitude": 139.751528,
-    "description": "미나토구(일본어: 港区 미나토쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 미나토구에는 48개국의 대사관이 있으며, 혼다, 미쓰비시 중공업, 미쓰비시 자동차공업, NEC, 소니, 후지쯔, 도시바, 모리나가 제과, 토소, JCB를 포함한 많은 회사들의 본사가 있다. 시부야구와 마찬가지로 구내 각지에 애니메이션 캐릭터 매장이 많으며, 특히 오다이바(お台場) 지역이 그 절정을 이룬다.",
-    "geography_description": "미나토구는 고쿄의 남서쪽에 위치하고 지요다구, 주오구, 고토구, 시나가와구, 시부야구, 신주쿠구와 접한다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.minato.tokyo.jp/",
-      "https://www.city.minato.tokyo.jp/kyouikucenter/kodomo/kids/machinami/taishikan/index.html"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%A0%EC%A3%BC%EC%BF%A0%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-SHINJUKU",
-    "city_name_ko": "신주쿠구",
-    "city_name_ja": "",
-    "city_name_en": "Shinjuku",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.69389,
-    "longitude": 139.703417,
-    "description": "신주쿠구(일본어: 新宿区 신주쿠쿠[*], 문화어: 신쥬꾸구)는 일본 도쿄도의 특별구이다. 도쿄의 주요 상업과 행정 중심지로 세계에서 제일 승객이 많은 철도역인 신주쿠역과 도쿄도의 행정 중심인 도쿄도청이 있다.",
-    "geography_description": "신주쿠구는 도쿄도의 다른 6개 구에 둘러싸여 있다. 동쪽으로 지요다구, 북쪽으로 분쿄구와 도시마구, 서쪽으로 나카노구, 남쪽으로 시부야구, 미나토구와 접한다. 게다가 네리마구가 몇 미터 떨어지지 않은 곳에 있다. 신주쿠구에서 가장 높은 곳은 다카다노바바역과 신오쿠보역 동쪽의 도야마 공원에 있는 하코네산으로 44.6m이다. 가장 낮은 곳은 리다바시 지구로 4.2m이다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.shinjuku.lg.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EB%B6%84%EC%BF%84%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-BUNKYO",
-    "city_name_ko": "분쿄구",
-    "city_name_ja": "",
-    "city_name_en": "Bunkyō",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.708,
-    "longitude": 139.75225,
-    "description": "분쿄구(일본어: 文京区 분쿄쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 도쿄 구부의 중앙에 위치하며 주거와 교육 중심지이다. 메이지 시대에 학자와 정치가들, 그리고 나쓰메 소세키와 같은 문학가가 이곳에서 태어났다. 출판, 인쇄, 첨단 의료 산업이 분쿄 경제에서 중요한 역할을 한다. 최근에는 IT 산업이 번성하고 있다. 분쿄에는 대형 병원과 도쿄 돔, 유도의 고도칸, 도쿄 대학이 있다.",
-    "geography_description": "분쿄구는 일본 도쿄도에 위치한 지자체이며, 대표 좌표는 위도 35.708, 경도 139.75225이다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.bunkyo.lg.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EB%8B%A4%EC%9D%B4%ED%86%A0%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-TAITO",
-    "city_name_ko": "다이토구",
-    "city_name_ja": "",
-    "city_name_en": "Taitō",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.712611,
-    "longitude": 139.779972,
-    "description": "다이토구(일본어: 台東区 다이토쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 에도 시대부터 번화가로 발전한 아사쿠사, 도쿄의 터미널역 중 하나인 우에노역이 이곳에 있다.",
-    "geography_description": "도쿄도 구부의 북동쪽에 위치한다. 분쿄구, 스미다구, 아라카와구, 주오구, 지요다구와 접한다. 스미다강이 구를 흐른다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.taito.lg.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AF%B8%EB%8B%A4%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-SUMIDA-TOKYO",
-    "city_name_ko": "스미다구",
-    "city_name_ja": "",
-    "city_name_en": "Sumida, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.710694,
-    "longitude": 139.8015,
-    "description": "스미다구(일본어: 墨田区 스미다쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 시타마치(일본어: 下町)라고 불리는 전쟁 이전부터의 주택 지역이다. 또 프로 스모 대회가 열리는 료고쿠 국기관이 있다.\n\n2019년 4월 1일 기준 인구는 268,192명으로 집계됐고, 인구 밀도는 19,361km2였다. 면적은 13.77 km2이다.",
-    "geography_description": "스미다구는 도쿄의 본토 부분의 북동부에 위치한다. 주요 강으로 스미다강과 아라카와강이 있으며 구의 경계 일부를 이룬다. 북쪽으로 아다치구, 북서쪽으로 아라카와구, 동쪽으로 가쓰시카구, 남동쪽으로 에도가와구, 서쪽으로 다이토구, 남서쪽으로 주오구, 남쪽으로 고토구와 접한다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.sumida.lg.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%ED%86%A0%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
       "city_name_ja": "collected",
@@ -295,7 +13,324 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-CHIYODA-TOKYO",
+    "city_name_ko": "지요다구",
+    "city_name_ja": "千代田区",
+    "city_name_en": "Chiyoda, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.693944,
+    "longitude": 139.75361,
+    "description": "지요다구(일본어: 千代田区 지요다쿠[*])는 일본 도쿄도의 특별구 가운데 하나이다. 일본의 황궁(궁내청), 입법부, 사법부, 행정부 모든 주요 기관들이 이 지역에 있으며, 정부기관, 공공기관들도 대다수 밀집되어 있다. 또한 마루노우치와 오테마치를 중심으로 일본의 경제와 금융 중심지를 형성하며, 일본 언론의 심장이기도 하다. 한 마디로 도쿄도에서 가장 중요한 지역으로, 도쿄도의 중심인 도심(Downtown)이다. 2019년 6월 기준으로 추계 인구는 64,894명이고 인구밀도는 5,230명/km2로 특별구 중 가장 낮다. 총 면적은 11.66km2이고 고쿄가 12%를 차지한다.",
+    "geography_description": "지요다구는 도쿄 중앙의 심장부에 위치해 있다. 구의 중심 지역은 고쿄가 차지하고 있다. 동쪽은 주오구와 접하고 있고 도쿄역이 위치해 있다. 남쪽은 미나토구와 접하고 히비야 공원과 국회의사당에 둘러싸여 있다. 구의 대부분을 행정 기관들이 차지하고 있다. 서쪽과 북서쪽은 주로 상류층의 거주지로 야스쿠니 신사 또한 이곳에 있다. 북쪽과 북동쪽에는 몇몇 주택 지구와 아키하바라와 같은 상업 지구가 있다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "지요다구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.chiyoda.lg.jp/",
+      "https://web.archive.org/web/20051029083026/http://kugikai.city.chiyoda.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%A3%BC%EC%98%A4%EA%B5%AC_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-CHUO-TOKYO",
+    "city_name_ko": "주오구",
+    "city_name_ja": "中央区 (東京都)",
+    "city_name_en": "Chūō, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.670583,
+    "longitude": 139.771972,
+    "description": "주오구(일본어: 中央区 주오쿠[*])는 일본 도쿄도의 심장부에 있는 특별구 중 하나이다.\n\n에도 시대에는 각 지방으로 가는 길의 기점인 된 다리 니혼바시(日本橋)가 만들어지고 그 주변의 니혼바시 지역은 상업 지역으로 발전했다. 현재도 니혼바시 지역 일본은행 본점, 도쿄 증권거래소 등 일본 경제의 중추와 미쓰코시 본점, 다카시마야 도쿄점 등 일본을 대표하는 백화점이 집중하고 있다.\n\n또 일본을 대표하는 고급 상가인 긴자(銀座), 전국에서 생선류가 모이는 쓰키지 시장도 주오구에 있다.",
+    "geography_description": "주오구는 도쿄의 중심 지역으로 5개의 특별구(지요다구, 미나토구, 다이토구, 스미다구, 고토구)에 둘러싸여 있다.\n\n행정적으로 주오구는 3개의 구역(니혼바시, 교바시, 쓰키시마)으로 나뉜다. 니혼바시와 교바시는 도쿄역 동쪽의 두드러진 상업 지역으로 긴자, 쓰키지와 같은 유명한 지구들이 있다. 쓰키시마는 도쿄만에 의해 분리되어 있으며 콘도 건물이 주를 이룬다.\n\n제2차 세계 대전까지 이 지역은 강과 운하가 교차하던 지역으로 작은 배가 주요 교통 수단으로 사용되었다. 전쟁 후 이 수로들이 새로운 도로와 건물, 고속도로 건설을 위해 매립되었다. 그러나 이전의 수로들은 특별구 내의 많은 지구들의 경계선의 기준이 되었다. 스미다강은 구의 동쪽 경계를 이룬다.\n\n주오구는 도쿄에서 다이토구에 이어 두 번째로 작은 구이다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "주오구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.chuo.lg.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EB%AF%B8%EB%82%98%ED%86%A0%EA%B5%AC_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-MINATO-TOKYO",
+    "city_name_ko": "미나토구",
+    "city_name_ja": "港区 (東京都)",
+    "city_name_en": "Minato, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.658028,
+    "longitude": 139.751528,
+    "description": "미나토구(일본어: 港区 미나토쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 미나토구에는 48개국의 대사관이 있으며, 혼다, 미쓰비시 중공업, 미쓰비시 자동차공업, NEC, 소니, 후지쯔, 도시바, 모리나가 제과, 토소, JCB를 포함한 많은 회사들의 본사가 있다. 시부야구와 마찬가지로 구내 각지에 애니메이션 캐릭터 매장이 많으며, 특히 오다이바(お台場) 지역이 그 절정을 이룬다.",
+    "geography_description": "미나토구는 고쿄의 남서쪽에 위치하고 지요다구, 주오구, 고토구, 시나가와구, 시부야구, 신주쿠구와 접한다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "미나토구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.minato.tokyo.jp/",
+      "https://www.city.minato.tokyo.jp/kyouikucenter/kodomo/kids/machinami/taishikan/index.html"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%A0%EC%A3%BC%EC%BF%A0%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-SHINJUKU",
+    "city_name_ko": "신주쿠구",
+    "city_name_ja": "新宿区",
+    "city_name_en": "Shinjuku",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.69389,
+    "longitude": 139.703417,
+    "description": "신주쿠구(일본어: 新宿区 신주쿠쿠[*], 문화어: 신쥬꾸구)는 일본 도쿄도의 특별구이다. 도쿄의 주요 상업과 행정 중심지로 세계에서 제일 승객이 많은 철도역인 신주쿠역과 도쿄도의 행정 중심인 도쿄도청이 있다.",
+    "geography_description": "신주쿠구는 도쿄도의 다른 6개 구에 둘러싸여 있다. 동쪽으로 지요다구, 북쪽으로 분쿄구와 도시마구, 서쪽으로 나카노구, 남쪽으로 시부야구, 미나토구와 접한다. 게다가 네리마구가 몇 미터 떨어지지 않은 곳에 있다. 신주쿠구에서 가장 높은 곳은 다카다노바바역과 신오쿠보역 동쪽의 도야마 공원에 있는 하코네산으로 44.6m이다. 가장 낮은 곳은 리다바시 지구로 4.2m이다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "신주쿠구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.shinjuku.lg.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EB%B6%84%EC%BF%84%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-BUNKYO",
+    "city_name_ko": "분쿄구",
+    "city_name_ja": "文京区",
+    "city_name_en": "Bunkyō",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.708,
+    "longitude": 139.75225,
+    "description": "분쿄구(일본어: 文京区 분쿄쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 도쿄 구부의 중앙에 위치하며 주거와 교육 중심지이다. 메이지 시대에 학자와 정치가들, 그리고 나쓰메 소세키와 같은 문학가가 이곳에서 태어났다. 출판, 인쇄, 첨단 의료 산업이 분쿄 경제에서 중요한 역할을 한다. 최근에는 IT 산업이 번성하고 있다. 분쿄에는 대형 병원과 도쿄 돔, 유도의 고도칸, 도쿄 대학이 있다.",
+    "geography_description": "분쿄구는 일본 도쿄도에 위치한 지자체이며, 대표 좌표는 위도 35.708, 경도 139.75225이다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "분쿄구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.bunkyo.lg.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EB%8B%A4%EC%9D%B4%ED%86%A0%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-TAITO",
+    "city_name_ko": "다이토구",
+    "city_name_ja": "台東区",
+    "city_name_en": "Taitō",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.712611,
+    "longitude": 139.779972,
+    "description": "다이토구(일본어: 台東区 다이토쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 에도 시대부터 번화가로 발전한 아사쿠사, 도쿄의 터미널역 중 하나인 우에노역이 이곳에 있다.",
+    "geography_description": "도쿄도 구부의 북동쪽에 위치한다. 분쿄구, 스미다구, 아라카와구, 주오구, 지요다구와 접한다. 스미다강이 구를 흐른다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "다이토구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.taito.lg.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AF%B8%EB%8B%A4%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-SUMIDA-TOKYO",
+    "city_name_ko": "스미다구",
+    "city_name_ja": "墨田区",
+    "city_name_en": "Sumida, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.710694,
+    "longitude": 139.8015,
+    "description": "스미다구(일본어: 墨田区 스미다쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 시타마치(일본어: 下町)라고 불리는 전쟁 이전부터의 주택 지역이다. 또 프로 스모 대회가 열리는 료고쿠 국기관이 있다.\n\n2019년 4월 1일 기준 인구는 268,192명으로 집계됐고, 인구 밀도는 19,361km2였다. 면적은 13.77 km2이다.",
+    "geography_description": "스미다구는 도쿄의 본토 부분의 북동부에 위치한다. 주요 강으로 스미다강과 아라카와강이 있으며 구의 경계 일부를 이룬다. 북쪽으로 아다치구, 북서쪽으로 아라카와구, 동쪽으로 가쓰시카구, 남동쪽으로 에도가와구, 서쪽으로 다이토구, 남서쪽으로 주오구, 남쪽으로 고토구와 접한다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "스미다구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.sumida.lg.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%ED%86%A0%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -313,9 +348,14 @@
     "description": "고토구(일본어: 江東区 고토쿠[*])는 일본 도쿄도에 있는 23개의 특별구 중 하나이다.",
     "geography_description": "도쿄만 해안 지역의 주오구와 에도가와구 사이에 위치한다. 내륙 쪽으로는 스미다구와 접한다. 땅의 대부분이 매립된 곳으로 오래된 절이나 신사가 거의 없다.\n\n도쿄도의 동쪽에 위치하고 서쪽으로 스미다강, 동쪽으로 아라카와강에 의해 경계 지어진다. 주요 지구로는 가메이도, 기바, 기요스미, 몬젠나카초, 시라카와, 도요스가 있다. 고토구 아리아케의 새로이 개발된 해안 지역은 도쿄만 임해부도심 지역의 일부이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "고토구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.koto.lg.jp/",
@@ -325,168 +365,7 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%82%98%EA%B0%80%EC%99%80%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-SHINAGAWA",
-    "city_name_ko": "시나가와구",
-    "city_name_ja": "",
-    "city_name_en": "Shinagawa",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.60917,
-    "longitude": 139.730167,
-    "description": "시나가와구(일본어: 品川区 시나가와쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
-    "geography_description": "시나가와구는 다섯 개의 지구로 이루어져 있다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.shinagawa.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EB%A9%94%EA%B5%AC%EB%A1%9C%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-MEGURO",
-    "city_name_ko": "메구로구",
-    "city_name_ja": "",
-    "city_name_en": "Meguro",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.6415,
-    "longitude": 139.698278,
-    "description": "메구로구(일본어: 目黑区 메구로쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.\n\n메구로구에는 15개국의 대사관과 총영사가 있다. 메구로구는 도쿄에서 가장 땅값이 높은 3대 주거중심 구 중 하나로 메구로구를 이어 시나가와구 그리고 세타가야구가 있다.\n\n메구로구 내에서도 동부에 위치하며 위, 중앙, 아래를 뜻하는 카미, 나카, 시모메구로 그리고 북부에 위치한 히가시야마는 도쿄의 주요 상업중심구 중 하나인 시부야구 바로 밑에 붙어 있어 돈이 있어도 매물이 없어 땅을 살 수 없는 희소성이 매우 높은 동네로 일본을 대표하는 연예인, 사업가, 엘리트 고소득 전문직들이 많이 거주하며, 이외에도 메구로구 남부의 야쿠모, 카키노키자카 및 지유가오카 또한 은퇴한 고액자산가들이 은퇴 후 살고 싶은 동네로 손에 꼽힐정도로 거주환경이 탁월한 구로 꼽힌다.",
-    "geography_description": "메구로구는 네 개의 다른 구들에 둘러싸여 있다. 북동쪽으로 시부야구, 서쪽으로 세타가야구, 남쪽으로 오타구, 남동쪽으로 시나가와구와 접한다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.meguro.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%98%A4%ED%83%80%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-OTA-TOKYO",
-    "city_name_ko": "오타구",
-    "city_name_ja": "",
-    "city_name_en": "Ōta, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.561278,
-    "longitude": 139.716028,
-    "description": "오타구(일본어: 大田区 오타쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 총 면적은 59.46km2로 도쿄 23구 중 가장 넓다.\n\n오타구의 중심은 오타구청과 오타 우체국이 있는 가마타역과 게이큐 가마타역 주변에 위치한다.",
-    "geography_description": "도쿄 23구의 남쪽 끝에 위치한다. 북쪽으로 시나가와구, 메구로구, 세타가야구와 접하고 동쪽으로 고토구와 접한다. 다마강은 가나가와현 가와사키시와의 남쪽과 서쪽 경계를 이룬다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.ota.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%ED%83%80%EA%B0%80%EC%95%BC%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-SETAGAYA",
-    "city_name_ko": "세타가야구",
-    "city_name_ja": "",
-    "city_name_en": "Setagaya",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.646556,
-    "longitude": 139.653222,
-    "description": "세타가야구(일본어: 世田谷区 세타가야쿠[*])는 일본 도쿄도의 특별구이다. 특별구 중에서 면적은 두 번째로 크며, 인구는 가장 많다.[1]",
-    "geography_description": "도쿄 23구의 남서쪽 모퉁이에 위치하고 있다. 다마강을 경계로 세타가야구와 가나가와현이 나뉜다. 다마강 건너편에는 가와사키시가 위치하고 있다. 많은 철도 노선이 도쿄 23구 중심부에서 방사형으로 뻗어 있으며 게이오선, 게이오 이노카시라선, 오다큐 오다와라선, 도큐 덴엔토시선, 도큐 오이마치선, 도큐 메구로선, 도큐 세타가야선, 도큐 도요코선이 세타가야구를 통과한다. 인접한 자치체로는 도쿄도 고마에시, 메구로구, 미타카시, 스기나미구, 시부야구, 오타구, 조후시와 가나가와현 가와사키시 다마구, 다카쓰구, 나카하라구가 있다.\n\n토지 대부분이 무사시노 대지 내에 있어 고도가 낮으며, 남쪽의 다마강 유역은 특히 고도가 낮다. 세타가야구는 도쿄에서 가장 인구가 많은 구로 많은 주거 지역이 있다.\n\n세타가야구는 세타가야 지역, 기타자와 지역, 다마가와 지역, 기누타 지역, 가라스야마 지역의 다섯 개 지역으로 나뉜다. 각각의 지역은 행정 구조의 일부로 각자의 관청을 가진다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.setagaya.lg.jp/",
-      "https://www.city.setagaya.lg.jp/mokuji/shigoto/005/004/d00161784.html"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%B6%80%EC%95%BC%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
       "city_name_ja": "collected",
@@ -497,7 +376,188 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-SHINAGAWA",
+    "city_name_ko": "시나가와구",
+    "city_name_ja": "品川区",
+    "city_name_en": "Shinagawa",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.60917,
+    "longitude": 139.730167,
+    "description": "시나가와구(일본어: 品川区 시나가와쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
+    "geography_description": "시나가와구는 다섯 개의 지구로 이루어져 있다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "시나가와구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.shinagawa.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EB%A9%94%EA%B5%AC%EB%A1%9C%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-MEGURO",
+    "city_name_ko": "메구로구",
+    "city_name_ja": "目黒区",
+    "city_name_en": "Meguro",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.6415,
+    "longitude": 139.698278,
+    "description": "메구로구(일본어: 目黑区 메구로쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.\n\n메구로구에는 15개국의 대사관과 총영사가 있다. 메구로구는 도쿄에서 가장 땅값이 높은 3대 주거중심 구 중 하나로 메구로구를 이어 시나가와구 그리고 세타가야구가 있다.\n\n메구로구 내에서도 동부에 위치하며 위, 중앙, 아래를 뜻하는 카미, 나카, 시모메구로 그리고 북부에 위치한 히가시야마는 도쿄의 주요 상업중심구 중 하나인 시부야구 바로 밑에 붙어 있어 돈이 있어도 매물이 없어 땅을 살 수 없는 희소성이 매우 높은 동네로 일본을 대표하는 연예인, 사업가, 엘리트 고소득 전문직들이 많이 거주하며, 이외에도 메구로구 남부의 야쿠모, 카키노키자카 및 지유가오카 또한 은퇴한 고액자산가들이 은퇴 후 살고 싶은 동네로 손에 꼽힐정도로 거주환경이 탁월한 구로 꼽힌다.",
+    "geography_description": "메구로구는 네 개의 다른 구들에 둘러싸여 있다. 북동쪽으로 시부야구, 서쪽으로 세타가야구, 남쪽으로 오타구, 남동쪽으로 시나가와구와 접한다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "메구로구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.meguro.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%98%A4%ED%83%80%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-OTA-TOKYO",
+    "city_name_ko": "오타구",
+    "city_name_ja": "大田区",
+    "city_name_en": "Ōta, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.561278,
+    "longitude": 139.716028,
+    "description": "오타구(일본어: 大田区 오타쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 총 면적은 59.46km2로 도쿄 23구 중 가장 넓다.\n\n오타구의 중심은 오타구청과 오타 우체국이 있는 가마타역과 게이큐 가마타역 주변에 위치한다.",
+    "geography_description": "도쿄 23구의 남쪽 끝에 위치한다. 북쪽으로 시나가와구, 메구로구, 세타가야구와 접하고 동쪽으로 고토구와 접한다. 다마강은 가나가와현 가와사키시와의 남쪽과 서쪽 경계를 이룬다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "오타구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.ota.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%ED%83%80%EA%B0%80%EC%95%BC%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-SETAGAYA",
+    "city_name_ko": "세타가야구",
+    "city_name_ja": "世田谷区",
+    "city_name_en": "Setagaya",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.646556,
+    "longitude": 139.653222,
+    "description": "세타가야구(일본어: 世田谷区 세타가야쿠[*])는 일본 도쿄도의 특별구이다. 특별구 중에서 면적은 두 번째로 크며, 인구는 가장 많다.[1]",
+    "geography_description": "도쿄 23구의 남서쪽 모퉁이에 위치하고 있다. 다마강을 경계로 세타가야구와 가나가와현이 나뉜다. 다마강 건너편에는 가와사키시가 위치하고 있다. 많은 철도 노선이 도쿄 23구 중심부에서 방사형으로 뻗어 있으며 게이오선, 게이오 이노카시라선, 오다큐 오다와라선, 도큐 덴엔토시선, 도큐 오이마치선, 도큐 메구로선, 도큐 세타가야선, 도큐 도요코선이 세타가야구를 통과한다. 인접한 자치체로는 도쿄도 고마에시, 메구로구, 미타카시, 스기나미구, 시부야구, 오타구, 조후시와 가나가와현 가와사키시 다마구, 다카쓰구, 나카하라구가 있다.\n\n토지 대부분이 무사시노 대지 내에 있어 고도가 낮으며, 남쪽의 다마강 유역은 특히 고도가 낮다. 세타가야구는 도쿄에서 가장 인구가 많은 구로 많은 주거 지역이 있다.\n\n세타가야구는 세타가야 지역, 기타자와 지역, 다마가와 지역, 기누타 지역, 가라스야마 지역의 다섯 개 지역으로 나뉜다. 각각의 지역은 행정 구조의 일부로 각자의 관청을 가진다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "세타가야구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.setagaya.lg.jp/",
+      "https://www.city.setagaya.lg.jp/mokuji/shigoto/005/004/d00161784.html"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%9C%EB%B6%80%EC%95%BC%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -515,9 +575,14 @@
     "description": "시부야구(일본어: 渋谷区 시부야쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.[1] 시부야역 주변 등 중심부는 서시부야 대지, 요요기 대지, 동시부야 대지 등 3개의 대지에 둘러싸여 있다.[2]\n\n\"시부야\"라는 이름은 또한 도쿄에서 가장 분주한 역 중 하나인 시부야역 주변의 중심 업무 지구를 가리키기도 한다. 시부야는 특히 젊은이들에게 패션의 중심지로 불리며 주요 유흥가이다.",
     "geography_description": "시부야구는 신주쿠구, 도시마구와 함께 \"부도심 3구\"로 불리며,[3] 부동산 업계에서는 지요다구, 주오구, 미나토구의 \"도심 3구\"에 신주쿠구와 시부야구를 더해 \"도심 5구\"라고도 칭해진다.[4] 구 전역은 무사시노 대지 위의 고지대에 위치하며, 도쿄의 야마노테 지역을 구성한다.\n\n시부야역 주변은 신주쿠, 이케부쿠로와 함께 도쿄를 대표하는 번화가로 삼대 부도심 중 하나로 꼽힌다. 특히, 시부야 스크램블 교차로와 시부야 센터가는 \"젊음의 거리\"의 상징으로, 뉴스나 미디어를 통해 전국적으로 유명하다. 신주쿠역에 가까운 요요기와 센다가야는 신주쿠와 연계된 번화가이자 오피스 거리로 발전해 있으며, 니시신주쿠와 인접한 하쓰다이와 혼초에도 다수의 오피스 빌딩이 밀집해 있다.\n\n또한, 하라주쿠와 오모테산도(진구마에) 및 인접한 미나토구 아오야마 지역은 일본 패션의 중심지로 알려져 있으며, 다이칸야마와 에비스에는 상업 시설 및 셀렉트 숍 등 패션・의류 산업이 다수 집중되어 있다.\n\n구 내에는 메이지 신궁와 요요기 공원과 같은 넓은 녹지가 있으며, 주변에는 쇼토, 요요기우에하라, 다이칸야마 등 야마노테의 고급 주택가가 자리 잡고 있다. 고급 주택지로 유명한 히로오는 원래 아자부구(현재의 미나토구)에 속했으며, 현재도 아자부와 유사한 지역적 특성을 유지하고 있다.\n\n시부야구 북부의 하쓰다이, 혼초, 하타가야, 사가쓰카 등은 시부야 중심부와 거리가 있으며, 고슈 가도와 게이오선 연선에 위치한 특성상 과거부터 신주쿠와의 연결성이 강했다. 하지만 시부야구의 일부로서, 2022년 가을에는 북시부 페스티벌이나 북시부 마일 같은 지역 활성화 행사가 개최되어, \"북시부(北渋)\"라는 이름으로 지역 정체성을 강화하려는 움직임이 진행 중이다.[5] 이 지역은 서민적인 상점가가 다수 존재하여 신주쿠구 및 나카노구의 번화가 외곽 지역과 유사한 분위기를 띠고 있다. 현재, 이 지역의 녹도와 수도도로 재정비가 계획되어 있으며, 역 주변에서도 대규모 재개발이 진행 중이다. 이러한 변화로 인해 앞으로 지역의 모습이 크게 달라질 가능성이 있다.\n\n1970년대까지는 일본의 \"젊음의 거리\" 및 젊은 문화의 발신지로 신주쿠가 주목받았다.[6] 그러나 1973년 시부야 파르코의 개점 이후, 일본의 젊은이 문화는 신주쿠에서 시부야 및 시부야구 전역(하라주쿠, 오모테산도, 다이칸야마, 우라하라주쿠 포함)으로 중심지가 이동하며 큰 변화를 맞았다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "시부야구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.shibuya.tokyo.jp/eng/index.html",
@@ -527,87 +592,7 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%82%98%EC%B9%B4%EB%85%B8%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-NAKANO-TOKYO",
-    "city_name_ko": "나카노구",
-    "city_name_ja": "",
-    "city_name_en": "Nakano, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.707278,
-    "longitude": 139.66375,
-    "description": "나카노구(일본어: 中野区 나카노쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.\n\n일본의 지자체 중 도시마구와 함께 1 km2당 인구밀도가 20,000명 이상인 자치체이며, 동시에 일본에서 인구밀도가 가장 높은 자치체이다.",
-    "geography_description": "나카노구는 다섯 개의 특별구(동쪽으로 신주쿠구, 서쪽으로는 스기나미구, 남쪽으로는 시부야군, 북쪽으로는 네리마구, 북서쪽으로는 도시마구와 접한다.)에 둘러싸여 있다. 나카노는 분주한 신주쿠 지역의 바로 서쪽에 놓여 있다.\n\n강으로는 간다강, 묘쇼지강, 젠푸쿠지강, 아라타마 수도가 있다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.tokyo-nakano.lg.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EA%B8%B0%EB%82%98%EB%AF%B8%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-SUGINAMI",
-    "city_name_ko": "스기나미구",
-    "city_name_ja": "",
-    "city_name_en": "Suginami",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.6995,
-    "longitude": 139.636417,
-    "description": "스기나미구(일본어: 杉並区 스기나미쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
-    "geography_description": "도쿄 구부의 서쪽 지역을 차지한다. 동쪽으로 시부야구와 나카노구, 북쪽으로 네리마구, 남쪽으로 세타가야구와 접한다. 서쪽으로는 미타카시, 무사시노시와 접한다.\n\n주요 하천인 간다강이 스기나미구 일대를 통과한다. 젠푸쿠지강이 스기나미구의 서부 일대에서 젠푸쿠지 공원에서 발원하며, 묘쇼지강도 역시 오기쿠보역 북쪽의 묘쇼지 공원에서 발원한다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.suginami.tokyo.jp/guide/annai/information/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%8B%9C%EB%A7%88%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
       "city_name_ja": "collected",
@@ -618,7 +603,97 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-NAKANO-TOKYO",
+    "city_name_ko": "나카노구",
+    "city_name_ja": "中野区",
+    "city_name_en": "Nakano, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.707278,
+    "longitude": 139.66375,
+    "description": "나카노구(일본어: 中野区 나카노쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.\n\n일본의 지자체 중 도시마구와 함께 1 km2당 인구밀도가 20,000명 이상인 자치체이며, 동시에 일본에서 인구밀도가 가장 높은 자치체이다.",
+    "geography_description": "나카노구는 다섯 개의 특별구(동쪽으로 신주쿠구, 서쪽으로는 스기나미구, 남쪽으로는 시부야군, 북쪽으로는 네리마구, 북서쪽으로는 도시마구와 접한다.)에 둘러싸여 있다. 나카노는 분주한 신주쿠 지역의 바로 서쪽에 놓여 있다.\n\n강으로는 간다강, 묘쇼지강, 젠푸쿠지강, 아라타마 수도가 있다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "나카노구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.tokyo-nakano.lg.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EA%B8%B0%EB%82%98%EB%AF%B8%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-SUGINAMI",
+    "city_name_ko": "스기나미구",
+    "city_name_ja": "杉並区",
+    "city_name_en": "Suginami",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.6995,
+    "longitude": 139.636417,
+    "description": "스기나미구(일본어: 杉並区 스기나미쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
+    "geography_description": "도쿄 구부의 서쪽 지역을 차지한다. 동쪽으로 시부야구와 나카노구, 북쪽으로 네리마구, 남쪽으로 세타가야구와 접한다. 서쪽으로는 미타카시, 무사시노시와 접한다.\n\n주요 하천인 간다강이 스기나미구 일대를 통과한다. 젠푸쿠지강이 스기나미구의 서부 일대에서 젠푸쿠지 공원에서 발원하며, 묘쇼지강도 역시 오기쿠보역 북쪽의 묘쇼지 공원에서 발원한다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "스기나미구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.suginami.tokyo.jp/guide/annai/information/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%8B%9C%EB%A7%88%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -636,9 +711,14 @@
     "description": "도시마구(일본어: 豊島区 도시마쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 비록 구라는 명칭을 쓰지만 하나의 시로 여겨진다. 구청은 이케부쿠로에 위치하며 도시마의 상업과 오락의 중심지이다.",
     "geography_description": "도쿄 구부의 북서쪽에 위치한다. 북쪽으로 네리마구, 이타바시구, 기타구와 접하고 남쪽으로 신주쿠구, 분쿄구와 접한다.\n\n도시마구의 총 면적은 13.01 km2이고 완만한 대지에 놓여있으며 고저의 차는 28m이다. 구 면적의 48%가 주거 지역이고 20%는 상업과 공공 지역이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "도시마구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.toshima.lg.jp/",
@@ -648,207 +728,7 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B8%B0%ED%83%80%EA%B5%AC_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-KITA-TOKYO",
-    "city_name_ko": "기타구",
-    "city_name_ja": "",
-    "city_name_en": "Kita, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.752806,
-    "longitude": 139.733556,
-    "description": "기타구(일본어: 北区 기타쿠[*])은 일본 도쿄도에 있는 특별구 중 하나이다.",
-    "geography_description": "\"기타\"라는 이름은 일본어로 '북쪽'을 의미하며 도쿄 구부의 북쪽에 있음을 말해준다. 북쪽으로는 사이타마현 가와구치시와 도다시가 있고 동쪽과 남쪽, 서쪽은 다른 특별구인 아다치구, 아라카와구, 이타바시구, 분쿄구, 도시마구가 있다.\n\n구내에 아라카와강과 스미다강이 흐른다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.kita.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%9D%BC%EC%B9%B4%EC%99%80%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-ARAKAWA-TOKYO",
-    "city_name_ko": "아라카와구",
-    "city_name_ja": "",
-    "city_name_en": "Arakawa, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.73611,
-    "longitude": 139.783389,
-    "description": "아라카와구(일본어: 荒川区 아라카와쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 구의 이름은 아라카와강에서 유래했다.\n\n\"미카와시마\"(三河島) 역 주변은 도쿄를 대표하는 코리아타운으로 제주도 출신자를 중심으로 한 재일 한국인이 많이 살고 있다.",
-    "geography_description": "도쿄의 북동부에 있다. 구의 모양은 길고 좁으며 동서로 뻗어 있으며 스미다강이 구의 북쪽 경계를 이룬다. 구는 북쪽으로 아다치구, 서쪽으로 기타구, 남서쪽으로 분쿄구, 남쪽으로 다이토구, 남동쪽으로 스미다구와 각각 접한다. 그리고 이 안에는 고양이만을 위한 마을인 유야케단단이라는 고양이 마을도 물론 존재한다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.arakawa.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B4%ED%83%80%EB%B0%94%EC%8B%9C%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-ITABASHI",
-    "city_name_ko": "이타바시구",
-    "city_name_ja": "",
-    "city_name_en": "Itabashi",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.751194,
-    "longitude": 139.709278,
-    "description": "이타바시구(일본어: 板橋区 이타바시쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
-    "geography_description": "이타바시구는 간토 지방에 놓여 있다. 아라카와강이 사이타마현과의 경계의 일부를 이룬다. 도쿄도 네리마구, 도시마구, 기타구와 사이타마현의 와코시, 도다시에 둘러싸여 있다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.itabashi.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EB%84%A4%EB%A6%AC%EB%A7%88%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-NERIMA",
-    "city_name_ko": "네리마구",
-    "city_name_ja": "",
-    "city_name_en": "Nerima",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.735528,
-    "longitude": 139.651694,
-    "description": "네리마구(일본어: 練馬区 네리마쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
-    "geography_description": "도쿄 23구의 북서쪽 가장자리에 있다. 동쪽으로 이타바시구, 남쪽으로 스기나미구, 도시마구, 나카노구와 접하고 남서쪽으로 무사시노시, 서쪽으로 니시토쿄시와 접한다. 북쪽으로는 사이타마현의 3개 도시 와코시, 아사카시, 니자시가 있다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.nerima.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%8B%A4%EC%B9%98%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
-    "field_status": {
-      "city_name_ko": "collected",
-      "city_name_ja": "missing",
-      "city_name_en": "collected",
-      "prefecture_id": "collected",
-      "location": "collected",
-      "latitude": "collected",
-      "longitude": "collected",
-      "description": "needs_review",
-      "geography_description": "collected",
-      "climate_table": "needs_review",
-      "site_urls": "collected"
-    },
-    "data_confidence": "medium",
-    "verified_at": null,
-    "verified_source_url": null,
-    "verification_note": null,
-    "city_id": "JP-13-ADACHI-TOKYO",
-    "city_name_ko": "아다치구",
-    "city_name_ja": "",
-    "city_name_en": "Adachi, Tokyo",
-    "prefecture_id": "JP-13",
-    "location": "일본 도쿄도",
-    "latitude": 35.774944,
-    "longitude": 139.804361,
-    "description": "아다치구(일본어: 足立区 아다치쿠[*])는 일본 도쿄도의 특별구이다.\n\n남동쪽의 아라카와강 남쪽에 위치한 센주 지구는 에도 시대에 닛코 가도의 여인숙이었으며 지금은 터미널 역인 기타센주역을 포함한 아다치구의 번화가가 되었다.\n\n지금의 아다치구 지역은 1932년 이전에는 미나미아다치군이었다. 아다치구는 그 이전의 아다치군 지역의 중심에서 벗어난 남동쪽에 위치해 있다.",
-    "geography_description": "도쿄도의 북쪽에 위치해 있다. 스미다강과 아라카와강 사이의 작고 가는 땅과 아라카와강 북쪽의 더 넓은 땅으로 이루어져 있다. 도쿄도의 다른 특별구인 가쓰시카구, 기타구, 스미다구, 아라카와구와 접하고 사이타마현의 가와구치시, 소카시, 야시오시, 하토가야시와 접한다.",
-    "climate_table": {
-      "caption": "수작업 필요",
-      "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
-    },
-    "site_urls": [
-      "https://www.city.adachi.tokyo.jp/"
-    ]
-  },
-  {
-    "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%93%B0%EC%8B%9C%EC%B9%B4%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
       "city_name_ja": "collected",
@@ -859,7 +739,232 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-KITA-TOKYO",
+    "city_name_ko": "기타구",
+    "city_name_ja": "北区 (東京都)",
+    "city_name_en": "Kita, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.752806,
+    "longitude": 139.733556,
+    "description": "기타구(일본어: 北区 기타쿠[*])은 일본 도쿄도에 있는 특별구 중 하나이다.",
+    "geography_description": "\"기타\"라는 이름은 일본어로 '북쪽'을 의미하며 도쿄 구부의 북쪽에 있음을 말해준다. 북쪽으로는 사이타마현 가와구치시와 도다시가 있고 동쪽과 남쪽, 서쪽은 다른 특별구인 아다치구, 아라카와구, 이타바시구, 분쿄구, 도시마구가 있다.\n\n구내에 아라카와강과 스미다강이 흐른다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "기타구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.kita.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%9D%BC%EC%B9%B4%EC%99%80%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-ARAKAWA-TOKYO",
+    "city_name_ko": "아라카와구",
+    "city_name_ja": "荒川区",
+    "city_name_en": "Arakawa, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.73611,
+    "longitude": 139.783389,
+    "description": "아라카와구(일본어: 荒川区 아라카와쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 구의 이름은 아라카와강에서 유래했다.\n\n\"미카와시마\"(三河島) 역 주변은 도쿄를 대표하는 코리아타운으로 제주도 출신자를 중심으로 한 재일 한국인이 많이 살고 있다.",
+    "geography_description": "도쿄의 북동부에 있다. 구의 모양은 길고 좁으며 동서로 뻗어 있으며 스미다강이 구의 북쪽 경계를 이룬다. 구는 북쪽으로 아다치구, 서쪽으로 기타구, 남서쪽으로 분쿄구, 남쪽으로 다이토구, 남동쪽으로 스미다구와 각각 접한다. 그리고 이 안에는 고양이만을 위한 마을인 유야케단단이라는 고양이 마을도 물론 존재한다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "아라카와구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.arakawa.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B4%ED%83%80%EB%B0%94%EC%8B%9C%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-ITABASHI",
+    "city_name_ko": "이타바시구",
+    "city_name_ja": "板橋区",
+    "city_name_en": "Itabashi",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.751194,
+    "longitude": 139.709278,
+    "description": "이타바시구(일본어: 板橋区 이타바시쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
+    "geography_description": "이타바시구는 간토 지방에 놓여 있다. 아라카와강이 사이타마현과의 경계의 일부를 이룬다. 도쿄도 네리마구, 도시마구, 기타구와 사이타마현의 와코시, 도다시에 둘러싸여 있다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "이타바시구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.itabashi.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EB%84%A4%EB%A6%AC%EB%A7%88%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-NERIMA",
+    "city_name_ko": "네리마구",
+    "city_name_ja": "練馬区",
+    "city_name_en": "Nerima",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.735528,
+    "longitude": 139.651694,
+    "description": "네리마구(일본어: 練馬区 네리마쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다.",
+    "geography_description": "도쿄 23구의 북서쪽 가장자리에 있다. 동쪽으로 이타바시구, 남쪽으로 스기나미구, 도시마구, 나카노구와 접하고 남서쪽으로 무사시노시, 서쪽으로 니시토쿄시와 접한다. 북쪽으로는 사이타마현의 3개 도시 와코시, 아사카시, 니자시가 있다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "네리마구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.nerima.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%EB%8B%A4%EC%B9%98%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
+      "site_urls": "collected"
+    },
+    "data_confidence": "medium",
+    "verified_at": null,
+    "verified_source_url": null,
+    "verification_note": null,
+    "city_id": "JP-13-ADACHI-TOKYO",
+    "city_name_ko": "아다치구",
+    "city_name_ja": "足立区",
+    "city_name_en": "Adachi, Tokyo",
+    "prefecture_id": "JP-13",
+    "location": "일본 도쿄도",
+    "latitude": 35.774944,
+    "longitude": 139.804361,
+    "description": "아다치구(일본어: 足立区 아다치쿠[*])는 일본 도쿄도의 특별구이다.\n\n남동쪽의 아라카와강 남쪽에 위치한 센주 지구는 에도 시대에 닛코 가도의 여인숙이었으며 지금은 터미널 역인 기타센주역을 포함한 아다치구의 번화가가 되었다.\n\n지금의 아다치구 지역은 1932년 이전에는 미나미아다치군이었다. 아다치구는 그 이전의 아다치군 지역의 중심에서 벗어난 남동쪽에 위치해 있다.",
+    "geography_description": "도쿄도의 북쪽에 위치해 있다. 스미다강과 아라카와강 사이의 작고 가는 땅과 아라카와강 북쪽의 더 넓은 땅으로 이루어져 있다. 도쿄도의 다른 특별구인 가쓰시카구, 기타구, 스미다구, 아라카와구와 접하고 사이타마현의 가와구치시, 소카시, 야시오시, 하토가야시와 접한다.",
+    "climate_table": {
+      "caption": "기후",
+      "wikitext": "",
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "아다치구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
+    },
+    "site_urls": [
+      "https://www.city.adachi.tokyo.jp/"
+    ]
+  },
+  {
+    "source_name": "Wikipedia",
+    "source_url": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%93%B0%EC%8B%9C%EC%B9%B4%EA%B5%AC",
+    "collected_at": "2026-06-22T15:57:55+09:00",
+    "field_status": {
+      "city_name_ko": "collected",
+      "city_name_ja": "collected",
+      "city_name_en": "collected",
+      "prefecture_id": "collected",
+      "location": "collected",
+      "latitude": "collected",
+      "longitude": "collected",
+      "description": "needs_review",
+      "geography_description": "collected",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -877,9 +982,14 @@
     "description": "가쓰시카구(일본어: 葛飾区 가쓰시카쿠[*]는 일본 도쿄도 북동부에 있는 특별구 중 하나이다.",
     "geography_description": "도쿄도 동부에 위치한다. 구역 전체가 아라카와강 바깥에 있는 유일한 구이다. 구의 서부는 해발 0m 지대로 해발 -1m나 그보다 낮은 곳이 있다. 한편 구의 동부는 해발 1~2.5m까지의 범위에 있다. 도내에서 유일하게 사이타마현과 지바현 양쪽 모두와 인접한다.\n\n가쓰시카구는 도쿄도의 다른 세 개의 구인 아다치구, 에도가와구, 스미다구와 접하고 지바현의 마쓰도시, 사이타마현의 미사토시, 야시오시와 접한다.\n\n구를 흐르는 주요 강으로는 나카가와강, 신나카가와강, 아라카와강, 아야세강, 에도강이 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "가쓰시카구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.katsushika.lg.jp/",
@@ -889,10 +999,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%97%90%EB%8F%84%EA%B0%80%EC%99%80%EA%B5%AC",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -900,7 +1010,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -909,7 +1019,7 @@
     "verification_note": null,
     "city_id": "JP-13-EDOGAWA-TOKYO",
     "city_name_ko": "에도가와구",
-    "city_name_ja": "",
+    "city_name_ja": "江戸川区",
     "city_name_en": "Edogawa, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -918,9 +1028,14 @@
     "description": "에도가와구(일본어: 江戸川区 에도가와쿠[*])는 일본 도쿄도에 있는 특별구 중 하나이다. 구의 이름은 동쪽 가장자리를 따라 남북으로 흐르는 에도강에서 유래하였다.",
     "geography_description": "도쿄도 동부에 위치한다. 동쪽으로 지바현 우라야스시, 이치카와시, 마쓰도시와 접하고 북쪽으로 가쓰시카구, 서쪽으로 스미다구, 고토구와 접한다. 남쪽은 도쿄만과 접한다.\n\n에도강, 아라카와강, 나카가와강이 구를 흐른다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "에도가와구의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.edogawa.tokyo.jp/",
@@ -930,10 +1045,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%95%98%EC%B9%98%EC%98%A4%EC%A7%80%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -941,7 +1056,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -950,7 +1065,7 @@
     "verification_note": null,
     "city_id": "JP-13-HACHIOJI",
     "city_name_ko": "하치오지시",
-    "city_name_ja": "",
+    "city_name_ja": "八王子市",
     "city_name_en": "Hachiōji",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -959,9 +1074,14 @@
     "description": "하치오지시(일본어: 八王子市)는 일본 도쿄도의 도서부를 제외한 지역 중 남서부에 위치한 시이자 다마 지역의 중심 도시 중 하나이다. 도쿄도에서는 다치카와시, 마치다시, 오메시, 다마 뉴타운과 함께 다마 지역의 중심지로 자리매김하고 있다. 또한 이곳에 다이쇼 천황과 쇼와 천황의 묘가 있기도 하다. 인구는 약 57만 명으로 도쿄도 내에서 도쿄도 구부에 이어 2위이며 면적은 오쿠타마정에 이어 도쿄도의 시정촌 중 두번째로 넓다.",
     "geography_description": "도쿄 23구의 중심에서 40km 떨어져 있다. 삼면이 산으로 둘러싸여 있으며 중심지는 하치오지 분지를 이루며 동쪽 방향으로 도쿄를 향해 열려 있다. 남서쪽으로는 다카오산(599m)과 진바산(857m)이 있고 인기 있는 하이킹 목적지로 각각 기차와 버스로 갈 수 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "하치오지시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.hachioji.tokyo.jp/"
@@ -970,10 +1090,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%8B%A4%EC%B9%98%EC%B9%B4%EC%99%80%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -981,7 +1101,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -990,7 +1110,7 @@
     "verification_note": null,
     "city_id": "JP-13-TACHIKAWA-TOKYO",
     "city_name_ko": "다치카와시",
-    "city_name_ja": "",
+    "city_name_ja": "立川市",
     "city_name_en": "Tachikawa, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -999,9 +1119,14 @@
     "description": "다치카와시(일본어: 立川市)는 일본 도쿄도 서부에 있는 시이다.\n\n다마강변에 위치하며 도쿄역에서는 주오 쾌속선으로 40분 정도, 신주쿠역에서는 전철로 30분 정도면 도착할 수 있다.\n\n다치카와역 및 다치카와키타역, 다치카와미나미역을 중심으로 상업 시설과 오피스가 집결해 있으며, 다마 지역의 중심 도시로 발전하고 있다.",
     "geography_description": "도쿄 도심에서 서쪽으로 약 40km 떨어져 있다. 동쪽으로 구니타치시, 고쿠분지시, 고다이라시와 접하고 북쪽으로는 히가시야마토시, 무사시무라야마시와 접하며 서쪽으로는 훗사시, 아키시마시, 남쪽으로는 히노시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "다치카와시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.tachikawa.lg.jp/"
@@ -1010,10 +1135,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%AC%B4%EC%82%AC%EC%8B%9C%EB%85%B8%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1021,7 +1146,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1030,7 +1155,7 @@
     "verification_note": null,
     "city_id": "JP-13-MUSASHINO-TOKYO",
     "city_name_ko": "무사시노시",
-    "city_name_ja": "",
+    "city_name_ja": "武蔵野市",
     "city_name_en": "Musashino, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1039,9 +1164,14 @@
     "description": "무사시노시(일본어: 武蔵野市)는 일본 도쿄도에 있는 시이다.\n\n도쿄도 구부와 인접해 교외 주거지로 발전했다. 이 도시는 13개의 지역으로 구성되어 있으며, 전철역을 위주로 하여 기치조지 역세권, 중앙 역세권, 무사시사카이 역세권으로 분류되어 있고 그 중 간다강의 원천(原川)이 있는 기치조지는 도쿄 안에서 \"살고 싶은 지역 No.1\"으로 6년 연속 선정되기도 했다.",
     "geography_description": "도쿄도 23구와 26개 시(市) 중 가운데에 위치하고 동쪽으로는 스기나미구, 남쪽으로는 미타카시, 서쪽으로 고가네이시, 북쪽으로는 니시토쿄시와 네리마구를 각각 접하는 지정학적 위치를 차지하고 있어 도쿄의 내륙부 중심지 역할을 하고 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "무사시노시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.musashino.lg.jp/"
@@ -1050,10 +1180,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%AF%B8%ED%83%80%EC%B9%B4%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1061,7 +1191,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1070,7 +1200,7 @@
     "verification_note": null,
     "city_id": "JP-13-MITAKA-TOKYO",
     "city_name_ko": "미타카시",
-    "city_name_ja": "",
+    "city_name_ja": "三鷹市",
     "city_name_en": "Mitaka, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1079,9 +1209,14 @@
     "description": "미타카시(일본어: 三鷹市)는 일본 도쿄도에 있는 시이다.\n\n무샤노코지 사네아쓰, 다자이 오사무 등 많은 작가들이 살았던 곳으로 알려져 있다.",
     "geography_description": "도쿄도 구부와 시부의 경계에 있다. 동쪽으로 세타가야구, 스기나미구, 북쪽으로 무사시노시, 서쪽으로 고가네이시, 남쪽으로 조후시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "미타카시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.mitaka.lg.jp/"
@@ -1090,10 +1225,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%98%A4%EB%A9%94%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1101,7 +1236,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1110,7 +1245,7 @@
     "verification_note": null,
     "city_id": "JP-13-OME-TOKYO",
     "city_name_ko": "오메시",
-    "city_name_ja": "",
+    "city_name_ja": "青梅市",
     "city_name_en": "Ōme, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1119,9 +1254,14 @@
     "description": "오메시(일본어: 青梅市)는 일본 도쿄도 다마 지구 서부에 있는 시이다.",
     "geography_description": "남쪽으로 도쿄도 히노데정, 아키루노시, 남동쪽으로 하무라시, 서쪽으로 오쿠타마정과 접하고 북쪽으로 사이타마현 한노시, 동쪽으로 이루마시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "오메시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.ome.tokyo.jp/"
@@ -1130,10 +1270,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9B%84%EC%B6%94%EC%8B%9C_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1141,7 +1281,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1150,7 +1290,7 @@
     "verification_note": null,
     "city_id": "JP-13-FUCHU-TOKYO",
     "city_name_ko": "후추시",
-    "city_name_ja": "",
+    "city_name_ja": "府中市 (東京都)",
     "city_name_en": "Fuchū, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1159,9 +1299,14 @@
     "description": "후추시(일본어: 府中市)는 일본 도쿄도 다마 지구에 있는 시이다. 율령 시대에 무사시국의 국부가 있는 도시였다. \"후추(부중)\"라는 지명은 국부 소재지를 의미하는 명칭이고, 이런 이유로 일본 각지에 후추(府中)라는 지명이 많이 존재한다. 그래서 다른 지역의 후추(동일 시명인 히로시마현 후추시 등)와 구별해서 무사시후추로 불리기도 한다(예: 무사시후추 우체국, 무사시후추 세무서 등).",
     "geography_description": "지리적으로는 도쿄도의 거의 중앙에 위치한다. 서쪽으로 구니타치시, 히노시, 북쪽으로 고쿠분지시, 고가네이시, 동쪽으로 조후시, 남쪽으로 다마시, 이나기시와 접한다. 신주쿠구에서 서쪽으로 22km, 니혼바시에서 서쪽으로 30km 지점에 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "후추시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.fuchu.tokyo.jp/"
@@ -1170,10 +1315,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%ED%82%A4%EC%8B%9C%EB%A7%88%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1181,7 +1326,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1190,7 +1335,7 @@
     "verification_note": null,
     "city_id": "JP-13-AKISHIMA-TOKYO",
     "city_name_ko": "아키시마시",
-    "city_name_ja": "",
+    "city_name_ja": "昭島市",
     "city_name_en": "Akishima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1199,9 +1344,14 @@
     "description": "아키시마시(일본어: 昭島市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "도쿄도 중서부에 위치한다. 다마강이 흐른다. 남서쪽으로 하치오지시, 북서쪽으로 훗사시, 북동쪽으로 다치카와시, 남동쪽으로 히노시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "아키시마시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.akishima.lg.jp/"
@@ -1210,10 +1360,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%A1%B0%ED%9B%84%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1221,7 +1371,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1230,7 +1380,7 @@
     "verification_note": null,
     "city_id": "JP-13-CHOFU",
     "city_name_ko": "조후시",
-    "city_name_ja": "",
+    "city_name_ja": "調布市",
     "city_name_en": "Chōfu",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1239,9 +1389,14 @@
     "description": "조후시(일본어: 調布市)는 일본 도쿄도 다마 지구에 있는 시이다.",
     "geography_description": "도쿄도의 시부와 구부가 만나는 곳에 위치한다. 서쪽으로 후추시, 북쪽으로 고가네이시, 미타카시, 동쪽으로 고마에시, 세타가야구와 접하며 남쪽으로 다마강을 경계로 가와사키시 다마구와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "조후시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.chofu.lg.jp/"
@@ -1250,10 +1405,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%A7%88%EC%B9%98%EB%8B%A4%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1261,7 +1416,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1270,7 +1425,7 @@
     "verification_note": null,
     "city_id": "JP-13-MACHIDA-TOKYO",
     "city_name_ko": "마치다시",
-    "city_name_ja": "",
+    "city_name_ja": "町田市",
     "city_name_en": "Machida, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1279,9 +1434,14 @@
     "description": "마치다시(일본어: 町田市)는 일본 도쿄도 중남부에 있는 시이다. 1958년 2월 1일에 설립되었다.",
     "geography_description": "북쪽으로 도쿄도 하치오지시, 다마시와 접하고 서쪽으로는 가나가와현 사가미하라시, 동쪽으로 가나가와현 가와사키시 아사오구, 요코하마시 아오바구, 미도리구, 남쪽으로 야마토시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "마치다시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.machida.tokyo.jp/"
@@ -1290,10 +1450,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EA%B0%80%EB%84%A4%EC%9D%B4%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1301,7 +1461,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1310,7 +1470,7 @@
     "verification_note": null,
     "city_id": "JP-13-KOGANEI-TOKYO",
     "city_name_ko": "고가네이시",
-    "city_name_ja": "",
+    "city_name_ja": "小金井市",
     "city_name_en": "Koganei, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1319,9 +1479,14 @@
     "description": "고가네이시(일본어: 小金井市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "지리적으로 도쿄의 대략 중앙에 있고 도쿄도청이 있는 신주쿠구에서 서쪽으로 약 20km 떨어져 있다. 서쪽으로 고쿠분지시, 북쪽으로 고다이라시, 니시토쿄시, 동쪽으로 무사시노시, 미타카시, 남쪽으로 후추시와 접한다. 주오 본선이 동서로 횡단한다.\n\n고가네이에는 남북으로 두 개의 커다란 공원이 있다. 북쪽은 고가네이 공원으로 에도 도쿄 박물관의 지부인 에도 도쿄 건물원이 있다. 남쪽은 노가와 공원과 다마 묘원으로 도쿄도에서 가장 큰 녹림 지역 중 하나이다.\n\n인구 밀도는 10,000명/km2가 넘는다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "고가네이시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.koganei.lg.jp/"
@@ -1330,10 +1495,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%8B%A4%EC%9D%B4%EB%9D%BC%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1341,7 +1506,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1350,18 +1515,23 @@
     "verification_note": null,
     "city_id": "JP-13-KODAIRA-TOKYO",
     "city_name_ko": "고다이라시",
-    "city_name_ja": "",
+    "city_name_ja": "小平市",
     "city_name_en": "Kodaira, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
     "latitude": 35.7285,
     "longitude": 139.477444,
     "description": "고다이라시(일본어: 小平市)는 일본 도쿄도 다마 지역에 있는 시이다.",
-    "geography_description": "무사시노 대지의 서쪽에 위치한다. 바닥이 긴 사다리꼴 모양으로, '고다이라(小平)'라는 지명에서 알 수 있듯이 기복은 심하지 않다. 동쪽 끝에 이시가미이강의 원류가 있지만, 이외 지역에서는 물을 구하기 어려웠다. 그러나 에도 시대에 다마가와 상수도가 개설되어 거기서 물을 취수할 수 있게 되면서 처음으로 개척할 수 있는 여건이 마련되었다. 또한 신전 개발로 인해 취락이 형성되었다. 시내에는 다마가와 상수 산책로, 고다이라 묘원 등 녹지가 많다. 과거에는 바람 피해를 막기 위해 방사림을 심어 시내에는 보존수로 지정된 것이 있으며, 1931년 지금의 쓰다초로 이전한 쓰다주쿠 대학의 첫 공사는 방사림의 식수였다고 한다.\n\n교통은 도쿄 중심부로 향하는 오메 가도, 고카이치 가도, 세이부 철도 신주쿠선과 하이지마선이 도시를 동서로 연결하고 있다. 또한 남북 방향으로는 고가네이 가도, 후추 가도 외에도 세이부 철도 고쿠분지선과 다마코선, JR 무사시노선이 지나며 도코로자와 고쿠분지 방면 등으로 연결된다.\n\n시내에 철도가 처음 들어온 것은 메이지 시대의 가와고에 철도(현 세이부 철도 고쿠분지선)로, 후추 가도와 가까운 오가와역이 개설되었다. 시내에는 옛 신덴 시대의 지명인 오가와, 스즈키, 오누마 등이 남아 있으며, 에도 시대 오와리 도쿠가와 가문의 매장이 있었던 데서 유래한 다카노다이, 1883년 메이지 천황의 행차에서 유래한 고쿄(御幸)라는 지명 등이 있다.\n\n시내에는 다음과 같은 용수로가 남아 있으며, 시에서는 물과 녹지를 접할 수 있는 공간으로 보존·정비를 하고 있다.",
+    "geography_description": "무사시노 대지의 서쪽에 위치한다. 바닥이 긴 사다리꼴 모양으로, '고다이라(小平)'라는 지명에서 알 수 있듯이 기복은 심하지 않다. 동쪽 끝에 이시가미이강의 원류가 있지만, 이외 지역에서는 물을 구하기 어려웠다. 그러나 에도 시대에 다마가와 상수도가 개설되어 거기서 물을 취수할 수 있게 되면서 처음으로 개척할 수 있는 여건이 마련되었다. 또한 신전 개발로 인해 취락이 형성되었다. 시내에는 다마가와 상수 산책로, 고다이라 묘원 등 녹지가 많다. 과거에는 바람 피해를 막기 위해 방사림을 심어 시내에는 보존수로 지정된 것이 있으며, 1931년 지금의 쓰다초로 이전한 쓰다주쿠 대학의 첫 공사는 방사림의 식수였다고 한다.\n\n교통은 도쿄 중심부로 향하는 오메 가도, 고카이치 가도, 세이부 철도 신주쿠선과 하이지마선이 도시를 동서로 연결하고 있다. 또한 남북 방향으로는 고가네이 가도, 후추 가도 외에도 세이부 철도 고쿠분지선과 다마코선, JR 무사시노선이 지나며 도코로자와 고쿠분지 방면 등으로 연결된다.\n\n시내에 철도가 처음 들어온 것은 메이지 시대의 가와고에 철도(현 세이부 철도 고쿠분지선)로, 후추 가도와 가까운 오가와역이 개설되었다. 시내에는 옛 신덴 시대의 지명인 오가와, 스즈키, 오누마 등이 남아 있으며, 에도 시대 오와리 도쿠가와 가문의 매장이 있었던 데서 유래한 다카노다이, 1883년 메이지 천황의 행차에서 유래한 고쿄(御幸)라는 지명 등이 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "고다이라시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.kodaira.tokyo.jp/"
@@ -1370,10 +1540,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9E%88%EB%85%B8%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1381,7 +1551,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1390,7 +1560,7 @@
     "verification_note": null,
     "city_id": "JP-13-HINO-TOKYO",
     "city_name_ko": "히노시",
-    "city_name_ja": "",
+    "city_name_ja": "日野市",
     "city_name_en": "Hino, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1399,9 +1569,14 @@
     "description": "히노시(일본어: 日野市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "동쪽으로 후추시, 북쪽으로 구니타치시, 다치카와시, 아키시마시, 서쪽으로 하치오지시, 남쪽으로 다마시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "히노시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.hino.lg.jp/"
@@ -1410,10 +1585,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9E%88%EA%B0%80%EC%8B%9C%EB%AC%B4%EB%9D%BC%EC%95%BC%EB%A7%88%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1421,7 +1596,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1430,7 +1605,7 @@
     "verification_note": null,
     "city_id": "JP-13-HIGASHIMURAYAMA-TOKYO",
     "city_name_ko": "히가시무라야마시",
-    "city_name_ja": "",
+    "city_name_ja": "東村山市",
     "city_name_en": "Higashimurayama, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1439,9 +1614,14 @@
     "description": "히가시무라야마시(일본어: 東村山市)는 일본 도쿄도의 중북부에 있는 시이다. 하치코쿠야마 공원이 히가시무라야마에 있다.",
     "geography_description": "서쪽으로 히가시야마토시, 남쪽으로 고다이라시, 동쪽으로 기요세시, 히가시쿠루메시와 접하고 북쪽으로 사이타마현 도코로자와시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "히가시무라야마시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.higashimurayama.tokyo.jp/"
@@ -1450,10 +1630,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EC%BF%A0%EB%B6%84%EC%A7%80%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1461,7 +1641,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1470,7 +1650,7 @@
     "verification_note": null,
     "city_id": "JP-13-KOKUBUNJI-TOKYO",
     "city_name_ko": "고쿠분지시",
-    "city_name_ja": "",
+    "city_name_ja": "国分寺市",
     "city_name_en": "Kokubunji, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1479,9 +1659,14 @@
     "description": "고쿠분지시(일본어: 国分寺市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "도쿄도의 정중앙에 위치한다. 북쪽으로 고다이라시, 동쪽으로 고가네이시, 남쪽으로 후추시, 구니타치시, 서쪽으로 다치카와시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "고쿠분지시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.kokubunji.tokyo.jp/"
@@ -1490,10 +1675,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B5%AC%EB%8B%88%ED%83%80%EC%B9%98%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1501,7 +1686,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1510,7 +1695,7 @@
     "verification_note": null,
     "city_id": "JP-13-KUNITACHI-TOKYO",
     "city_name_ko": "구니타치시",
-    "city_name_ja": "",
+    "city_name_ja": "国立市",
     "city_name_en": "Kunitachi, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1519,9 +1704,14 @@
     "description": "구니타치시(일본어: 国立市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "도쿄도 중앙부에 위치한다. 서쪽으로 다치카와시, 남쪽으로 히노시, 북쪽으로 고쿠분지시, 동쪽으로 후추시와 접한다.\n\n도시는 역사적으로 에도와 가이국의 고후를 연결하는 고슈 가도의 길목에 놓여 있었다. 구니타치는 폭이 넓은 중심가인 다이가쿠도리로 알려져 있었다. 벚나무가 심어져 있는 가로수길이 주오선의 구니타치역에서 다마강 기슭을 향해 뻗어 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "구니타치시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.kunitachi.tokyo.jp/"
@@ -1530,10 +1720,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9B%97%EC%82%AC%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1541,7 +1731,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1550,7 +1740,7 @@
     "verification_note": null,
     "city_id": "JP-13-FUSSA-TOKYO",
     "city_name_ko": "훗사시",
-    "city_name_ja": "",
+    "city_name_ja": "福生市",
     "city_name_en": "Fussa, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1559,9 +1749,14 @@
     "description": "훗사시(일본어: 福生市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "도쿄도 서부에 위치한다. 서쪽으로 아키루노시, 남쪽으로 아키시마시, 동쪽으로 다치카와시, 북쪽으로 니시타마군 미즈호정과 접한다.\n\n훗사에는 이웃한 이루마시, 다치카와시와 함께 일본 항공자위대의 주둔지가 있다. 시 동부는 이곳에 사는 사람들의 경제 기반이다. 서쪽은 다마강 기슭으로 많은 공원과 휴양 시설, 자전거 도로가 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "훗사시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.fussa.tokyo.jp/"
@@ -1570,10 +1765,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A7%88%EC%97%90%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1590,7 +1785,7 @@
     "verification_note": null,
     "city_id": "JP-13-KOMAE-TOKYO",
     "city_name_ko": "고마에시",
-    "city_name_ja": "",
+    "city_name_ja": "狛江市",
     "city_name_en": "Komae, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1610,10 +1805,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9E%88%EA%B0%80%EC%8B%9C%EC%95%BC%EB%A7%88%ED%86%A0%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1621,7 +1816,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1630,7 +1825,7 @@
     "verification_note": null,
     "city_id": "JP-13-HIGASHIYAMATO-TOKYO",
     "city_name_ko": "히가시야마토시",
-    "city_name_ja": "",
+    "city_name_ja": "東大和市",
     "city_name_en": "Higashiyamato, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1639,9 +1834,14 @@
     "description": "히가시야마토시(일본어: 東大和市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "도쿄도 중북부에 위치한다. 서쪽으로 도쿄도 무사시무라야마시, 남쪽으로 다치카와시, 고다이라시, 동쪽으로 히가시무라야마시, 북쪽으로 사이타마현 도코로자와시와 접한다.\n\n다마호(무라야마 저수지)가 시내에 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "히가시야마토시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.higashiyamato.lg.jp/"
@@ -1650,10 +1850,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B8%B0%EC%9A%94%EC%84%B8%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1661,7 +1861,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1670,7 +1870,7 @@
     "verification_note": null,
     "city_id": "JP-13-KIYOSE-TOKYO",
     "city_name_ko": "기요세시",
-    "city_name_ja": "",
+    "city_name_ja": "清瀬市",
     "city_name_en": "Kiyose, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1679,9 +1879,14 @@
     "description": "기요세시(일본어: 清瀬市)는 일본 도쿄도 다마 지역 북부에 있는 시이다.",
     "geography_description": "사이타마현 니자시와 도코로자와시 사이에 쐐기를 박은 듯한 모양으로 위치한다. 북쪽의 사이타마현 도코로자와시와는 서쪽으로 야나세강을 경계로 마주하며 남쪽은 도쿄도 히가시쿠루메시와 접한다. 기요세시에는 많은 녹지가 있으며 그 비율은 46%에 이른다.\n\n기요세는 무사시노 대지 북동쪽 가장자리에 위치한다. 북동쪽에서 남서쪽까지의 길이는 6.5km이고 북서쪽에서 남동쪽까지의 길이는 2km이다. 서쪽은 대지의 비탈면으로 동쪽보다 상대적으로 높다. 고도는 서쪽의 다케오카는 65m이고 북동쪽의 시타주쿠는 20m로 고저 차이는 45m이다. 이 지역의 대부분은 야나세강 유역의 충적토를 제외하고는 대부분 홍적토이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "기요세시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.kiyose.lg.jp/"
@@ -1690,10 +1895,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9E%88%EA%B0%80%EC%8B%9C%EC%BF%A0%EB%A3%A8%EB%A9%94%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1701,7 +1906,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1710,7 +1915,7 @@
     "verification_note": null,
     "city_id": "JP-13-HIGASHIKURUME-TOKYO",
     "city_name_ko": "히가시쿠루메시",
-    "city_name_ja": "",
+    "city_name_ja": "東久留米市",
     "city_name_en": "Higashikurume, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1719,9 +1924,14 @@
     "description": "히가시쿠루메시(일본어: 東久留米市)는 일본 도쿄도에 있는 시이다. 1970년 10월 1일에 설립되었다.",
     "geography_description": "도쿄도 북부, 다마 지역 북동부에 위치한다. 북쪽으로 기요세시, 서쪽으로 히가시무라야마시, 남쪽으로 고다이라시, 남동쪽으로 니시토쿄시와 접하고 북동쪽으로 사이타마현 니자시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "히가시쿠루메시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.higashikurume.lg.jp/"
@@ -1730,10 +1940,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%AC%B4%EC%82%AC%EC%8B%9C%EB%AC%B4%EB%9D%BC%EC%95%BC%EB%A7%88%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1741,7 +1951,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1750,7 +1960,7 @@
     "verification_note": null,
     "city_id": "JP-13-MUSASHIMURAYAMA-TOKYO",
     "city_name_ko": "무사시무라야마시",
-    "city_name_ja": "",
+    "city_name_ja": "武蔵村山市",
     "city_name_en": "Musashimurayama, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1759,9 +1969,14 @@
     "description": "무사시무라야마시(일본어: 武蔵村山市)는 일본 도쿄도 북서부에 있는 시이다.",
     "geography_description": "동쪽으로 히가시야마토시, 남쪽으로 다치카와시, 남서쪽으로 훗사시, 서쪽으로 니시타마군 미즈호정과 접하고 북쪽으로 사이타마현 도코로자와시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "무사시무라야마시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.musashimurayama.lg.jp/"
@@ -1770,10 +1985,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%8B%A4%EB%A7%88%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1781,7 +1996,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1790,7 +2005,7 @@
     "verification_note": null,
     "city_id": "JP-13-TAMA-TOKYO",
     "city_name_ko": "다마시",
-    "city_name_ja": "",
+    "city_name_ja": "多摩市",
     "city_name_en": "Tama, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1799,9 +2014,14 @@
     "description": "다마시(일본어: 多摩市)는 일본 도쿄도에 있는 시이다.",
     "geography_description": "도쿄도 남부에 위치한다. 동쪽으로 이나기시, 서쪽으로 히노시, 하치오지시, 남쪽으로 마치다시, 북쪽으로 후추시와 접하고 남동쪽으로 가나가와현 가와사키시 아사오구와 접한다.\n\n도시는 도쿄 남서부에서 가나가와현까지 걸쳐 있는 광대한 구릉 지역인 다마 구릉의 북부에 위치한다. 이 지역 전체는 역사적으로 다마로 불렸고 이러한 이유로 시 경계를 넘어 다마라는 이름이 도처에 널려 있다. 일례로 몇 km 떨어진 곳에 가나가와현 가와사키시 관할의 다마구가 있다. 다마강은 시의 북쪽 경계를 이룬다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "다마시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.tama.lg.jp/"
@@ -1810,10 +2030,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%82%98%EA%B8%B0%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1821,7 +2041,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1830,7 +2050,7 @@
     "verification_note": null,
     "city_id": "JP-13-INAGI",
     "city_name_ko": "이나기시",
-    "city_name_ja": "",
+    "city_name_ja": "稲城市",
     "city_name_en": "Inagi",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1839,9 +2059,14 @@
     "description": "이나기시(일본어: 稲城市)는 일본 도쿄도 남부에 있는 시이다.\n\n1970년대 이후 일본주택공사(현 독립행정법인 도시재생기구)의 다마 뉴타운 건설과 게이오 사가미하라선 및 오다큐 다마선 연선 개발에 따라 다마강 유역의 기존 주택지와 함께 인구가 급증했다.\n\n또한 예로부터 배와 포도의 산지였다. 특히 '이나기 배'는 브랜드 배로 유명하며, 지금도 주택가에는 많은 배 농장과 배 직판장을 볼 수 있다. 일본 프로 축구 J리그 도쿄 베르디의 연고지이기도 하다.",
     "geography_description": "도쿄 도심에서 서남쪽으로 약 25km 떨어진 다마강 우안에 위치하며, 시내 다이마루에서 취수한 다이마루 용수가 동부를 적시고, 미사와강이 동서를 가로지른다. 다마 구릉의 북동부에 위치하며 현재는 대부분 주택지로 변했지만 예로부터 골짜기 지형을 활용한 농업이 이루어졌으며, 숲도 비교적 많이 남아 있다. 다른 도쿄도 다마 지역의 지자체보다 가나가와현의 가와사키시 등과의 연계성이 강하다.\n\n서쪽으로 다마시, 북쪽으로 후추시, 조후시와 접하고 동쪽과 남쪽으로 가나가와현 가와사키시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "이나기시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.inagi.tokyo.jp/"
@@ -1850,10 +2075,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%95%98%EB%AC%B4%EB%9D%BC%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1861,7 +2086,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1870,7 +2095,7 @@
     "verification_note": null,
     "city_id": "JP-13-HAMURA-TOKYO",
     "city_name_ko": "하무라시",
-    "city_name_ja": "",
+    "city_name_ja": "羽村市",
     "city_name_en": "Hamura, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1879,9 +2104,14 @@
     "description": "하무라시(일본어: 羽村市)는 일본 도쿄도 서부 교외에 있는 시이다.",
     "geography_description": "다마강을 끼고 있으며 다마강 하구에서 약 50km 떨어진 상류에 위치한다. 북쪽과 서쪽으로 오메시, 동쪽으로 니시타마군 미즈호정, 남동쪽으로 훗사시, 남서쪽으로 아키루노시와 접한다.\n\n다마가와 상수는 1653년에 완성된 인공 수로로 다마강의 물길을 돌려 에도로 물을 공급하는 것으로 하무라에서 시작된다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "하무라시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.hamura.tokyo.jp/"
@@ -1890,10 +2120,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%ED%82%A4%EB%A3%A8%EB%85%B8%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1901,7 +2131,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1910,7 +2140,7 @@
     "verification_note": null,
     "city_id": "JP-13-AKIRUNO-TOKYO",
     "city_name_ko": "아키루노시",
-    "city_name_ja": "",
+    "city_name_ja": "あきる野市",
     "city_name_en": "Akiruno, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1919,9 +2149,14 @@
     "description": "아키루노시(일본어: あきる野市)는 일본 도쿄도 다마 지역에 있는 시이다.",
     "geography_description": "도쿄도 서부에 위치한다. 남쪽으로 하치오지시, 동쪽으로 훗사시, 하무라시, 북쪽으로 오메시 니시타마군 히노데정, 서쪽으로 히노하라촌과 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "아키루노시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.akiruno.tokyo.jp/"
@@ -1930,10 +2165,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%8B%88%EC%8B%9C%ED%86%A0%EC%BF%84%EC%8B%9C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1941,7 +2176,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1950,7 +2185,7 @@
     "verification_note": null,
     "city_id": "JP-13-NISHITOKYO",
     "city_name_ko": "니시토쿄시",
-    "city_name_ja": "",
+    "city_name_ja": "西東京市",
     "city_name_en": "Nishitokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1959,9 +2194,14 @@
     "description": "니시토쿄시(일본어: 西東京市, 문화어: 니시도꾜시)는 일본 도쿄도에 있는 시이다. 이 도시는 2001년 1월 21일에 호야시와 다나시시를 통합하여 만들어졌다.",
     "geography_description": "무사시노 대지의 중앙에 위치한다. 도시는 물 공급 상태가 안 좋은 다마 지역에 속하기는 하지만 도시를 통과하는 사쿠지강, 시라코강, 신카와강, 다마가와조스이강 덕분에 물 공급 상태가 좋은 편이다. 동서 길이는 4.8km이고 남북 길이는 5.6km이다.\n\n동쪽으로 네리마구, 서쪽으로 고다이라시, 남쪽으로 고가네이시, 무사시노시, 북서쪽으로 히가시쿠루메시와 접하고 북쪽으로 사이타마현 니자시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "니시토쿄시의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.city.nishitokyo.lg.jp/"
@@ -1970,10 +2210,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%AF%B8%EC%A6%88%ED%98%B8%EC%A0%95",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -1981,7 +2221,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -1990,7 +2230,7 @@
     "verification_note": null,
     "city_id": "JP-13-MIZUHO-TOKYO",
     "city_name_ko": "미즈호정",
-    "city_name_ja": "",
+    "city_name_ja": "瑞穂町",
     "city_name_en": "Mizuho, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -1999,9 +2239,14 @@
     "description": "미즈호정(일본어: 瑞穂町 미즈호마치[*])은 일본 도쿄도 니시타마군의 정이다.",
     "geography_description": "남쪽으로 도쿄도 훗사시, 서쪽으로 오메시, 하무라시, 동쪽으로 무사시무라야마시, 사이타마현 도코로자와시, 북쪽으로 사이타마현 이루마시와 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "미즈호정의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.town.mizuho.tokyo.jp/"
@@ -2010,10 +2255,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9E%88%EB%85%B8%EB%8D%B0%EC%A0%95",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2021,7 +2266,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2030,7 +2275,7 @@
     "verification_note": null,
     "city_id": "JP-13-HINODE-TOKYO",
     "city_name_ko": "히노데정",
-    "city_name_ja": "",
+    "city_name_ja": "日の出町",
     "city_name_en": "Hinode, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2039,9 +2284,14 @@
     "description": "히노데정(일본어: 日の出町 히노데마치[*])는 일본 도쿄도 니시타마군의 정이다.",
     "geography_description": "오메시・아키루노시에 인접한다. 아키루노시로의 통근율은 14.6%(헤이세이 22년 국세조사).\n\n관내 지리는 동부의 히라이 지구(구 히라이촌 지역), 서부의 오구노 지구(구 오구노촌 지역)로 크게 나뉜다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "히노데정의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.town.hinode.tokyo.jp/",
@@ -2051,10 +2301,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%9E%88%EB%85%B8%ED%95%98%EB%9D%BC%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2062,7 +2312,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2071,7 +2321,7 @@
     "verification_note": null,
     "city_id": "JP-13-HINOHARA",
     "city_name_ko": "히노하라촌",
-    "city_name_ja": "",
+    "city_name_ja": "檜原村",
     "city_name_en": "Hinohara",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2080,19 +2330,24 @@
     "description": "히노하라촌(일본어: 檜原村)는 일본 도쿄도 니시타마군의 촌이다. 도쿄도 도서부를 제외하고 도쿄도 본토의 유일한 촌이다.",
     "geography_description": "'히노하라'라는 이름은 편백의 숲 혹은 땅을 의미한다. 이 지역의 93%가 숲으로 덮여 있으며, 예전에 이곳의 나무들은 에도의 목조 건축물을 짓는 데 사용되었다. 동쪽으로 하치오지시, 아키루노시, 북쪽으로 오쿠타마정, 서쪽으로 야마나시현 기타쓰루군 고스게촌, 남쪽으로 가나가와현 사가미하라시 미도리구, 가나가와현 우에노하라시와 접한다. 다마강의 지류인 아키가와의 상류 산지에 놓여 있다. 아키가와 남북 지류의 합류 지점인 모토슈쿠는 촌의 중심지로 촌사무소도 이곳에 있다.\n\n가장 높은 지점은 해발 1,528m의 미토산 정상이다. 히노하라의 다른 산들로는 소토산(990m), 이치미치산(795m), 가리요세산(687m), 우사키산(842m), 오다케산(1,267m)이 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "히노하라촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%98%A4%EC%BF%A0%ED%83%80%EB%A7%88%EC%A0%95",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2100,7 +2355,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2109,7 +2364,7 @@
     "verification_note": null,
     "city_id": "JP-13-OKUTAMA-TOKYO",
     "city_name_ko": "오쿠타마정",
-    "city_name_ja": "",
+    "city_name_ja": "奥多摩町",
     "city_name_en": "Okutama, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2118,9 +2373,14 @@
     "description": "오쿠타마정(일본어: 奥多摩町 오쿠타마마치[*])는 일본 도쿄도 다마 지역 북서부에 있는 니시타마군의 정이다.\n\n다마 지역의 3개 정 중 하나이며 면적은 도쿄도의 지자체 중 가장 넓다. 오메시로의 통근율은 16.4%로 나온다.",
     "geography_description": "다마 지역에 위치하며 대부분이 산지이다. 도쿄에서 가장 넓은 자치체이자 도쿄에서 가장 높은 산인 구모토리산이 있다. 정의 많은 부분이 숲으로 덮여있으며 다마강의 상류가 이곳에 위치한다.\n\n도쿄도 오메시, 아키루노시, 히노하라촌과 접하고 사이타마현 지치부시, 한노시와 접하며 야마나시현 우에노하라시, 고스게촌, 다바야마촌과 접한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "오쿠타마정의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.town.okutama.tokyo.jp/"
@@ -2129,10 +2389,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%98%A4%EC%8B%9C%EB%A7%88%EC%A0%95",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2140,7 +2400,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2149,7 +2409,7 @@
     "verification_note": null,
     "city_id": "JP-13-OSHIMA-TOKYO",
     "city_name_ko": "오시마정",
-    "city_name_ja": "",
+    "city_name_ja": "大島町",
     "city_name_en": "Ōshima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2158,9 +2418,14 @@
     "description": "오시마정(일본어: 大島町 오시마마치[*])은 일본 도쿄도 도서부 오시마 지청의 정이다. 오시마정은 이즈 제도의 북단 이즈오섬(伊豆大島)을 관할하는 지역 정부이다.",
     "geography_description": "도쿄 도심에서 남쪽으로 120km 떨어져 있는 이즈 제도의 최대 섬이다. 기후는 온난하며 연평균 기온은 15.8℃이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "오시마정의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.town.oshima.tokyo.jp/",
@@ -2170,10 +2435,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%8B%9C%EB%A7%88%EC%B4%8C_%28%EB%8F%84%EC%BF%84%EB%8F%84%29",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2181,7 +2446,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2190,7 +2455,7 @@
     "verification_note": null,
     "city_id": "JP-13-TO-SHIMA-TOKYO",
     "city_name_ko": "도시마촌",
-    "city_name_ja": "",
+    "city_name_ja": "利島村",
     "city_name_en": "To-shima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2199,19 +2464,24 @@
     "description": "도시마촌(일본어: 利島村 도시마무라[*])은 일본 도쿄도 도서부 오시마 지청의 촌으로 도시마의 지역 정부 역할을 한다. 도시마(利島)는 도쿄도가 관할하는 이즈 제도의 화산 섬으로 도쿄의 남쪽, 시즈오카현 이즈반도의 동쪽에 있다. 넓이는 4.12km2로 이즈 제도에서 가장 작은 섬 중 하나이다.",
     "geography_description": "하나의 섬으로 구성되어 있으며 미야츠키산이 있다. 섬은 이즈 제도에서 가장 큰 섬인 이즈오섬과 니지마섬 사이에 있다.\n\n섬의 80%는 동백나무 숲으로 덮여 있다. 11월부터 3월까지 섬은 동백나무의 꽃으로 붉게 물든다. 또한 백합의 본고장이기도 하다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "도시마촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%8B%88%EC%A7%80%EB%A7%88%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2219,7 +2489,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2228,7 +2498,7 @@
     "verification_note": null,
     "city_id": "JP-13-NIIJIMA-TOKYO",
     "city_name_ko": "니지마촌",
-    "city_name_ja": "",
+    "city_name_ja": "新島村",
     "city_name_en": "Niijima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2237,19 +2507,24 @@
     "description": "니지마촌(일본어: 新島村)은 일본 도쿄도 도서부 오시마 지청의 촌으로 이즈 제도의 니지마섬과 시키네섬을 관할한다. 온천과 맥주로 유명하다.",
     "geography_description": "도쿄 도심에서 남쪽으로 약 160km 떨어진 태평양 해상에 위치한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "니지마촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EC%A6%88%EC%8B%9C%EB%A7%88%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2257,7 +2532,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2266,7 +2541,7 @@
     "verification_note": null,
     "city_id": "JP-13-KOZUSHIMA-TOKYO",
     "city_name_ko": "고즈시마촌",
-    "city_name_ja": "",
+    "city_name_ja": "神津島村",
     "city_name_en": "Kōzushima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2275,19 +2550,24 @@
     "description": "고즈시마촌(일본어: 神津島村)은 일본 도쿄도 도서부 오시마 지청의 촌으로 고즈섬의 지역 정부 역할을 한다.",
     "geography_description": "도쿄 중심에서 남서쪽으로 178km 떨어진 태평양 해상에 위치한다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "고즈시마촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%AF%B8%EC%95%BC%EC%BC%80%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2295,7 +2575,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2304,7 +2584,7 @@
     "verification_note": null,
     "city_id": "JP-13-MIYAKE-TOKYO",
     "city_name_ko": "미야케촌",
-    "city_name_ja": "",
+    "city_name_ja": "三宅村",
     "city_name_en": "Miyake, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2313,19 +2593,24 @@
     "description": "미야케촌(일본어: 三宅村)은 일본 도쿄도 도서부 미야케 지청의 촌으로 미야케섬의 지역 정부 역할을 한다.",
     "geography_description": "도쿄 본토에서 남쪽으로 180km 떨어져 있다. 이즈 제도의 북부에 위치하고 미야케섬과 더불어 무인도인 오노하라섬을 관할한다. 지역 정부의 소재지는 미야케섬 남동쪽 해안의 쓰보타촌이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "미야케촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EB%AF%B8%EC%BF%A0%EB%9D%BC%EC%A7%80%EB%A7%88%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2333,7 +2618,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2342,7 +2627,7 @@
     "verification_note": null,
     "city_id": "JP-13-MIKURAJIMA-TOKYO",
     "city_name_ko": "미쿠라지마촌",
-    "city_name_ja": "",
+    "city_name_ja": "御蔵島村",
     "city_name_en": "Mikurajima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2351,19 +2636,24 @@
     "description": "미쿠라지마촌(일본어: 御蔵島村)은 일본 도쿄도 도서부 미야케 지청의 촌으로 미쿠라섬의 지역 정부 역할을 한다. 촌은 또한 무인도인 이난바섬(藺灘波島)을 관할한다.",
     "geography_description": "도쿄 중심에서 남쪽으로 200km 떨어진 태평양 해상에 위치한다. 촌의 최고봉인 오야마산은 851m이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "미쿠라지마촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%ED%95%98%EC%B9%98%EC%A1%B0%EC%A0%95",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2371,7 +2661,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2380,7 +2670,7 @@
     "verification_note": null,
     "city_id": "JP-13-HACHIJO-TOKYO",
     "city_name_ko": "하치조정",
-    "city_name_ja": "",
+    "city_name_ja": "八丈町",
     "city_name_en": "Hachijō, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2389,9 +2679,14 @@
     "description": "하치조정(일본어: 八丈町 하치조마치[*])은 일본 도쿄도 도서부 하치조 지청의 정으로 이즈 제도의 남부에 위치한다. 하치조섬과 무인도 하치조코섬을 관할한다.",
     "geography_description": "하치조정는 일본 도쿄도에 위치한 지자체이며, 대표 좌표는 위도 33.1095, 경도 139.790889이다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "하치조정의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": [
       "https://www.town.hachijo.tokyo.jp/"
@@ -2400,10 +2695,10 @@
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%95%84%EC%98%A4%EA%B0%80%EC%8B%9C%EB%A7%88%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2411,7 +2706,7 @@
       "longitude": "collected",
       "description": "needs_review",
       "geography_description": "collected",
-      "climate_table": "needs_review",
+      "climate_table": "collected",
       "site_urls": "collected"
     },
     "data_confidence": "medium",
@@ -2420,7 +2715,7 @@
     "verification_note": null,
     "city_id": "JP-13-AOGASHIMA-TOKYO",
     "city_name_ko": "아오가시마촌",
-    "city_name_ja": "",
+    "city_name_ja": "青ヶ島村",
     "city_name_en": "Aogashima, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
@@ -2429,19 +2724,24 @@
     "description": "아오가시마촌(일본어: 青ヶ島村)은 일본 도쿄도 도서부 하치조 지청의 촌으로 이즈 제도의 남부 아오가섬에 위치한다. 도쿄 근처의 유인도 중 최남단에 있고 일본의 지방자치체 중 가장 인구가 적다.",
     "geography_description": "아오가시마라는 격리된 섬에 위치하고 도쿄 본토에서 남쪽으로 358.4km 떨어져 있다. 이즈 제도의 일부로 가장 가까운 하치조섬에서 71.4km 떨어져 있다.",
     "climate_table": {
-      "caption": "수작업 필요",
+      "caption": "기후",
       "wikitext": "",
-      "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
+      "content": "도쿄 도심부는 온난 습윤 기후(쾨펜의 기후 구분 Cfa)로 여름은 덥고 습하며 겨울은 온화한 편이다. 사계절의 변화가 뚜렷하며 눈은 아주 가끔 내리는 수준이고, 거의 매년 태풍이 찾아온다. 장마가 6월 중순경부터 시작되므로 봄·가을에 여행하는 것이 좋다.\n\n행정구역 도쿄도는 매우 넓고 다양한 지형을 포함하기 때문에 지역에 따라 기후가 다르게 나타난다. 예를 들어 도심부와 서부 산악지대, 도서 지역은 기온이나 강수량의 차이가 커서 같은 기후라고 보기 어렵다.",
+      "source_scope": "prefecture",
+      "source_prefecture_id": "JP-13",
+      "source_prefecture_name_ko": "도쿄도",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8F%84%EC%BF%84%EB%8F%84",
+      "inheritance_note": "아오가시마촌의 개별 기후 표가 없어 도쿄도 기후 표를 공통 기준으로 적용했다."
     },
     "site_urls": []
   },
   {
     "source_name": "Wikipedia",
     "source_url": "https://ko.wikipedia.org/wiki/%EC%98%A4%EA%B0%80%EC%82%AC%EC%99%80%EB%9D%BC%EC%B4%8C",
-    "collected_at": "2026-06-04T17:35:28+09:00",
+    "collected_at": "2026-06-22T15:57:55+09:00",
     "field_status": {
       "city_name_ko": "collected",
-      "city_name_ja": "missing",
+      "city_name_ja": "collected",
       "city_name_en": "collected",
       "prefecture_id": "collected",
       "location": "collected",
@@ -2458,7 +2758,7 @@
     "verification_note": null,
     "city_id": "JP-13-OGASAWARA-TOKYO",
     "city_name_ko": "오가사와라촌",
-    "city_name_ja": "",
+    "city_name_ja": "小笠原村",
     "city_name_en": "Ogasawara, Tokyo",
     "prefecture_id": "JP-13",
     "location": "일본 도쿄도",
