@@ -95,7 +95,7 @@ def _normalize_item(item: dict[str, Any], *, city_pk: str) -> dict[str, Any]:
         else:
             sk = f"ATTRACTION#{content_id}"
 
-    return {
+    result = {
         "PK": city_pk,
         "SK": str(sk),
         "entity_type": entity_type,
@@ -122,6 +122,12 @@ def _normalize_item(item: dict[str, Any], *, city_pk: str) -> dict[str, Any]:
         "statistics": item.get("statistics"),
         "item_count": 1,
     }
+
+    # Preserve image_status field when present (e.g. "needs_review" from image processing)
+    if item.get("image_status"):
+        result["image_status"] = item["image_status"]
+
+    return result
 
 
 def _write_item(client: DynamoClient, table_name: str, item: dict[str, Any]) -> None:

@@ -26,7 +26,8 @@ def handler(event: dict[str, Any], context: Any) -> dict[str, Any]:  # noqa: ARG
     s3 = boto3.client("s3")
     ddb = boto3.client("dynamodb")
 
-    prefix = f"{processed_prefix.rstrip('/')}/details/{ingest_date}/passed/"
+    # Accept optional `prefix` param; fall back to default passed/ path
+    prefix = event.get("prefix") or f"{processed_prefix.rstrip('/')}/details/{ingest_date}/passed/"
     paginator = s3.get_paginator("list_objects_v2")
     for page in paginator.paginate(Bucket=bucket, Prefix=prefix):
         for item in page.get("Contents", []):

@@ -104,7 +104,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - **Validates: Requirements 2.3, 3.1**
 
 - [ ] 5. kr-pipeline-image Lambda 구현 — Review 및 Report
-  - [~] 5.1 Implement `src/kr_image_processor/review.py` — review manifest aggregation
+  - [x] 5.1 Implement `src/kr_image_processor/review.py` — review manifest aggregation
     - Function `aggregate_review(bucket, ingest_date, image_results)` → dict
     - Collect all `review_entries` from per-city results
     - Write combined manifest to `processed/KR/review/{ingest_date}/image_review.json`
@@ -117,7 +117,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Verify all required fields present: city_name_en, content_id, entity_type, original_image_url, failure_reason, timestamp
     - **Validates: Requirements 3.4**
 
-  - [~] 5.3 Implement `src/kr_image_processor/report.py` — execution report generation
+  - [x] 5.3 Implement `src/kr_image_processor/report.py` — execution report generation
     - Function `generate_report(bucket, ingest_date, execution_context)` → dict
     - Aggregate per-city results into summary (total_cities, images_downloaded, images_failed, review_count, records_loaded, vectors_built)
     - Include per_city breakdown
@@ -138,7 +138,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - **Validates: Requirements 8.2, 8.3**
 
 - [ ] 6. kr-pipeline-image Lambda — Handler 통합
-  - [~] 6.1 Implement `src/kr_image_processor/handlers/image_handler.py` — multi-command Lambda entry point
+  - [x] 6.1 Implement `src/kr_image_processor/handlers/image_handler.py` — multi-command Lambda entry point
     - Route by `event["command"]`: `"process_city"` (default), `"aggregate_review"`, `"generate_report"`
     - `process_city`: call `processor.process_city()` with event params
     - `aggregate_review`: call `review.aggregate_review()` with event params
@@ -155,8 +155,8 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
 - [~] 7. Checkpoint — kr-pipeline-image Lambda 검증
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 8. Step Functions 상태 머신 구현
-  - [~] 8.1 Create `infrastructure/terraform/step_functions.tf` — State Machine definition
+- [x] 8. Step Functions 상태 머신 구현
+  - [x] 8.1 Create `infrastructure/terraform/step_functions.tf` — State Machine definition
     - Define `aws_sfn_state_machine.kr_data_pipeline` resource
     - ASL definition as per design (CheckSkipTransform → TransformStage → BuildCityList → ImageStage → AggregateReviewManifest → LoadStage → VectorStage → GenerateReport → Success)
     - Map State MaxConcurrency: 10 for TransformStage and ImageStage
@@ -167,7 +167,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Enable CloudWatch logging
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 2.1, 7.1, 7.2, 7.3, 7.4, 7.5_
 
-  - [~] 8.2 Define Step Functions IAM execution role in `step_functions.tf`
+  - [x] 8.2 Define Step Functions IAM execution role in `step_functions.tf`
     - Create `aws_iam_role.sfn_execution_role` with states.amazonaws.com trust
     - Policy: invoke all 4 Lambda functions (transform, image, loader, vector)
     - Policy: CloudWatch Logs write for execution logging
@@ -179,8 +179,8 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Verify state transitions match design flow
     - _Requirements: 1.1, 1.7_
 
-- [ ] 9. kr-pipeline-loader 수정 — prefix 파라미터 지원
-  - [~] 9.1 Update `kr-pipeline-loader` Lambda's `load` command to accept alternative S3 prefix
+- [x] 9. kr-pipeline-loader 수정 — prefix 파라미터 지원
+  - [x] 9.1 Update `kr-pipeline-loader` Lambda's `load` command to accept alternative S3 prefix
     - Modify handler to accept `prefix` param in event (instead of hardcoded `passed/` path)
     - Default to existing behavior if prefix not provided (backward compatible)
     - When prefix is `processed/KR/details/{date}/images/`, load image-processed records
