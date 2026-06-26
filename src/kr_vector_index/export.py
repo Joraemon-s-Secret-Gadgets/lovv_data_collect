@@ -25,15 +25,25 @@ def iter_gsi3_items(
     *,
     table_name: str,
     entity_type: str,
+    index_name: str = "GSI3",
 ) -> Iterator[dict[str, Any]]:
-    """Query GSI3 for one entity type and yield deserialized DynamoDB items."""
+    """Query a GSI by entity type and yield deserialized DynamoDB items.
+
+    Args:
+        client: boto3 DynamoDB client.
+        table_name: Name of the DynamoDB table.
+        entity_type: The entity type to query (e.g. "city", "attraction").
+        index_name: Name of the GSI to query. Defaults to "GSI3" for backward
+            compatibility with the existing TourKoreaDomainData table. Pass
+            "EntityTypeDomainIndex" when querying the new V2 table.
+    """
 
     deserializer = TypeDeserializer()
     exclusive_start_key: dict[str, Any] | None = None
     while True:
         params: dict[str, Any] = {
             "TableName": table_name,
-            "IndexName": "GSI3",
+            "IndexName": index_name,
             "KeyConditionExpression": "entity_type = :entity_type",
             "ExpressionAttributeValues": {
                 ":entity_type": {"S": entity_type},
@@ -57,10 +67,11 @@ def export_items(
     table_name: str,
     entity_types: tuple[str, ...] = VECTORIZABLE_ENTITY_TYPES,
     city_pk: str | None = None,
+    index_name: str = "GSI3",
 ) -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
     for entity_type in entity_types:
-        for item in iter_gsi3_items(client, table_name=table_name, entity_type=entity_type):
+        for item in iter_gsi3_items(client, table_name=table_name, entity_type=entity_type, index_name=index_name):
             if city_pk and item.get("PK") != city_pk:
                 continue
             items.append(item)

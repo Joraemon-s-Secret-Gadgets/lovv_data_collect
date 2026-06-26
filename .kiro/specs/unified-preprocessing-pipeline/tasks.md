@@ -89,8 +89,8 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
 - [x] 4. Checkpoint - Core business logic
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 5. Implement incremental merge logic
-  - [~] 5.1 Implement `src/kr_unified_pipeline/merge.py`
+- [x] 5. Implement incremental merge logic
+  - [x] 5.1 Implement `src/kr_unified_pipeline/merge.py`
     - Implement incremental merge: load existing `cities.json` as base dataset
     - Update only fields with equal or higher `data_confidence`; never overwrite valid data with empty/lower-confidence values
     - Record previous value source and new value source in `field_status` for auditability
@@ -112,8 +112,8 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - **Property 12: Image merge without force flag**
     - **Validates: Requirements 9.5**
 
-- [ ] 6. Implement pipeline orchestrator and stage wrappers
-  - [~] 6.1 Implement `src/kr_unified_pipeline/orchestrator.py`
+- [x] 6. Implement pipeline orchestrator and stage wrappers
+  - [x] 6.1 Implement `src/kr_unified_pipeline/orchestrator.py`
     - Implement `UnifiedPipeline` class that coordinates stage execution in canonical order
     - Accept configuration specifying which stages to execute (all by default)
     - Pass `PipelineContext` between stages accumulating results
@@ -125,7 +125,7 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - Output summary report on completion
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 8.1, 8.2, 8.3, 8.4_
 
-  - [~] 6.2 Implement stage wrappers in `src/kr_unified_pipeline/stages.py`
+  - [x] 6.2 Implement stage wrappers in `src/kr_unified_pipeline/stages.py`
     - Implement `WikipediaStage` wrapping existing `crawling/KR/pipeline.py` logic
     - Implement `TourAPIRegionStage` wrapping `tour_api_region_detail_acquisition.py` logic
     - Implement `TourAPIDetailStage` wrapping `tour_api_detail_harvester.py` logic
@@ -163,25 +163,25 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - Add `domain_dynamodb_table_name_v2` variable with default "TourKoreaDomainDataV2"
     - _Requirements: 11.8_
 
-- [~] 8. Checkpoint - Infrastructure validated
+- [x] 8. Checkpoint - Infrastructure validated
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 9. Implement E2E pipeline Lambda handler (S3 → DynamoDB → Vector)
-  - [~] 9.1 Implement `src/kr_unified_pipeline/s3_reader.py`
+- [x] 9. Implement E2E pipeline Lambda handler (S3 → DynamoDB → Vector)
+  - [x] 9.1 Implement `src/kr_unified_pipeline/s3_reader.py`
     - Implement `S3ProcessedReader` class to list and read JSON files from `processed/KR/details/{ingest_date}/passed/` prefix
     - Accept `bucket` and `ingest_date` parameters
     - Support province filtering for local-test mode (filter by province_key in items)
     - Return parsed domain items ready for DynamoDB load
     - _Requirements: 13.1, 13.3, 13.6, 14.3_
 
-  - [~] 9.2 Implement `src/kr_unified_pipeline/dynamodb_loader.py`
+  - [x] 9.2 Implement `src/kr_unified_pipeline/dynamodb_loader.py`
     - Implement `DynamoDBLoader` class that reuses `kr_details_pipeline.load._write_item` for DynamoDB writes
     - Accept items from S3 reader and write to New_Domain_Table
     - Track loaded/failed counts and return `LoadResult`
     - Import and reuse existing `_coerce_value` and `_write_item` from `kr_details_pipeline.load`
     - _Requirements: 13.3, 13.6, 13.7_
 
-  - [~] 9.3 Implement `src/kr_unified_pipeline/vector_rebuilder.py`
+  - [x] 9.3 Implement `src/kr_unified_pipeline/vector_rebuilder.py`
     - Implement `VectorRebuilder` class that reuses `kr_vector_index` modules (export, chunks, embed, upsert)
     - Support full and incremental rebuild modes
     - Use "EntityTypeDomainIndex" GSI name for queries against new table
@@ -194,7 +194,7 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - **Property 14: Rebuild manifest completeness**
     - **Validates: Requirements 12.5**
 
-  - [~] 9.5 Implement `src/kr_unified_pipeline/handlers/pipeline_handler.py`
+  - [x] 9.5 Implement `src/kr_unified_pipeline/handlers/pipeline_handler.py`
     - Implement `handler(event: dict[str, Any], context: Any) -> dict[str, Any]` following existing handler pattern
     - Support commands: `"load"`, `"vector-build"`, `"e2e"` (full sequence)
     - Read config from event and environment variables (`DYNAMODB_TABLE`, `PIPELINE_BUCKET`, `VECTOR_BUCKET`, `VECTOR_INDEX`)
@@ -203,8 +203,8 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - Return combined summary report (S3 files read, records loaded, vectors upserted, execution time)
     - _Requirements: 13.2, 13.3, 13.4, 13.5, 13.7, 13.8, 13.9_
 
-- [ ] 10. Update `kr_vector_index/export.py` for backward-compatible GSI support
-  - [~] 10.1 Update `iter_gsi3_items` in `src/kr_vector_index/export.py` to accept configurable index name
+- [x] 10. Update `kr_vector_index/export.py` for backward-compatible GSI support
+  - [x] 10.1 Update `iter_gsi3_items` in `src/kr_vector_index/export.py` to accept configurable index name
     - Add `index_name: str = "GSI3"` parameter to `iter_gsi3_items` function
     - Default to "GSI3" for backward compatibility with existing table
     - When called from unified pipeline, pass `index_name="EntityTypeDomainIndex"`
@@ -213,7 +213,7 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - _Requirements: 12.7_
 
 - [ ] 11. Implement local-test mode and CLI
-  - [~] 11.1 Implement `src/kr_unified_pipeline/local_test.py`
+  - [x] 11.1 Implement `src/kr_unified_pipeline/local_test.py`
     - Implement `LocalTestRunner` class that executes full E2E scoped to single province
     - Accept `province_id` parameter and filter all operations by province_key
     - Execute sequence: S3 read → DynamoDB load → Vector rebuild (province-scoped)
@@ -231,7 +231,7 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - **Property 16: Local test verdict correctness**
     - **Validates: Requirements 14.4, 14.5, 14.6**
 
-  - [~] 11.4 Implement `src/kr_unified_pipeline/cli.py`
+  - [x] 11.4 Implement `src/kr_unified_pipeline/cli.py`
     - Implement argparse CLI with subcommands: `preprocess`, `e2e`, `local-test`
     - `preprocess` subcommand: `--stage`, `--output-dir`, `--province-id`, `--force-refresh`, `--skip-images`, `--verbose`, `--force-image-update`
     - `e2e` subcommand: `--stage` (load/vector-build), `--bucket`, `--ingest-date`, `--table-name`, `--rebuild-mode`
@@ -241,8 +241,8 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - Support `--profile` and `--region` for AWS session configuration
     - _Requirements: 10.1, 10.2, 10.3, 10.4, 10.5, 10.6, 14.1, 14.8_
 
-- [ ] 12. Implement pipeline execution logging and summary report
-  - [~] 12.1 Implement `src/kr_unified_pipeline/reporting.py`
+- [x] 12. Implement pipeline execution logging and summary report
+  - [x] 12.1 Implement `src/kr_unified_pipeline/reporting.py`
     - Implement summary report generation: total records processed, records per stage, review transitions, images collected
     - Log start/completion timestamp of each stage
     - List count of records per `review_reason` category
@@ -255,13 +255,13 @@ This plan implements the unified preprocessing pipeline as AWS Lambda functions 
     - **Validates: Requirements 8.3**
 
 - [ ] 13. Integration wiring and final validation
-  - [~] 13.1 Wire orchestrator to Lambda handler
+  - [x] 13.1 Wire orchestrator to Lambda handler
     - Ensure `pipeline_handler.handler` delegates to `orchestrator.UnifiedPipeline` for preprocessing commands
     - Ensure `pipeline_handler.handler` delegates to `s3_reader` → `dynamodb_loader` → `vector_rebuilder` for E2E commands
     - Import from `kr_details_pipeline.load` and `kr_vector_index` modules (no code duplication)
     - _Requirements: 1.1, 13.2_
 
-  - [~] 13.2 Wire CLI to orchestrator and local-test runner
+  - [x] 13.2 Wire CLI to orchestrator and local-test runner
     - Connect CLI subcommands to appropriate orchestrator/runner classes
     - Ensure CLI creates boto3 session and passes clients to business logic
     - Test CLI argument parsing for all subcommands
