@@ -459,3 +459,53 @@ resource "aws_lambda_function" "kr_pipeline_vector" {
     aws_cloudwatch_log_group.lambda_vector,
   ]
 }
+
+# -----------------------------------------------------------------------------
+# kr-pipeline-loader Lambda (기존 kr_unified_pipeline 코드 재사용)
+# -----------------------------------------------------------------------------
+
+resource "aws_cloudwatch_log_group" "lambda_loader" {
+  # kr-pipeline-loader Lambda 런타임 로그. 보관 기간은 14일.
+  name              = "/aws/lambda/${local.lambda_names.loader}"
+  retention_in_days = 14
+}
+
+data "archive_file" "kr_unified_pipeline_lambda" {
+  # kr_unified_pipeline 소스를 ZIP으로 묶어 loader Lambda에 배포합니다.
+  type        = "zip"
+  source_dir  = "${path.module}/../../src"
+  output_path = "${path.module}/kr_unified_pipeline_lambda.zip"
+  excludes = [
+    "**/__pycache__/**",
+    "**/tests/**",
+    "kr_vector_index/**",
+    "kr_image_processor/**",
+  ]
+}
+
+resource "aws_lambda_function" "kr_pipeline_loader" {
+  function_name    = local.lambda_names.loader
+  description      = "KR pipeline loader Lambda for S3-to-DynamoDB load and vector index rebuild"
+  role             = aws_iam_role.pipeline_lambda_role.arn
+  handler          = "kr_unified_pipeline.handlers.pipeline_handler.handler"
+  runtime          = "python3.12"
+  timeout          = 900
+  memory_size      = 512
+  filename         = data.archive_file.kr_unified_pipeline_lambda.output_path
+  source_code_hash = data.archive_file.kr_unified_pipeline_lambda.output_base64sha256
+
+  environment {
+    variables = {
+      DYNAMODB_TABLE   = var.domain_dynamodb_table_name
+      PIPELINE_BUCKET  = aws_s3_bucket.pipeline.bucket
+      VECTOR_BUCKET    = var.vector_bucket_name
+      VECTOR_INDEX     = var.kr_vector_index_name
+      PROCESSED_PREFIX = var.processed_data_prefix
+    }
+  }
+
+  depends_on = [
+    aws_iam_role_policy.pipeline_lambda_policy,
+    aws_cloudwatch_log_group.lambda_loader,
+  ]
+}

@@ -6,7 +6,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
 
 ## Tasks
 
-- [ ] 1. Lambda 이름 변경 및 인프라 기초 정리
+- [x] 1. Lambda 이름 변경 및 인프라 기초 정리
   - [x] 1.1 Update `locals.lambda_names` map in `main.tf` to reflect new names
     - Change `domain_loader = "kr-domain-loader"` → `transform = "kr-pipeline-transform"`
     - Change `vector_index = "kr-vector-index"` → `vector = "kr-pipeline-vector"`
@@ -14,7 +14,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Update all `local.lambda_names.*` references in `main.tf` (resource names, function_name, log groups)
     - _Requirements: 10.1, 10.2, 10.3, 10.4, 10.5, 10.7_
 
-  - [~] 1.2 Rename Lambda function resources in `main.tf`
+  - [x] 1.2 Rename Lambda function resources in `main.tf`
     - Rename `aws_lambda_function.kr_domain_loader` → `aws_lambda_function.kr_pipeline_transform`
     - Update function_name to `kr-pipeline-transform`, handler path unchanged
     - Rename `aws_lambda_function.kr_vector_index` → `aws_lambda_function.kr_pipeline_vector`
@@ -24,7 +24,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Update CloudWatch Log Groups to match `/aws/lambda/kr-pipeline-*` naming
     - _Requirements: 10.1, 10.2, 10.3, 10.4, 10.6, 10.8, 10.9_
 
-  - [~] 1.3 Create `infrastructure/terraform/image_bucket.tf` — new S3 bucket for pipeline images
+  - [x] 1.3 Create `infrastructure/terraform/image_bucket.tf` — new S3 bucket for pipeline images
     - Define `aws_s3_bucket.pipeline_images` with name `lovv-pipeline-images-${var.env}-${data.aws_caller_identity.current.account_id}`
     - Add `aws_s3_bucket_server_side_encryption_configuration` (SSE-S3 / AES256)
     - Add `aws_s3_bucket_public_access_block` (all blocks = true)
