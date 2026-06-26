@@ -14,8 +14,11 @@ data "aws_caller_identity" "current" {}
 locals {
   bucket_name = "${var.bucket_base_name}-${var.env}-${data.aws_caller_identity.current.account_id}"
   lambda_names = {
-    domain_loader = "kr-domain-loader"
-    vector_index  = "kr-vector-index"
+    transform = "kr-pipeline-transform"
+    loader    = "kr-pipeline-loader"
+    vector    = "kr-pipeline-vector"
+    ingest    = "kr-pipeline-ingest"
+    image     = "kr-pipeline-image"
   }
   vector_bucket_arn   = "arn:aws:s3vectors:${var.aws_region}:${data.aws_caller_identity.current.account_id}:bucket/${var.vector_bucket_name}"
   kr_vector_index_arn = "${local.vector_bucket_arn}/index/${var.kr_vector_index_name}"
@@ -370,15 +373,15 @@ resource "aws_iam_role_policy" "s3_vector_index_reader_policy" {
   })
 }
 
-resource "aws_cloudwatch_log_group" "lambda_domain_loader" {
-  # domain-loader Lambda 런타임 로그. 보관 기간은 14일.
-  name              = "/aws/lambda/${local.lambda_names.domain_loader}"
+resource "aws_cloudwatch_log_group" "lambda_transform" {
+  # kr-pipeline-transform Lambda 런타임 로그. 보관 기간은 14일.
+  name              = "/aws/lambda/${local.lambda_names.transform}"
   retention_in_days = 14
 }
 
-resource "aws_cloudwatch_log_group" "lambda_vector_index" {
-  # vector-index Lambda 런타임 로그. 보관 기간은 14일.
-  name              = "/aws/lambda/${local.lambda_names.vector_index}"
+resource "aws_cloudwatch_log_group" "lambda_vector" {
+  # kr-pipeline-vector Lambda 런타임 로그. 보관 기간은 14일.
+  name              = "/aws/lambda/${local.lambda_names.vector}"
   retention_in_days = 14
 }
 
@@ -406,9 +409,9 @@ data "archive_file" "kr_vector_index_lambda" {
   ]
 }
 
-resource "aws_lambda_function" "kr_domain_loader" {
-  function_name    = local.lambda_names.domain_loader
-  description      = "KR domain loader Lambda for manual raw JSON preprocessing and DynamoDB load"
+resource "aws_lambda_function" "kr_pipeline_transform" {
+  function_name    = local.lambda_names.transform
+  description      = "KR pipeline transform Lambda for manual raw JSON preprocessing and DynamoDB load"
   role             = aws_iam_role.pipeline_lambda_role.arn
   handler          = "kr_details_pipeline.handlers.domain_loader_handler.handler"
   runtime          = "python3.12"
@@ -426,12 +429,12 @@ resource "aws_lambda_function" "kr_domain_loader" {
 
   depends_on = [
     aws_iam_role_policy.pipeline_lambda_policy,
-    aws_cloudwatch_log_group.lambda_domain_loader,
+    aws_cloudwatch_log_group.lambda_transform,
   ]
 }
 
-resource "aws_lambda_function" "kr_vector_index" {
-  function_name    = local.lambda_names.vector_index
+resource "aws_lambda_function" "kr_pipeline_vector" {
+  function_name    = local.lambda_names.vector
   description      = "KR S3 Vector index build Lambda handler"
   role             = aws_iam_role.pipeline_lambda_role.arn
   handler          = "kr_vector_index.handlers.vector_index_handler.handler"
@@ -453,6 +456,6 @@ resource "aws_lambda_function" "kr_vector_index" {
 
   depends_on = [
     aws_iam_role_policy.pipeline_lambda_policy,
-    aws_cloudwatch_log_group.lambda_vector_index,
+    aws_cloudwatch_log_group.lambda_vector,
   ]
 }

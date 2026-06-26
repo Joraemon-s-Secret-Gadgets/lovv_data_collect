@@ -28,28 +28,28 @@ output "lambda_role_arn" {
   value       = aws_iam_role.pipeline_lambda_role.arn
 }
 
-output "kr_domain_loader_lambda_name" {
-  # Raw JSON을 도메인별로 전처리한 뒤 신규 DynamoDB 테이블에 적재하는 수동 실행용 Lambda.
-  description = "Name of deployed KR domain loader Lambda function."
-  value       = aws_lambda_function.kr_domain_loader.function_name
+output "kr_pipeline_transform_lambda_name" {
+  # kr-pipeline-transform Lambda function name (formerly kr-domain-loader).
+  description = "Name of deployed KR pipeline transform Lambda function."
+  value       = aws_lambda_function.kr_pipeline_transform.function_name
 }
 
-output "kr_domain_loader_lambda_arn" {
-  # kr-domain-loader Lambda ARN.
-  description = "ARN of deployed KR domain loader Lambda function."
-  value       = aws_lambda_function.kr_domain_loader.arn
+output "kr_pipeline_transform_lambda_arn" {
+  # kr-pipeline-transform Lambda ARN.
+  description = "ARN of deployed KR pipeline transform Lambda function."
+  value       = aws_lambda_function.kr_pipeline_transform.arn
 }
 
-output "kr_vector_index_lambda_name" {
-  # S3 Vector index build Lambda function name.
-  description = "Name of deployed KR vector index Lambda function."
-  value       = aws_lambda_function.kr_vector_index.function_name
+output "kr_pipeline_vector_lambda_name" {
+  # kr-pipeline-vector Lambda function name (formerly kr-vector-index).
+  description = "Name of deployed KR pipeline vector Lambda function."
+  value       = aws_lambda_function.kr_pipeline_vector.function_name
 }
 
-output "kr_vector_index_lambda_arn" {
-  # kr-vector-index Lambda ARN.
-  description = "ARN of deployed KR vector index Lambda function."
-  value       = aws_lambda_function.kr_vector_index.arn
+output "kr_pipeline_vector_lambda_arn" {
+  # kr-pipeline-vector Lambda ARN.
+  description = "ARN of deployed KR pipeline vector Lambda function."
+  value       = aws_lambda_function.kr_pipeline_vector.arn
 }
 
 output "vector_bucket_name" {
