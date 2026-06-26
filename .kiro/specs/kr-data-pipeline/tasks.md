@@ -56,7 +56,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - IAM: S3 read on pipeline data bucket + S3 read/write on image bucket
     - _Requirements: 2.2, 6.3, 9.3_
 
-- [~] 3. Checkpoint — Terraform infrastructure validation
+- [x] 3. Checkpoint — Terraform infrastructure validation
   - Ensure `terraform plan` produces expected changes (no unintended modifications to existing resources).
   - Ensure all tests pass, ask the user if questions arise.
 
@@ -152,7 +152,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Test missing required params returns descriptive error
     - _Requirements: 2.2_
 
-- [~] 7. Checkpoint — kr-pipeline-image Lambda 검증
+- [x] 7. Checkpoint — kr-pipeline-image Lambda 검증
   - Ensure all tests pass, ask the user if questions arise.
 
 - [x] 8. Step Functions 상태 머신 구현
@@ -193,8 +193,8 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Test records with `image_status: "needs_review"` are preserved
     - _Requirements: 4.2, 4.6_
 
-- [ ] 10. DynamoDB V2 테이블 정리 스크립트
-  - [~] 10.1 Create `scripts/cleanup_dynamodb_v2.py` — table delete & recreate script
+- [x] 10. DynamoDB V2 테이블 정리 스크립트
+  - [x] 10.1 Create `scripts/cleanup_dynamodb_v2.py` — table delete & recreate script
     - Delete existing `TourKoreaDomainDataV2` table
     - Wait for deletion to complete
     - Recreate with same schema (PK, SK, GSIs) via Terraform apply or boto3
@@ -202,7 +202,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Include safety prompt (y/N) before execution
     - _Requirements: 9.8, 9.9_
 
-- [~] 11. Checkpoint — 전체 인프라 및 통합 검증
+- [x] 11. Checkpoint — 전체 인프라 및 통합 검증
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 12. Final wiring and deployment preparation
@@ -212,21 +212,21 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - Wire to `aws_lambda_function.kr_pipeline_image` resource
     - _Requirements: 2.2_
 
-  - [~] 12.2 Update `infrastructure/terraform/outputs.tf` with new resource outputs
+  - [x] 12.2 Update `infrastructure/terraform/outputs.tf` with new resource outputs
     - Add Step Functions state machine ARN output
     - Add kr-pipeline-image Lambda ARN output
     - Add image bucket name and ARN outputs
     - Add Lambda Layer ARN output
     - _Requirements: 1.5, 2.2, 9.1_
 
-  - [~] 12.3 Ensure all IAM policies are complete and least-privilege
+  - [x] 12.3 Ensure all IAM policies are complete and least-privilege
     - Verify kr-pipeline-image role has S3 read on data bucket + S3 read/write on image bucket
     - Verify Step Functions role invokes all 4 Lambdas
     - Verify existing kr-pipeline-loader role retains current permissions (no changes needed per Req 9.6)
     - Add new resources without modifying existing Lambda functions or buckets (Req 9.7)
     - _Requirements: 9.3, 9.4, 9.5, 9.6, 9.7_
 
-- [~] 13. Final checkpoint — 전체 프로젝트 검증
+- [x] 13. Final checkpoint — 전체 프로젝트 검증
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
