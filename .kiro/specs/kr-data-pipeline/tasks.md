@@ -32,7 +32,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
     - _Requirements: 9.1, 9.2_
 
 - [ ] 2. Lambda Layer 및 신규 Lambda 인프라
-  - [~] 2.1 Create `layers/requests/build.sh` — build script for requests Lambda Layer
+  - [x] 2.1 Create `layers/requests/build.sh` — build script for requests Lambda Layer
     - Script: `pip install requests -t python/ --platform manylinux2014_x86_64 --only-binary=:all: --python-version 3.12`
     - Zip output to `layer.zip`
     - Print layer size for validation (< 50MB)
@@ -61,7 +61,7 @@ AWS Step Functions 상태 머신으로 211개 도시 관광 데이터를 End-to-
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 4. kr-pipeline-image Lambda 구현 — 핵심 처리 로직
-  - [~] 4.1 Create `src/kr_image_processor/__init__.py` and module directory structure
+  - [x] 4.1 Create `src/kr_image_processor/__init__.py` and module directory structure
     - Create directories: `src/kr_image_processor/`, `src/kr_image_processor/handlers/`, `src/kr_image_processor/tests/`
     - Create `__init__.py` files for all packages
     - _Requirements: 2.2_
