@@ -33,6 +33,7 @@ def load_processed_city(payload: dict[str, Any], table_name: str, client: Dynamo
     city_pk = _city_pk(city_record.get("city_name_en"))
 
     if city_record.get("city_id"):
+        province = city_record.get("province") or ""
         _write_item(
             client,
             table_name,
@@ -43,10 +44,15 @@ def load_processed_city(payload: dict[str, Any], table_name: str, client: Dynamo
                 "city_id": city_record.get("city_id"),
                 "city_name_en": city_record.get("city_name_en"),
                 "city_name_ko": city_record.get("city_name_ko"),
-                "province": city_record.get("province"),
+                "province": province,
                 "lDongRegnCd": city_record.get("lDongRegnCd"),
                 "lDongSignguCd": city_record.get("lDongSignguCd"),
                 "source_status": payload.get("status", ""),
+                # GSI key fields
+                "city_key": city_pk,
+                "province_key": province,
+                "domain_sort_key": f"city#{city_record.get('city_id', '')}",
+                "gsi_sk": f"city#{city_record.get('city_id', '')}",
             },
         )
         passed += 1
@@ -122,6 +128,20 @@ def _normalize_item(item: dict[str, Any], *, city_pk: str) -> dict[str, Any]:
         "statistics": item.get("statistics"),
         "item_count": 1,
     }
+
+    # GSI key fields for TourKoreaDomainDataV2
+    # city_key: same as PK for CityDomainIndex GSI
+    result["city_key"] = city_pk
+    # province_key: extracted from item or inferred from city_pk
+    result["province_key"] = item.get("province_key") or item.get("province") or ""
+    # domain_sort_key: entity_type#content_id for ordering within GSI
+    result["domain_sort_key"] = f"{entity_type}#{content_id}" if content_id else f"{entity_type}#{entity_id}"
+    # gsi_sk: for FestivalMonthIndex — FESTIVAL#{month:02d}#{content_id}
+    if entity_type == "festival":
+        month = item.get("month") or item.get("eventstartdate", "")[:2] or "00"
+        result["gsi_sk"] = f"FESTIVAL#{month}#{content_id}"
+    else:
+        result["gsi_sk"] = f"{entity_type}#{content_id}"
 
     # Preserve image_status field when present (e.g. "needs_review" from image processing)
     if item.get("image_status"):

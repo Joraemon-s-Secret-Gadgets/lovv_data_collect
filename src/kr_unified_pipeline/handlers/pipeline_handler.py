@@ -249,6 +249,19 @@ def _execute_load_phase(
             try:
                 ddb_item = dict(item)
                 ddb_item.pop("table", None)
+                # Add GSI key fields for V2 table if missing
+                if "domain_sort_key" not in ddb_item:
+                    entity_type = ddb_item.get("entity_type", "")
+                    content_id = ddb_item.get("content_id", "")
+                    entity_id = ddb_item.get("entity_id", "")
+                    ddb_item["city_key"] = ddb_item.get("PK", "") or "UNKNOWN"
+                    ddb_item["province_key"] = ddb_item.get("province_key") or ddb_item.get("province", "") or "UNKNOWN"
+                    ddb_item["domain_sort_key"] = f"{entity_type}#{content_id}" if content_id else f"{entity_type}#{entity_id}" if entity_id else f"{entity_type}#UNKNOWN"
+                    if entity_type == "festival":
+                        month = ddb_item.get("month") or (ddb_item.get("eventstartdate") or "")[:2] or "00"
+                        ddb_item["gsi_sk"] = f"FESTIVAL#{month}#{content_id}"
+                    else:
+                        ddb_item["gsi_sk"] = f"{entity_type}#{content_id}" if content_id else f"{entity_type}#{entity_id}" if entity_id else f"{entity_type}#UNKNOWN"
                 _write_item(ddb_client, table_name, ddb_item)
                 loaded += 1
             except Exception as exc:  # noqa: BLE001
