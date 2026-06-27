@@ -282,6 +282,31 @@ resource "aws_iam_role_policy" "pipeline_lambda_policy" {
       {
         Effect = "Allow"
         Action = [
+          "dynamodb:PutItem",
+          "dynamodb:UpdateItem",
+          "dynamodb:GetItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:Query"
+        ]
+        Resource = aws_dynamodb_table.tourkorea_domain_data_v2.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "dynamodb:Query"
+        ]
+        Resource = "${aws_dynamodb_table.tourkorea_domain_data_v2.arn}/index/*"
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "dynamodb:DescribeTable"
+        ]
+        Resource = aws_dynamodb_table.tourkorea_domain_data_v2.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
           "dynamodb:Query"
         ]
         Resource = "${aws_dynamodb_table.tourkorea_domain_data.arn}/index/*"
