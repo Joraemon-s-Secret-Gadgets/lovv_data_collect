@@ -233,6 +233,24 @@ def collect_city_detail(
         "festivals": [_enrich_item_status(item) for item in collected_festivals],
     }
 
+    # Collect visitor statistics from DataLab API (if signguCode available)
+    lDongSignguCd = str(meta.get("lDongSignguCd") or "").strip()
+    if lDongSignguCd:
+        try:
+            from crawling.KR.datalab_collector import BigDataClient, SignguCodeMapping, collect_visitor_statistics_for_city
+            datalab_client = BigDataClient()
+            visitor_stats = collect_visitor_statistics_for_city(
+                signgu_code=lDongSignguCd,
+                city_name_en=city_name_en,
+                year=2025,
+                client=datalab_client,
+            )
+            if visitor_stats:
+                result["visitor_statistics"] = visitor_stats
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).warning("Failed to collect visitor stats for %s: %s", city_name_en, e)
+
     output_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return result
 
