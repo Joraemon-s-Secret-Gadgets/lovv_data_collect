@@ -50,7 +50,7 @@ MUNICIPALITY_EN_MAP: Final[dict[str, str]] = {
     "영월군": "YEONGWOL",
     "평창군": "PYEONGCHANG",
     "정선군": "JEONGSEON",
-    "철원군": "CHEORWON",
+    "철원군 (대한민국)": "CHEORWON",
     "화천군": "HWACHEON",
     "양구군": "YANGGU",
     "인제군": "INJE",
@@ -139,6 +139,7 @@ MUNICIPALITY_EN_MAP: Final[dict[str, str]] = {
     "수성구": "SUSEONG",
     "달서구": "DALSEO",
     "달성군": "DALSEONG",
+    "군위군": "GUNWI",
     # ──────────────────────────────────────────────
     # Incheon (KR-28) — 8 gu + 2 gun
     # ──────────────────────────────────────────────
@@ -337,3 +338,41 @@ def find_province(prefecture_id: str) -> ProvinceReference | None:
         if province.prefecture_id == prefecture_id:
             return province
     return None
+
+
+def validate_target_coverage(targets_dir: "Path | None" = None) -> list[str]:
+    """Return municipality names from MUNICIPALITY_EN_MAP not found in any target file.
+
+    Loads all 17 target JSON files from *targets_dir* (defaults to
+    ``crawling/KR/targets/``), collects every title string, and compares
+    against the keys of :data:`MUNICIPALITY_EN_MAP`.
+
+    Returns a list of missing municipality names (empty if coverage is complete).
+    """
+    from pathlib import Path
+    import json
+
+    if targets_dir is None:
+        targets_dir = Path(__file__).parent / "targets"
+    else:
+        targets_dir = Path(targets_dir)
+
+    all_titles: set[str] = set()
+    for target_file in sorted(targets_dir.glob("*_municipalities_ko.json")):
+        try:
+            payload = json.loads(target_file.read_text(encoding="utf-8"))
+            for item in payload:
+                if isinstance(item, str):
+                    all_titles.add(item)
+                elif isinstance(item, dict) and "title" in item:
+                    all_titles.add(item["title"])
+        except Exception as e:
+            print(f"Warning: Could not load target file {target_file}: {e}")
+
+    missing = [name for name in MUNICIPALITY_EN_MAP if name not in all_titles]
+    if missing:
+        print(
+            f"Target coverage gap: {len(missing)} municipalities "
+            f"in MUNICIPALITY_EN_MAP not found in target files."
+        )
+    return missing

@@ -239,3 +239,6 @@ infrastructure/terraform/*.zip
 !/data/**/.gitkeep
 /data/KR/detail_cache/**
 /data/KR/details/**
+
+# Codex agent internal settings
+.codex/
