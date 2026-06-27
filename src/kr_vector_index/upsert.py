@@ -76,12 +76,21 @@ def put_vectors_sdk(
 ) -> int:
     written = 0
     for batch in chunked(records, batch_size):
-        client.put_vectors(
-            vectorBucketName=vector_bucket,
-            indexName=index_name,
-            vectors=batch,
-        )
-        written += len(batch)
+        # Deduplicate keys within batch (S3 Vectors rejects duplicate keys)
+        seen_keys: set[str] = set()
+        deduped: list[dict[str, Any]] = []
+        for record in batch:
+            key = record.get("key", "")
+            if key not in seen_keys:
+                seen_keys.add(key)
+                deduped.append(record)
+        if deduped:
+            client.put_vectors(
+                vectorBucketName=vector_bucket,
+                indexName=index_name,
+                vectors=deduped,
+            )
+            written += len(deduped)
     return written
 
 
