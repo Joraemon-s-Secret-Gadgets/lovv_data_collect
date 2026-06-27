@@ -57,7 +57,7 @@ def _build_filename(record: dict[str, Any], used_names: set[str]) -> str:
     duplicates by appending the content_id.
     """
     title = str(record.get("title", "") or "")
-    content_id = str(record.get("content_id", "") or "")
+    content_id = str(record.get("content_id", "") or record.get("contentid", "") or "")
     base = romanize(title) or content_id or "item"
     if base in used_names:
         base = f"{base}_{content_id}"
@@ -120,6 +120,19 @@ def process_city(
     city_data = json.loads(body)
 
     records = city_data.get("records", [])
+    # Support raw format: attractions + festivals (no "records" key)
+    if not records:
+        attractions = city_data.get("attractions", [])
+        festivals = city_data.get("festivals", [])
+        records = []
+        for item in attractions:
+            if isinstance(item, dict):
+                item.setdefault("entity_type", "attraction")
+                records.append(item)
+        for item in festivals:
+            if isinstance(item, dict):
+                item.setdefault("entity_type", "festival")
+                records.append(item)
 
     # Counters
     images_downloaded = 0
@@ -132,6 +145,9 @@ def process_city(
 
     for record in records:
         image_url = record.get("image_url")
+        # Fallback to firstimage (raw TourAPI format)
+        if _is_empty_url(image_url):
+            image_url = record.get("firstimage")
 
         if _is_empty_url(image_url):
             # No source image
@@ -139,7 +155,7 @@ def process_city(
             record["image_status"] = "needs_review"
             review_entries.append({
                 "city_name_en": city_name_en,
-                "content_id": str(record.get("content_id", "")),
+                "content_id": str(record.get("content_id") or record.get("contentid") or ""),
                 "entity_type": str(record.get("entity_type", "")),
                 "original_image_url": "",
                 "failure_reason": "no_source_image",
@@ -162,7 +178,7 @@ def process_city(
             record["image_status"] = "needs_review"
             review_entries.append({
                 "city_name_en": city_name_en,
-                "content_id": str(record.get("content_id", "")),
+                "content_id": str(record.get("content_id") or record.get("contentid") or ""),
                 "entity_type": str(record.get("entity_type", "")),
                 "original_image_url": image_url,
                 "failure_reason": "download_failed",
