@@ -79,6 +79,12 @@ variable "domain_dynamodb_table_name" {
   default     = "TourKoreaDomainData"
 }
 
+variable "domain_dynamodb_table_name_v2" {
+  description = "DynamoDB V2 table name with descriptive GSI naming for unified pipeline."
+  type        = string
+  default     = "TourKoreaDomainDataV2"
+}
+
 # -----------------------------------------------------------------------------
 # 리소스 공통 태그
 # -----------------------------------------------------------------------------

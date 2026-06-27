@@ -167,6 +167,78 @@ resource "aws_dynamodb_table" "tourkorea_domain_data" {
   tags = merge(local.base_tags, { Name = var.domain_dynamodb_table_name, schema = "domain-separated" })
 }
 
+resource "aws_dynamodb_table" "tourkorea_domain_data_v2" {
+  # 의미 있는 GSI 명명을 적용한 신규 도메인 테이블입니다.
+  name           = var.domain_dynamodb_table_name_v2
+  billing_mode   = "PAY_PER_REQUEST"
+  hash_key       = "PK"
+  range_key      = "SK"
+  stream_enabled = false
+
+  attribute {
+    name = "PK"
+    type = "S"
+  }
+  attribute {
+    name = "SK"
+    type = "S"
+  }
+  attribute {
+    name = "entity_type"
+    type = "S"
+  }
+  attribute {
+    name = "city_key"
+    type = "S"
+  }
+  attribute {
+    name = "province_key"
+    type = "S"
+  }
+  attribute {
+    name = "domain_sort_key"
+    type = "S"
+  }
+  attribute {
+    name = "gsi_sk"
+    type = "S"
+  }
+
+  global_secondary_index {
+    name            = "CityDomainIndex"
+    hash_key        = "city_key"
+    range_key       = "domain_sort_key"
+    projection_type = "ALL"
+  }
+
+  global_secondary_index {
+    name            = "ProvinceDomainIndex"
+    hash_key        = "province_key"
+    range_key       = "domain_sort_key"
+    projection_type = "ALL"
+  }
+
+  global_secondary_index {
+    name            = "EntityTypeDomainIndex"
+    hash_key        = "entity_type"
+    range_key       = "domain_sort_key"
+    projection_type = "ALL"
+  }
+
+  global_secondary_index {
+    name            = "FestivalMonthIndex"
+    hash_key        = "entity_type"
+    range_key       = "gsi_sk"
+    projection_type = "ALL"
+  }
+
+  point_in_time_recovery {
+    enabled = true
+  }
+
+  tags = merge(local.base_tags, { Name = var.domain_dynamodb_table_name_v2, schema = "domain-separated-v2" })
+}
+
 resource "aws_iam_role" "pipeline_lambda_role" {
   # Lambda 실행 역할. Lambda 서비스가 AssumeRole로 사용합니다.
   name = "lovv-data-pipeline-lambda-${var.env}"
