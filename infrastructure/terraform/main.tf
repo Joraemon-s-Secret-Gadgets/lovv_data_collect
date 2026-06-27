@@ -22,6 +22,8 @@ locals {
   }
   vector_bucket_arn   = "arn:aws:s3vectors:${var.aws_region}:${data.aws_caller_identity.current.account_id}:bucket/${var.vector_bucket_name}"
   kr_vector_index_arn = "${local.vector_bucket_arn}/index/${var.kr_vector_index_name}"
+  agentcore_v1_vector_bucket_arn = "arn:aws:s3vectors:${var.aws_region}:${data.aws_caller_identity.current.account_id}:bucket/${var.agentcore_v1_vector_bucket_name}"
+  agentcore_v1_vector_index_arn  = "${local.agentcore_v1_vector_bucket_arn}/index/${var.agentcore_v1_vector_index_name}"
   base_tags           = merge(var.tags, { env = var.env })
 }
 
@@ -373,6 +375,22 @@ resource "aws_iam_role_policy" "pipeline_lambda_policy" {
           local.vector_bucket_arn,
           local.kr_vector_index_arn
         ]
+      },
+      {
+        # AgentCore v1 vector bucket/index (강원/경북 전용)
+        Effect = "Allow"
+        Action = [
+          "s3vectors:GetVectorBucket",
+          "s3vectors:GetIndex",
+          "s3vectors:ListVectors",
+          "s3vectors:GetVectors",
+          "s3vectors:QueryVectors",
+          "s3vectors:PutVectors"
+        ]
+        Resource = [
+          local.agentcore_v1_vector_bucket_arn,
+          local.agentcore_v1_vector_index_arn
+        ]
       }
     ]
   })
@@ -419,7 +437,9 @@ resource "aws_iam_role_policy" "s3_vector_index_writer_policy" {
         ]
         Resource = [
           local.vector_bucket_arn,
-          local.kr_vector_index_arn
+          local.kr_vector_index_arn,
+          local.agentcore_v1_vector_bucket_arn,
+          local.agentcore_v1_vector_index_arn
         ]
       }
     ]
@@ -463,7 +483,9 @@ resource "aws_iam_role_policy" "s3_vector_index_reader_policy" {
         ]
         Resource = [
           local.vector_bucket_arn,
-          local.kr_vector_index_arn
+          local.kr_vector_index_arn,
+          local.agentcore_v1_vector_bucket_arn,
+          local.agentcore_v1_vector_index_arn
         ]
       }
     ]

@@ -81,3 +81,21 @@ output "s3_vector_index_reader_role_arn" {
   description = "IAM role ARN for S3 Vector index reader queries."
   value       = aws_iam_role.s3_vector_index_reader_role.arn
 }
+
+# -----------------------------------------------------------------------------
+# AgentCore v1 Vector outputs
+# -----------------------------------------------------------------------------
+output "agentcore_v1_vector_bucket_name" {
+  description = "S3 Vector bucket name for AgentCore v1 (강원/경북 only)."
+  value       = var.agentcore_v1_vector_bucket_name
+}
+
+output "agentcore_v1_vector_index_name" {
+  description = "S3 Vector index name for AgentCore v1."
+  value       = var.agentcore_v1_vector_index_name
+}
+
+output "agentcore_v1_vector_index_arn" {
+  description = "ARN of the AgentCore v1 S3 Vector index."
+  value       = local.agentcore_v1_vector_index_arn
+}
