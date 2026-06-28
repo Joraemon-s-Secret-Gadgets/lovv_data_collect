@@ -323,6 +323,31 @@ resource "aws_iam_role_policy" "pipeline_lambda_policy" {
       {
         Effect = "Allow"
         Action = [
+          "dynamodb:PutItem",
+          "dynamodb:UpdateItem",
+          "dynamodb:GetItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:Query"
+        ]
+        Resource = aws_dynamodb_table.tourkorea_domain_data_v2.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "dynamodb:Query"
+        ]
+        Resource = "${aws_dynamodb_table.tourkorea_domain_data_v2.arn}/index/*"
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "dynamodb:DescribeTable"
+        ]
+        Resource = aws_dynamodb_table.tourkorea_domain_data_v2.arn
+      },
+      {
+        Effect = "Allow"
+        Action = [
           "s3:ListBucket",
           "s3:GetObject",
           "s3:PutObject",
@@ -626,5 +651,53 @@ resource "aws_lambda_function" "kr_pipeline_loader" {
   depends_on = [
     aws_iam_role_policy.pipeline_lambda_policy,
     aws_cloudwatch_log_group.lambda_loader,
+  ]
+}
+
+# -----------------------------------------------------------------------------
+# KR Unified Pipeline Lambda
+# -----------------------------------------------------------------------------
+
+data "archive_file" "kr_unified_pipeline_lambda" {
+  # 통합 파이프라인 handler를 포함하는 ZIP. kr_details_pipeline과 kr_vector_index도 포함.
+  type        = "zip"
+  source_dir  = "${path.module}/../../src"
+  output_path = "${path.module}/kr_unified_pipeline_lambda.zip"
+  excludes = [
+    "**/__pycache__/**",
+    "**/tests/**",
+  ]
+}
+
+resource "aws_cloudwatch_log_group" "lambda_unified_pipeline" {
+  name              = "/aws/lambda/${local.lambda_names.unified_pipeline}"
+  retention_in_days = 14
+}
+
+resource "aws_lambda_function" "kr_unified_pipeline" {
+  function_name    = local.lambda_names.unified_pipeline
+  description      = "KR unified preprocessing pipeline: E2E (S3 -> DynamoDB -> Vector) and preprocess orchestration"
+  role             = aws_iam_role.pipeline_lambda_role.arn
+  handler          = "kr_unified_pipeline.handlers.pipeline_handler.handler"
+  runtime          = "python3.12"
+  timeout          = 900
+  memory_size      = 1024
+  filename         = data.archive_file.kr_unified_pipeline_lambda.output_path
+  source_code_hash = data.archive_file.kr_unified_pipeline_lambda.output_base64sha256
+
+  environment {
+    variables = {
+      DYNAMODB_TABLE  = var.domain_dynamodb_table_name_v2
+      PIPELINE_BUCKET = aws_s3_bucket.pipeline.bucket
+      VECTOR_BUCKET   = var.vector_bucket_name
+      VECTOR_INDEX    = var.kr_vector_index_name
+      MANIFEST_BUCKET = aws_s3_bucket.pipeline.bucket
+      MANIFEST_PREFIX = "${var.processed_data_prefix}/vector/manifests"
+    }
+  }
+
+  depends_on = [
+    aws_iam_role_policy.pipeline_lambda_policy,
+    aws_cloudwatch_log_group.lambda_unified_pipeline,
   ]
 }
