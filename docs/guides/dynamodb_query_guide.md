@@ -1,4 +1,7 @@
-# DynamoDB TourKoreaDomainDataV2 Query 가이드
+# DynamoDB Query 참고 가이드
+
+> 현재 운영 기준은 [dynamodb_v2_query_guide.md](dynamodb_v2_query_guide.md)입니다.
+> 이 문서는 기존 조회 패턴을 빠르게 확인하기 위한 보조 문서입니다. 2026-06-28 live AWS 기준 운영 PK는 `CITY#GANGNEUNG`처럼 대문자 영문 도시키입니다.
 
 ## 테이블 스키마
 
@@ -29,7 +32,7 @@ table = dynamodb.Table('TourKoreaDomainDataV2')
 
 # PK로 직접 Query
 response = table.query(
-    KeyConditionExpression=Key('PK').eq('CITY#Gangneung')
+    KeyConditionExpression=Key('PK').eq('CITY#GANGNEUNG')
 )
 items = response['Items']
 ```
@@ -38,7 +41,7 @@ items = response['Items']
 
 ```python
 response = table.query(
-    KeyConditionExpression=Key('PK').eq('CITY#Gangneung') & Key('SK').begins_with('ATTRACTION#')
+    KeyConditionExpression=Key('PK').eq('CITY#GANGNEUNG') & Key('SK').begins_with('ATTRACTION#')
 )
 ```
 
@@ -46,7 +49,7 @@ response = table.query(
 
 ```python
 response = table.query(
-    KeyConditionExpression=Key('PK').eq('CITY#Gangneung') & Key('SK').begins_with('FESTIVAL#')
+    KeyConditionExpression=Key('PK').eq('CITY#GANGNEUNG') & Key('SK').begins_with('FESTIVAL#')
 )
 ```
 
@@ -54,7 +57,7 @@ response = table.query(
 
 ```python
 response = table.query(
-    KeyConditionExpression=Key('PK').eq('CITY#Gangneung') & Key('SK').eq('METADATA#city')
+    KeyConditionExpression=Key('PK').eq('CITY#GANGNEUNG') & Key('SK').eq('METADATA#city')
 )
 city_metadata = response['Items'][0]
 ```
@@ -78,7 +81,7 @@ all_attractions = response['Items']
 # ProvinceDomainIndex GSI 사용
 response = table.query(
     IndexName='ProvinceDomainIndex',
-    KeyConditionExpression=Key('province_key').eq('KR-42')  # 강원특별자치도
+    KeyConditionExpression=Key('province_key').eq('PROVINCE#강원특별자치도')
 )
 ```
 
@@ -100,8 +103,9 @@ july_festivals = response['Items']
 aws dynamodb query \
   --table-name TourKoreaDomainDataV2 \
   --key-condition-expression "PK = :pk" \
-  --expression-attribute-values '{":pk":{"S":"CITY#Gangneung"}}' \
-  --select COUNT
+  --expression-attribute-values '{":pk":{"S":"CITY#GANGNEUNG"}}' \
+  --select COUNT \
+  --profile skn26_final --region us-east-1
 
 # 전체 attraction 수 (GSI)
 aws dynamodb query \
@@ -109,14 +113,16 @@ aws dynamodb query \
   --index-name EntityTypeDomainIndex \
   --key-condition-expression "entity_type = :et" \
   --expression-attribute-values '{":et":{"S":"attraction"}}' \
-  --select COUNT
+  --select COUNT \
+  --profile skn26_final --region us-east-1
 
 # 특정 도시의 관광지 목록 (title만)
 aws dynamodb query \
   --table-name TourKoreaDomainDataV2 \
   --key-condition-expression "PK = :pk AND begins_with(SK, :sk)" \
-  --expression-attribute-values '{":pk":{"S":"CITY#Gangneung"},":sk":{"S":"ATTRACTION#"}}' \
-  --projection-expression "title,image_url"
+  --expression-attribute-values '{":pk":{"S":"CITY#GANGNEUNG"},":sk":{"S":"ATTRACTION#"}}' \
+  --projection-expression "title,image_url" \
+  --profile skn26_final --region us-east-1
 ```
 
 ## 레코드 필드 구조
@@ -125,7 +131,7 @@ aws dynamodb query \
 
 ```json
 {
-  "PK": "CITY#Gangneung",
+  "PK": "CITY#GANGNEUNG",
   "SK": "ATTRACTION#12345",
   "entity_type": "attraction",
   "entity_id": "A-12345",
@@ -147,11 +153,11 @@ aws dynamodb query \
 
 ```json
 {
-  "PK": "CITY#Gangneung",
+  "PK": "CITY#GANGNEUNG",
   "SK": "METADATA#city",
   "entity_type": "city",
-  "city_id": "KR-Gangneung",
-  "city_name_en": "Gangneung",
+  "city_id": "KR-GANGNEUNG",
+  "city_name_en": "GANGNEUNG",
   "city_name_ko": "강릉시",
   "province": "강원특별자치도"
 }

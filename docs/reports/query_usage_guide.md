@@ -1,12 +1,17 @@
 # 쿼리 사용 가이드
 
-이 문서는 `02_lovv_data_collect`에서 현재 기준으로 사용하는 S3 키 패턴과 DynamoDB 조회 패턴을 정리합니다.
+> 현재 `TourKoreaDomainDataV2` 운영 조회는 [../guides/dynamodb_v2_query_guide.md](../guides/dynamodb_v2_query_guide.md)를 기준으로 합니다.
+> 이 문서는 기존 `TourKoreaDomainData` 조회 패턴과 S3 키 패턴 참고용으로 유지합니다.
+> 2026-06-28 AWS 재조회 기준으로 `TourKoreaDomainData`도 ACTIVE이며 8,022 items가 남아 있지만, 신규 전국 데이터 운영 기준은 `TourKoreaDomainDataV2`입니다.
+
+이 문서는 `02_lovv_data_collect`의 기존 S3 키 패턴과 `TourKoreaDomainData` 조회 패턴을 정리합니다.
 
 ## 1. 기본 환경/자원
 - Region: `us-east-1`
 - AWS Profile: `skn26_final`
 - S3 버킷: `lovv-data-pipeline-dev-925273580929`(Terraform 기본값)
-- DynamoDB 테이블: `TourKoreaDomainData`
+- DynamoDB 테이블: `TourKoreaDomainData` (legacy/reference)
+- 현재 운영 테이블: `TourKoreaDomainDataV2` ([V2 가이드](../guides/dynamodb_v2_query_guide.md) 참조)
 - 핵심 속성
   - PK: `PK`
   - SK: `SK`
@@ -141,8 +146,8 @@ resp = ddb.query(
 ```
 
 ## 5. 주의/운영 노트
-- 현재 도메인 분리 적재의 운영 기준 테이블은 `TourKoreaDomainData`입니다.
-- 기존 `TourKoreaData`는 제거됐으므로 신규 조회와 재적재는 `TourKoreaDomainData`만 사용합니다.
-- `kr-domain-loader`는 같은 `PK`/`SK`에 대해 `put_item`으로 덮어씁니다. 컬럼 구조가 바뀐 경우에는 테이블 item 삭제 후 전체 재적재가 더 안전합니다.
+- 현재 전국 데이터 운영 조회 기준 테이블은 `TourKoreaDomainDataV2`입니다.
+- `TourKoreaDomainData`는 여전히 ACTIVE 상태의 legacy table입니다. 기존 Lambda 기본 환경변수도 이 테이블을 가리키므로, V2 재적재/벡터 빌드는 `table_name=TourKoreaDomainDataV2` override 여부를 먼저 확인해야 합니다.
+- `kr-domain-loader` 계열 적재는 같은 `PK`/`SK`에 대해 `put_item`으로 덮어씁니다. 컬럼 구조가 바뀐 경우에는 대상 테이블과 삭제 범위를 명확히 확인한 뒤 전체 재적재가 더 안전합니다.
 - 민감값(ACCESS KEY/SECRET)은 `~/.aws/credentials` 또는 세션 프로파일 기반으로 관리하고, 코드/문서에 직접 노출하지 않습니다.
 - 배포/운영에서 `query` 대신 `scan`을 남발하면 비용이 증가할 수 있으므로 우선 PK/SK 패턴을 고정해 조회하십시오.

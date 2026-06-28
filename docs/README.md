@@ -33,13 +33,21 @@
 | [specs/city_data_acquisition_spec.md](specs/city_data_acquisition_spec.md) | City 데이터 취득 계약 |
 | [specs/city_data_acquisition_spec_ko.md](specs/city_data_acquisition_spec_ko.md) | City 데이터 취득 계약 한국어본 |
 
+## Guides
+
+| 문서 | 목적 |
+| --- | --- |
+| [guides/dynamodb_v2_query_guide.md](guides/dynamodb_v2_query_guide.md) | `TourKoreaDomainDataV2` 조회, PK/SK, GSI, `visitor_statistics` 사용 가이드 |
+| [guides/dynamodb_query_guide.md](guides/dynamodb_query_guide.md) | 기존 DynamoDB 조회 패턴 참고 문서 |
+
 ## Reports
 
 | 문서 | 목적 |
 | --- | --- |
 | [reports/korea_data_preprocessing_result_report.md](reports/korea_data_preprocessing_result_report.md) | KR 전처리 결과 보고 |
-| [reports/preprocessing_report.md](reports/preprocessing_report.md) | 전처리 검증 보고 |
-| [reports/query_usage_guide.md](reports/query_usage_guide.md) | DynamoDB 조회 사용 가이드 |
+| [reports/kr_nationwide_pipeline_report_20260628.md](reports/kr_nationwide_pipeline_report_20260628.md) | 2026-06-28 AWS live 조회 기준 전국 전처리·적재 보고 |
+| [reports/preprocessing_report.md](reports/preprocessing_report.md) | 2026-06-10 40개 도시 기준 과거 전처리 검증 보고 |
+| [reports/query_usage_guide.md](reports/query_usage_guide.md) | 기존 `TourKoreaDomainData` 조회 및 S3 키 패턴 legacy 참고 문서 |
 | [reports/s3_vector_index_infra_report.md](reports/s3_vector_index_infra_report.md) | S3 Vector 인프라 작업 보고 |
 | [reports/s3_vector_graphrag_usage_report.md](reports/s3_vector_graphrag_usage_report.md) | GraphRAG 검색 사용 보고 |
 | [reports/s3_vector_console_test_usage.md](reports/s3_vector_console_test_usage.md) | S3 Vector 콘솔 테스트 사용 기록 |
