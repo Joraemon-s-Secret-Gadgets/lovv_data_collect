@@ -4011,8 +4011,8 @@
   },
   {
     "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%EC%A3%BC%EC%8B%9C",
-    "collected_at": "2026-06-26T17:43:42+09:00",
+    "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%EC%A3%BC%EC%8B%9C_%28%EA%B2%BD%EA%B8%B0%EB%8F%84%29",
+    "collected_at": "2026-06-29T11:52:22+09:00",
     "field_status": {
       "city_name_ko": "collected",
       "city_name_ja": "missing",
@@ -4036,16 +4036,19 @@
     "city_name_en": "GWANGJU-GYEONGGI",
     "prefecture_id": "KR-41",
     "location": "대한민국 경기도",
-    "latitude": 37.4290844,
-    "longitude": 127.255189,
-    "description": "광주시의 다른 뜻은 다음과 같다.",
-    "geography_description": "광주시는 대한민국 경기도에 위치한 지자체이며, 대표 좌표는 위도 37.4290844, 경도 127.255189이다.",
+    "latitude": 37.36666666666667,
+    "longitude": 127.28333333333333,
+    "description": "광주시(廣州市)는 대한민국 경기도 남동부에 있는 시이다. 광주산맥에 둘러싸인 분지 지형이며, 경안천이 흐른다. 동쪽으로 양평군, 여주시, 서쪽으로 성남시, 남쪽으로 용인시, 이천시, 북쪽으로 하남시, 남양주시와 접한다. 전라남도에 둘러싸인 광주광역시(光州廣域市)와의 혼동을 피하기 위하여 경기광주(京畿廣州)라고 부른다.\n\n광주군은 현재의 서울특별시 강남구·강동구·송파구(1962년 12월 12일 이관), 성남시(1973년 7월 1일 시 승격), 하남시(1989년 1월 1일 시 승격)를 포함하였고, 조선 시대에는 의왕시, 군포시 대야동, 안산시 상록구 지역까지 관할하였다. 1979년 5월 1일에 광주면이 광주읍으로 승격하였고, 2001년 3월 21일에 광주군이 광주시로 승격하였다. 2읍 4면 10동을 관할하는 도농복합시이다.",
+    "geography_description": "광주시는 경기도의 중부에 있는 도시로서 동서간 27.88 km, 남북간 30.26km로 면적은 431km2에 달한다. 동쪽으로 여주시, 이천시에 접하고, 서쪽에는 성남시, 남쪽에는 용인시를 이웃하고 있으며, 한강을 경계로 하여 남양주시, 양평군과 하남시를 마주보고 있다. 서울-부산간 국도가 광주시를 남북을 종단하고 있어 자동차가 빈번히 왕래하여 교통이 편리하다. 광주시의 경작지는 주로 한강 유역과 동서를 관통한 경안천 유역에 있고, 그 외에는 산간 계곡에 흩어져 있으나 산악이 좋은 곳이다.[5]\n\n상수도보호구역 등 보호구역이 4곳이 겹쳐 있는 퇴촌면 등으로 자연이 보존되어 있으나 난개발 및 저개발 지역이라는 단점이 있다. 또 이러한 것이 이 지역의 시민들에게 단점이 되기도 하는데, 2023년 12월부터 광주 지역의 시민들은 타 지역의 시민들보다 수도세를 10% 더 인상받아 내게 되었다.",
     "climate_table": {
       "caption": "수작업 필요",
       "wikitext": "",
       "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
     },
-    "site_urls": []
+    "site_urls": [
+      "https://www.gjcity.go.kr/main.do",
+      "http://www.gjcity.go.kr/n01_cityhall/03_general/01_01.asp"
+    ]
   },
   {
     "source_name": "Wikipedia",
@@ -13639,8 +13642,8 @@
   },
   {
     "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%98%81%EA%B4%91%EA%B5%B0",
-    "collected_at": "2026-06-26T17:44:56+09:00",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%98%81%EA%B4%91%EA%B5%B0_%28%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%29",
+    "collected_at": "2026-06-29T11:52:22+09:00",
     "field_status": {
       "city_name_ko": "collected",
       "city_name_ja": "missing",
@@ -13666,14 +13669,17 @@
     "location": "대한민국 전라남도",
     "latitude": 35.2769282,
     "longitude": 126.5124504,
-    "description": "영광군은 다음 등을 가리킨다.",
-    "geography_description": "영광군는 대한민국 전라남도에 위치한 지자체이며, 대표 좌표는 위도 35.2769282, 경도 126.5124504이다.",
+    "description": "영광군(靈光郡)은 대한민국 전라남도 서북부에 있는 군이다. 서쪽으로는 황해와 면하고, 동쪽으로 장성군, 남쪽으로 함평군, 무안군, 북쪽으로는 전북특별자치도 고창군과 접한다. 해안선 길이는 199.15 km이고, 부속도서로는 낙월도, 안마도, 송이도 등 62개의 섬이 있다.\n\n특산물로는 법성포 굴비가 유명하다. 군청 소재지는 영광읍이고, 행정구역은 3읍 8면이다.",
+    "geography_description": "영광군은 전라남도 서부 최북단에 위치하고 있으며, 동부 산간 지대와 서부 평야지의 특성을 가지고 있으며, 리아스식 해안이 발달해 있다. 동쪽으로 장성군과 접경을 하고 있으며, 남쪽으로는 함평군이 있다.\n\n여름은 해양성 기후의 영향으로 고온다습하며, 겨울은 대륙성 기후로 한랭건조하다. 일조시간이 길어 농작물 생산에 적합하고, 바람이 강하고 눈이 많이 내리는 지역이다.[7]",
     "climate_table": {
       "caption": "수작업 필요",
       "wikitext": "",
       "note": "Wikipedia에서 기후 표를 자동 취득하지 못해 수작업 확인이 필요하다."
     },
-    "site_urls": []
+    "site_urls": [
+      "http://www.yeonggwang.go.kr/",
+      "https://jumin.mois.go.kr/index.jsp"
+    ]
   },
   {
     "source_name": "Wikipedia",
