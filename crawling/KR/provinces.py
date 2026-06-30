@@ -8,6 +8,7 @@ mapping for all 17 Korean metropolitan cities and provinces.
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Final
 
 from crawling.KR.models import ProvinceReference
@@ -208,7 +209,7 @@ MUNICIPALITY_EN_MAP: Final[dict[str, str]] = {
     "안성시": "ANSEONG",
     "김포시": "GIMPO",
     "화성시": "HWASEONG",
-    "광주시": "GWANGJU-GYEONGGI",
+    "광주시 (경기도)": "GWANGJU-GYEONGGI",
     "양주시": "YANGJU",
     "포천시": "POCHEON",
     "여주시": "YEOJU",
@@ -284,7 +285,7 @@ MUNICIPALITY_EN_MAP: Final[dict[str, str]] = {
     "영암군": "YEONGAM",
     "무안군": "MUAN",
     "함평군": "HAMPYEONG",
-    "영광군": "YEONGGWANG",
+    "영광군 (전라남도)": "YEONGGWANG",
     "장성군": "JANGSEONG",
     "완도군": "WANDO",
     "진도군": "JINDO",
@@ -349,7 +350,6 @@ def validate_target_coverage(targets_dir: "Path | None" = None) -> list[str]:
 
     Returns a list of missing municipality names (empty if coverage is complete).
     """
-    from pathlib import Path
     import json
 
     if targets_dir is None:

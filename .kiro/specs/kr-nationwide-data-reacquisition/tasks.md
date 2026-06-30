@@ -4,6 +4,8 @@
 
 Extend the South Korea city data acquisition pipeline from limited scope (강원·경북 only) to nationwide coverage of all ~226 municipalities across all 17 provinces. The implementation adds CLI enhancements, province-aware batch processing, a DataLab visitor statistics collector with signguCode mapping, a merge pipeline, and robustness features (key rotation, retry, incremental persistence).
 
+This plan also contains the merged TourAPI unique city key reacquisition bugfix work. The former standalone bugfix Spec is no longer the active planning surface; its requirements are represented here as Task 12.
+
 ## Tasks
 
 - [ ] 1. Extend CLI and province-level batch execution
@@ -185,6 +187,94 @@ Extend the South Korea city data acquisition pipeline from limited scope (강원
 - [ ] 10. Final checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
+- [ ] 11. Remediate nationwide Wikipedia acquisition quality gaps
+  - [ ] 11.1 Correct disambiguation-page target titles
+    - Update `crawling/KR/targets/gyeonggi_municipalities_ko.json` and `crawling/KR/targets/jeonnam_municipalities_ko.json` so `광주시` and `영광군` resolve to the actual municipality pages, not Korean Wikipedia disambiguation pages
+    - Keep `MUNICIPALITY_EN_MAP` keys aligned with the corrected target titles
+    - Verify `KR-41-GWANGJU-GYEONGGI` and `KR-46-YEONGGWANG` descriptions no longer contain `다른 뜻은 다음과 같다` or `다음 등을 가리킨다`
+    - _Requirements: 4.6, 11.1, 11.2, 11.3_
+
+  - [ ] 11.2 Add coordinate remediation for missing-coordinate municipalities
+    - Add a fallback or remediation path for the 9 cities identified in `docs/reports/kr_wikipedia_nationwide_acquisition_review_20260629.md`
+    - Preserve records when coordinates are still missing, but report them as quality remediation items
+    - Verify missing coordinate count is reduced or explicitly documented
+    - _Requirements: 4.8, 11.4_
+
+  - [ ] 11.3 Fix empty-container field_status handling
+    - Update field status logic so empty lists and empty objects are marked missing unless a field-specific rule says otherwise
+    - Add tests for empty `site_urls`
+    - Verify the 5 empty `site_urls` cases are no longer marked collected
+    - _Requirements: 4.7, 11.5_
+
+  - [ ] 11.4 Add province/all-provinces execution path tests
+    - Test `--province-id KR-11` target resolution
+    - Test `--all-provinces` iterates 17 province target files
+    - Test `acquire_province()` skip/new/failed accounting
+    - Test `acquire_all_provinces()` returns one ProvinceResult per province
+    - _Requirements: 2.2, 2.3, 9.3, 11.6_
+
+  - [ ] 11.5 Partial reacquisition and report update
+    - Reacquire or patch the affected Wikipedia records after Tasks 11.1-11.3
+    - Update the nationwide Wikipedia acquisition report so count completeness and content-quality completeness are reported separately
+    - _Requirements: 11.7_
+
+- [ ] 12. Remediate TourAPI unique city key and reacquisition path
+  - [ ] 12.1 Present Korean file header drafts for user approval
+    - Purpose: Python 파일 헤더를 적용하기 전에 사용자 검토 게이트를 통과한다.
+    - Scope: `crawling/KR/tour_api_region_detail_acquisition.py`, `crawling/KR/tour_api_city_detail_acquisition.py`, `crawling/KR/datalab_collector.py`, `src/kr_details_pipeline/s3_keys.py`, `src/kr_details_pipeline/manifest.py`, `src/kr_details_pipeline/transform.py`, and modified tests
+    - Acceptance: 대상 파일별 한국어 파일 헤더 문안이 사용자에게 제시되고 승인 전까지 Python 파일 docstring을 수정하지 않는다.
+    - Verification: 승인 기록 또는 사용자 확인 메시지
+    - _Requirements: 17.1, 17.2_
+
+  - [ ] 12.2 Add province-aware TourAPI city identity helper
+    - Purpose: TourAPI target을 `cities.json`의 disambiguated 도시와 정확히 연결한다.
+    - Scope: `crawling/KR/tour_api_region_detail_acquisition.py`
+    - Acceptance: 동명이구 대상의 `city_key`가 모두 고유하고, lookup은 `city_name_ko` 단독 키를 사용하지 않는다.
+    - Verification: identity 중복 검사와 관련 단위 테스트
+    - _Requirements: 12.2, 12.3, 13.1, 13.2, 13.3, 13.4_
+
+  - [ ] 12.3 Change TourAPI list/detail output paths to `city_key`
+    - Purpose: `jung-gu.json`, `dong-gu.json` 같은 단독 파일명 충돌을 제거한다.
+    - Scope: `crawling/KR/tour_api_region_detail_acquisition.py`, `crawling/KR/tour_api_city_detail_acquisition.py`
+    - Acceptance: `output_path`와 `list_path`가 standalone `city_name_en`으로 생성되지 않고, 표시명은 metadata로 보존된다.
+    - Verification: 서울/울산 중구, 강원/경남 고성군 테스트
+    - _Requirements: 12.1, 12.2, 12.3, 12.4, 12.5_
+
+  - [ ] 12.4 Make nationwide TourAPI reacquisition repeatable without disposable helper scripts
+    - Purpose: 임시 `_run_nationwide.py` 없이 전국 재취득을 재현 가능하게 실행한다.
+    - Scope: `crawling/KR/tour_api_region_detail_acquisition.py`
+    - Acceptance: 전국 target 파일 또는 region option을 명시적으로 선택할 수 있다.
+    - Verification: dry-run 또는 limit 기반 smoke 실행
+    - _Requirements: 18.4_
+
+  - [ ] 12.5 Fix DataLab visitor statistics association for TourAPI details
+    - Purpose: raw/detail 내부 visitor_statistics가 동명이구에 잘못 붙는 것을 막는다.
+    - Scope: `crawling/KR/tour_api_city_detail_acquisition.py`, `crawling/KR/datalab_collector.py`
+    - Acceptance: 방문통계 결과에 city identity 추적 필드가 남고, 통계 부재는 raw/detail 생성을 실패시키지 않는다.
+    - Verification: mocked DataLab 응답 단위 테스트
+    - _Requirements: 14.1, 14.2, 14.3, 14.4_
+
+  - [ ] 12.6 Make S3 raw manifest and keys use unique city identity
+    - Purpose: S3 raw 업로드 결과에서 도시 식별자를 추적 가능하게 하고 key 충돌을 차단한다.
+    - Scope: `src/kr_details_pipeline/s3_keys.py`, `src/kr_details_pipeline/manifest.py`, `src/kr_details_pipeline/tests/test_s3_keys.py`, `src/kr_details_pipeline/tests/test_manifest.py`
+    - Acceptance: manifest가 `city_key`, `city_id`, `city_name_en`, `city_name_ko`, province, `lDongRegnCd`, `lDongSignguCd`를 포함하고, 동명이구 S3 key 중복이 0건이다.
+    - Verification: `uv run pytest src/kr_details_pipeline/tests/test_s3_keys.py src/kr_details_pipeline/tests/test_manifest.py`
+    - _Requirements: 15.1, 15.2, 15.3, 15.4, 15.5_
+
+  - [ ] 12.7 Align transform and DynamoDB V2 key candidates
+    - Purpose: 후단 load candidate가 standalone `city_name_en` PK로 수렴하지 않게 한다.
+    - Scope: `src/kr_details_pipeline/transform.py`, `src/kr_details_pipeline/tests/test_transform.py`, optionally `src/kr_details_pipeline/load.py` or `src/kr_details_pipeline/domain_preprocess.py`
+    - Acceptance: transformed records가 unique city key와 표시명을 모두 보존하고, 동명이구 PK 중복은 dry-run/load candidate 검증에서 보고된다.
+    - Verification: `uv run pytest src/kr_details_pipeline/tests/test_transform.py` plus duplicate key dry-run if available
+    - _Requirements: 16.1, 16.2, 16.3, 16.4_
+
+  - [ ] 12.8 Apply approved Korean headers, file history, and run reacquisition readiness verification
+    - Purpose: 승인된 문서화 규칙을 적용하고 전국 재취득 전 smoke gate를 통과한다.
+    - Scope: modified Python modules, modified tests, and completion report
+    - Acceptance: 각 수정 파일 하단에 `# 파일 이력`과 `(github name)` 작업자 표기가 있고, smoke 대상이 별도 raw/detail 파일로 생성되며, 완료 보고서가 기존 `20260625`와 신규 ingest date를 구분한다.
+    - Verification: `rg -n "파일 이력|2026-06-29" <target-files>` and smoke report for 서울 중구, 울산 중구, 강원 고성군, 경남 고성군
+    - _Requirements: 17.3, 17.4, 17.5, 18.1, 18.2, 18.3, 18.5_
+
 ## Notes
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP
@@ -208,7 +298,14 @@ Extend the South Korea city data acquisition pipeline from limited scope (강원
     { "id": 4, "tasks": ["7.1", "8.1"] },
     { "id": 5, "tasks": ["7.2", "7.3", "8.2", "8.3"] },
     { "id": 6, "tasks": ["9.1"] },
-    { "id": 7, "tasks": ["9.2"] }
+    { "id": 7, "tasks": ["9.2"] },
+    { "id": 8, "tasks": ["11.1", "11.2", "11.3", "11.4", "11.5"] },
+    { "id": 9, "tasks": ["12.1", "12.2", "12.3", "12.4", "12.5", "12.6", "12.7", "12.8"] }
   ]
 }
 ```
+
+## Change History
+
+- 2026-06-29: Added Task 11 to remediate nationwide Wikipedia quality gaps found in `docs/reports/kr_wikipedia_nationwide_acquisition_review_20260629.md`.
+- 2026-06-29: Merged TourAPI unique city key bugfix tasks into the existing nationwide reacquisition Spec as Task 12.

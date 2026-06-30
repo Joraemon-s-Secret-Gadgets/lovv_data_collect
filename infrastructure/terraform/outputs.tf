@@ -12,14 +12,24 @@ output "bucket_arn" {
 
 output "domain_dynamodb_table_name" {
   # 음식점/관광지/축제 분리 전처리 결과를 적재할 신규 테이블 이름.
-  description = "Domain-separated KR content table."
+  description = "Legacy domain-separated KR content table."
   value       = aws_dynamodb_table.tourkorea_domain_data.name
 }
 
 output "domain_dynamodb_table_arn" {
   # 신규 도메인 분리 테이블 ARN.
-  description = "Domain-separated KR content table ARN."
+  description = "Legacy domain-separated KR content table ARN."
   value       = aws_dynamodb_table.tourkorea_domain_data.arn
+}
+
+output "domain_dynamodb_table_name_v2" {
+  description = "DynamoDB V2 table name for KR domain data."
+  value       = aws_dynamodb_table.tourkorea_domain_data_v2.name
+}
+
+output "domain_dynamodb_table_arn_v2" {
+  description = "DynamoDB V2 table ARN for KR domain data."
+  value       = aws_dynamodb_table.tourkorea_domain_data_v2.arn
 }
 
 output "lambda_role_arn" {
@@ -60,13 +70,13 @@ output "vector_bucket_name" {
 
 output "kr_vector_index_name" {
   # S3 Vector index name used for KR tourism domain search.
-  description = "S3 Vector index name for KR tourism domain data."
+  description = "S3 Vector index name for KR tourism domain data V2."
   value       = var.kr_vector_index_name
 }
 
 output "kr_vector_index_arn" {
   # S3 Vector index ARN for writer/reader policy references.
-  description = "ARN of the KR S3 Vector index."
+  description = "ARN of the KR S3 Vector index V2."
   value       = local.kr_vector_index_arn
 }
 

@@ -65,7 +65,7 @@ def load_processed_city(payload: dict[str, Any], table_name: str, client: Dynamo
             _write_item(
                 client,
                 table_name,
-                _normalize_item(item, city_pk=city_pk),
+                _normalize_item(item, city_pk=city_pk, province=city_record.get("province")),
             )
             passed += 1
         except Exception as exc:
@@ -84,7 +84,7 @@ def load_processed_payload(payload: dict[str, Any], table_name: str, client: Dyn
     return load_processed_city(payload, table_name, client)
 
 
-def _normalize_item(item: dict[str, Any], *, city_pk: str) -> dict[str, Any]:
+def _normalize_item(item: dict[str, Any], *, city_pk: str, province: Any = None) -> dict[str, Any]:
     entity_type = item.get("entity_type", "")
     entity_id = item.get("entity_id", "")
     content_id = item.get("content_id", "")
@@ -133,7 +133,7 @@ def _normalize_item(item: dict[str, Any], *, city_pk: str) -> dict[str, Any]:
     # city_key: same as PK for CityDomainIndex GSI
     result["city_key"] = city_pk
     # province_key: extracted from item or inferred from city_pk
-    result["province_key"] = item.get("province_key") or item.get("province") or ""
+    result["province_key"] = item.get("province_key") or item.get("province") or province or ""
     # domain_sort_key: entity_type#content_id for ordering within GSI
     result["domain_sort_key"] = f"{entity_type}#{content_id}" if content_id else f"{entity_type}#{entity_id}"
     # gsi_sk: for FestivalMonthIndex — FESTIVAL#{month:02d}#{content_id}
@@ -147,13 +147,14 @@ def _normalize_item(item: dict[str, Any], *, city_pk: str) -> dict[str, Any]:
     if item.get("image_status"):
         result["image_status"] = item["image_status"]
 
-    return result
+    return _normalize_visitor_statistics_keys(result)
 
 
 def _write_item(client: DynamoClient, table_name: str, item: dict[str, Any]) -> None:
     from boto3.dynamodb.types import TypeSerializer
 
     serializer = TypeSerializer()
+    item = _normalize_visitor_statistics_keys(item)
     serialized = {key: serializer.serialize(_coerce_value(value)) for key, value in item.items()}
     client.put_item(TableName=table_name, Item=serialized)
 
@@ -170,3 +171,28 @@ def _coerce_value(value: Any) -> Any:
     if isinstance(value, dict):
         return {key: _coerce_value(item) for key, item in value.items()}
     return value
+
+
+def _normalize_visitor_statistics_keys(item: dict[str, Any]) -> dict[str, Any]:
+    if item.get("entity_type") != "visitor_statistics":
+        return item
+
+    result = dict(item)
+    month = str(result.get("month") or "UNKNOWN")
+    sk = str(result.get("SK") or f"STAT#{month}")
+    result["SK"] = sk
+    result["domain_sort_key"] = sk
+
+    province_key = str(result.get("province_key") or "")
+    province = str(result.get("province") or "")
+    if province_key.startswith("PROVINCE#"):
+        result["province_key"] = province_key
+    elif province_key and province_key != "UNKNOWN":
+        result["province_key"] = f"PROVINCE#{province_key}"
+    elif province:
+        result["province_key"] = province if province.startswith("PROVINCE#") else f"PROVINCE#{province}"
+    else:
+        result["province_key"] = "PROVINCE#UNKNOWN"
+
+    result.pop("gsi_sk", None)
+    return result

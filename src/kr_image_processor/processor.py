@@ -13,6 +13,7 @@ import time
 from datetime import datetime, timezone
 from typing import Any
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlparse
 
 from kr_image_uploader.download import fetch_bytes
 from kr_image_uploader.romanize import romanize
@@ -22,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 _MAX_RETRIES = 3
 _BACKOFF_BASE = 1  # seconds
+_IMAGE_ENTITY_TYPES = {"attraction", "festival"}
 
 
 def _is_empty_url(url: Any) -> bool:
@@ -74,6 +76,147 @@ def _get_extension_from_url(url: str) -> str:
         if ext in ("jpg", "jpeg", "png", "gif", "webp", "bmp"):
             return ext
     return "jpg"
+
+
+def rewrite_image_urls_to_s3(
+    *,
+    records: list[dict[str, Any]],
+    image_s3_client: Any,
+    image_bucket: str,
+    city_name_en: str,
+) -> dict[str, Any]:
+    images_downloaded = 0
+    images_failed = 0
+    no_source_image = 0
+    review_entries: list[dict[str, Any]] = []
+    used_names: set[str] = set()
+    output_records: list[dict[str, Any]] = []
+
+    for source_record in records:
+        record = dict(source_record)
+        if str(record.get("entity_type") or "") not in _IMAGE_ENTITY_TYPES:
+            output_records.append(record)
+            continue
+
+        image_url = record.get("image_url")
+        if _is_empty_url(image_url):
+            image_url = record.get("firstimage")
+
+        if _is_empty_url(image_url):
+            no_source_image += 1
+            record["image_url"] = ""
+            record["source_image_url"] = ""
+            record["image_status"] = "needs_review"
+            record["image_review_reason"] = "no_source_image"
+            review_entries.append(
+                _image_review_entry(
+                    record=record,
+                    city_name_en=city_name_en,
+                    original_image_url="",
+                    failure_reason="no_source_image",
+                    error_message="",
+                )
+            )
+            output_records.append(record)
+            continue
+
+        original_image_url = str(image_url)
+        if not _is_supported_image_url(original_image_url):
+            images_failed += 1
+            record["image_url"] = ""
+            record["source_image_url"] = original_image_url
+            record["image_status"] = "needs_review"
+            record["image_review_reason"] = "unsupported_url_scheme"
+            record["image_error_message"] = "Only http and https image URLs are supported."
+            review_entries.append(
+                _image_review_entry(
+                    record=record,
+                    city_name_en=city_name_en,
+                    original_image_url=original_image_url,
+                    failure_reason="unsupported_url_scheme",
+                    error_message=record["image_error_message"],
+                )
+            )
+            output_records.append(record)
+            continue
+
+        filename_base = _build_filename(record, used_names)
+        ext = _get_extension_from_url(original_image_url)
+        suffix = "1"
+
+        try:
+            image_bytes = _download_with_retry(original_image_url)
+            s3_key = build_image_key(
+                city_name_en=city_name_en,
+                file_base=filename_base,
+                suffix=suffix,
+                ext=ext,
+            )
+            image_s3_client.put_object(
+                Bucket=image_bucket,
+                Key=s3_key,
+                Body=image_bytes,
+                ContentType=f"image/{ext}",
+            )
+        except Exception as exc:
+            images_failed += 1
+            record["image_url"] = ""
+            record["source_image_url"] = original_image_url
+            record["image_status"] = "needs_review"
+            record["image_review_reason"] = "download_or_upload_failed"
+            record["image_error_message"] = str(exc)
+            review_entries.append(
+                _image_review_entry(
+                    record=record,
+                    city_name_en=city_name_en,
+                    original_image_url=original_image_url,
+                    failure_reason="download_failed",
+                    error_message=str(exc),
+                )
+            )
+            output_records.append(record)
+            continue
+
+        s3_url = f"https://{image_bucket}.s3.amazonaws.com/{s3_key}"
+        record["image_url"] = s3_url
+        record["source_image_url"] = original_image_url
+        record["image_status"] = "ok"
+        record["image_s3_key"] = s3_key
+        images_downloaded += 1
+        output_records.append(record)
+
+    return {
+        "records": output_records,
+        "total_records": len(records),
+        "images_downloaded": images_downloaded,
+        "images_failed": images_failed,
+        "no_source_image": no_source_image,
+        "review_count": len(review_entries),
+        "review_entries": review_entries,
+    }
+
+
+def _image_review_entry(
+    *,
+    record: dict[str, Any],
+    city_name_en: str,
+    original_image_url: str,
+    failure_reason: str,
+    error_message: str,
+) -> dict[str, Any]:
+    return {
+        "city_name_en": city_name_en,
+        "content_id": str(record.get("content_id") or record.get("contentid") or ""),
+        "entity_type": str(record.get("entity_type", "")),
+        "original_image_url": original_image_url,
+        "failure_reason": failure_reason,
+        "error_message": error_message,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+def _is_supported_image_url(url: str) -> bool:
+    return urlparse(url).scheme.lower() in {"http", "https"}
 
 
 def process_city(
@@ -134,82 +277,13 @@ def process_city(
                 item.setdefault("entity_type", "festival")
                 records.append(item)
 
-    # Counters
-    images_downloaded = 0
-    images_failed = 0
-    no_source_image = 0
-    review_entries: list[dict[str, Any]] = []
-
-    used_names: set[str] = set()
-    output_records: list[dict[str, Any]] = []
-
-    for record in records:
-        image_url = record.get("image_url")
-        # Fallback to firstimage (raw TourAPI format)
-        if _is_empty_url(image_url):
-            image_url = record.get("firstimage")
-
-        if _is_empty_url(image_url):
-            # No source image
-            no_source_image += 1
-            record["image_status"] = "needs_review"
-            review_entries.append({
-                "city_name_en": city_name_en,
-                "content_id": str(record.get("content_id") or record.get("contentid") or ""),
-                "entity_type": str(record.get("entity_type", "")),
-                "original_image_url": "",
-                "failure_reason": "no_source_image",
-                "error_message": "",
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-            })
-            output_records.append(record)
-            continue
-
-        # Has image_url — attempt download
-        filename_base = _build_filename(record, used_names)
-        ext = _get_extension_from_url(image_url)
-        suffix = "1"  # single image per record in pipeline context
-
-        try:
-            image_bytes = _download_with_retry(image_url)
-        except Exception as exc:
-            # Download failed after retries
-            images_failed += 1
-            record["image_status"] = "needs_review"
-            review_entries.append({
-                "city_name_en": city_name_en,
-                "content_id": str(record.get("content_id") or record.get("contentid") or ""),
-                "entity_type": str(record.get("entity_type", "")),
-                "original_image_url": image_url,
-                "failure_reason": "download_failed",
-                "error_message": str(exc),
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-            })
-            output_records.append(record)
-            continue
-
-        # Upload to Image_Bucket
-        s3_key = build_image_key(
-            city_name_en=city_name_en,
-            file_base=filename_base,
-            suffix=suffix,
-            ext=ext,
-        )
-
-        image_s3_client.put_object(
-            Bucket=image_bucket,
-            Key=s3_key,
-            Body=image_bytes,
-            ContentType=f"image/{ext}",
-        )
-
-        # Replace image_url with S3 URL
-        s3_url = f"https://{image_bucket}.s3.amazonaws.com/{s3_key}"
-        record["image_url"] = s3_url
-        record["image_status"] = "ok"
-        record["image_s3_key"] = s3_key
-        images_downloaded += 1
-        output_records.append(record)
+    image_result = rewrite_image_urls_to_s3(
+        records=records,
+        image_s3_client=image_s3_client,
+        image_bucket=image_bucket,
+        city_name_en=city_name_en,
+    )
+    output_records = image_result.pop("records")
 
     # Write output records to S3
     output_key = f"processed/KR/details/{ingest_date}/images/{city_name_en}.json"
@@ -221,13 +295,4 @@ def process_city(
         ContentType="application/json",
     )
 
-    review_count = len(review_entries)
-
-    return {
-        "total_records": len(records),
-        "images_downloaded": images_downloaded,
-        "images_failed": images_failed,
-        "no_source_image": no_source_image,
-        "review_count": review_count,
-        "review_entries": review_entries,
-    }
+    return image_result

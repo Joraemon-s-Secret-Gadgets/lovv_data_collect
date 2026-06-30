@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-from io import BytesIO
 from typing import Any
 from unittest.mock import MagicMock, patch
 
@@ -15,6 +14,7 @@ from kr_image_processor.processor import (
     _get_extension_from_url,
     _is_empty_url,
     process_city,
+    rewrite_image_urls_to_s3,
 )
 
 
@@ -464,3 +464,72 @@ class TestProcessCity:
         assert entry["content_id"] == "500"
         assert entry["entity_type"] == "festival"
         assert entry["failure_reason"] == "no_source_image"
+
+
+class TestRewriteImageUrlsToS3:
+    @patch("kr_image_processor.processor.fetch_bytes")
+    @patch("kr_image_processor.processor.time.sleep")
+    def test_rewrites_domain_record_and_preserves_source_url(self, mock_sleep, mock_fetch):
+        mock_fetch.return_value = b"image"
+        image_s3_client = _make_image_s3_client()
+
+        result = rewrite_image_urls_to_s3(
+            records=[
+                {
+                    "entity_type": "attraction",
+                    "content_id": "100",
+                    "title": "하회마을",
+                    "image_url": "https://cdn.example.com/hahoe.webp?size=large",
+                },
+                {
+                    "entity_type": "city_metadata",
+                    "city_name_en": "Andong",
+                },
+            ],
+            image_s3_client=image_s3_client,
+            image_bucket="image-bucket",
+            city_name_en="Andong",
+        )
+
+        assert result["images_downloaded"] == 1
+        assert result["images_failed"] == 0
+        assert result["no_source_image"] == 0
+
+        attraction = result["records"][0]
+        city = result["records"][1]
+        assert attraction["source_image_url"] == "https://cdn.example.com/hahoe.webp?size=large"
+        assert attraction["image_url"].startswith("https://image-bucket.s3.amazonaws.com/images/KR/Andong/")
+        assert attraction["image_s3_key"].endswith(".webp")
+        assert attraction["image_status"] == "ok"
+        assert city == {"entity_type": "city_metadata", "city_name_en": "Andong"}
+
+        image_s3_client.put_object.assert_called_once()
+        assert image_s3_client.put_object.call_args.kwargs["Body"] == b"image"
+
+    @patch("kr_image_processor.processor.fetch_bytes")
+    @patch("kr_image_processor.processor.time.sleep")
+    def test_rejects_non_http_image_url(self, mock_sleep, mock_fetch):
+        image_s3_client = _make_image_s3_client()
+
+        result = rewrite_image_urls_to_s3(
+            records=[
+                {
+                    "entity_type": "attraction",
+                    "content_id": "101",
+                    "title": "하회마을",
+                    "image_url": "file:///tmp/private.jpg",
+                }
+            ],
+            image_s3_client=image_s3_client,
+            image_bucket="image-bucket",
+            city_name_en="Andong",
+        )
+
+        assert result["images_downloaded"] == 0
+        assert result["images_failed"] == 1
+        assert result["review_entries"][0]["failure_reason"] == "unsupported_url_scheme"
+        assert result["records"][0]["image_url"] == ""
+        assert result["records"][0]["source_image_url"] == "file:///tmp/private.jpg"
+        assert result["records"][0]["image_status"] == "needs_review"
+        mock_fetch.assert_not_called()
+        image_s3_client.put_object.assert_not_called()

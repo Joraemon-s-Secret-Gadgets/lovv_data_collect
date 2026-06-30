@@ -10,11 +10,14 @@
 # -----------------------------------------------------------------------------
 data "archive_file" "kr_image_processor_lambda" {
   type        = "zip"
-  source_dir  = "${path.module}/../../src/kr_image_processor"
+  source_dir  = "${path.module}/../../src"
   output_path = "${path.module}/kr_image_processor_lambda.zip"
   excludes = [
     "**/__pycache__/**",
     "**/tests/**",
+    "kr_details_pipeline/**",
+    "kr_unified_pipeline/**",
+    "kr_vector_index/**",
   ]
 }
 

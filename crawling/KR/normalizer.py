@@ -181,9 +181,7 @@ def page_url(lang: str, title: str) -> str:
 
 
 def _display_korean_title(title: str) -> str:
-    # Removes disambiguation brackets from Korean Wikipedia titles
-    # e.g., "고성군 (강원특별자치도)" -> "고성군", "철원군 (대한민국)" -> "철원군"
-    return re.sub(r"\s+\((?:강원특별자치도|경상북도|대한민국)\)$", "", title).strip()
+    return re.sub(r"\s+\([^)]+\)$", "", title).strip()
 
 
 def _coordinates(page: dict[str, Any]) -> tuple[float, float] | None:
@@ -471,7 +469,7 @@ def _city_id(
 
 
 def _status(value: object, review_if_present: bool = False) -> str:
-    if value is None or value == "":
+    if value is None or value == "" or value == [] or value == {}:
         return STATUS_MISSING
     if review_if_present:
         return STATUS_NEEDS_REVIEW

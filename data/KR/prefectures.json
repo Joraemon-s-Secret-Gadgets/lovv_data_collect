@@ -209,8 +209,8 @@
   },
   {
     "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%ED%8F%89%EA%B5%B0",
-    "collected_at": "2026-06-26T17:43:42+09:00",
+    "source_url": "https://ko.wikipedia.org/wiki/%EA%B4%91%EC%A3%BC%EC%8B%9C_%28%EA%B2%BD%EA%B8%B0%EB%8F%84%29",
+    "collected_at": "2026-06-29T11:52:22+09:00",
     "field_status": {
       "prefecture_id": "collected",
       "name_ko": "collected",
@@ -339,8 +339,8 @@
   },
   {
     "source_name": "Wikipedia",
-    "source_url": "https://ko.wikipedia.org/wiki/%EC%8B%A0%EC%95%88%EA%B5%B0",
-    "collected_at": "2026-06-26T17:44:56+09:00",
+    "source_url": "https://ko.wikipedia.org/wiki/%EC%98%81%EA%B4%91%EA%B5%B0_%28%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%29",
+    "collected_at": "2026-06-29T11:52:22+09:00",
     "field_status": {
       "prefecture_id": "collected",
       "name_ko": "collected",
