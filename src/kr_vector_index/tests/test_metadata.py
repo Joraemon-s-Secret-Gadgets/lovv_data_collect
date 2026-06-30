@@ -1,11 +1,14 @@
-import pytest
+import json
 from decimal import Decimal
 
+import pytest
+
 from kr_vector_index.metadata import (
-    ENRICHMENT_DERIVED_KEYS,
+    FILTERABLE_METADATA_KEYS,
     FORBIDDEN_METADATA_KEYS,
     MetadataValidationError,
     build_enriched_metadata,
+    trim_to_budget,
     validate_metadata,
 )
 
@@ -40,23 +43,14 @@ def test_validate_metadata_normalizes_decimal_values() -> None:
 
     assert metadata == {"latitude": 36.5, "longitude": 128.1}
 
-
-from kr_vector_index.metadata import trim_to_budget, FILTERABLE_METADATA_KEYS
-import json
-
-
 class TestTrimToBudget:
-    """Tests for trim_to_budget() function."""
-
     def test_returns_metadata_as_is_when_under_budget(self) -> None:
         metadata = {"entity_type": "attraction", "title": "Test Place"}
         result = trim_to_budget(metadata)
         assert result == metadata
-        # Verify original is not mutated
         assert result is not metadata
 
     def test_trims_experience_tags_first(self) -> None:
-        # Build metadata that exceeds budget with large array fields
         metadata = {
             "entity_type": "attraction",
             "title": "x" * 1900,
@@ -65,11 +59,9 @@ class TestTrimToBudget:
         }
         result = trim_to_budget(metadata)
         assert result is not None
-        # experience_tags should be trimmed before vibe_tags
         assert len(result["experience_tags"]) < 3 or len(result["vibe_tags"]) < 5
 
     def test_trims_vibe_tags_after_experience_tags_exhausted(self) -> None:
-        # Build metadata where trimming experience_tags alone is not enough
         metadata = {
             "entity_type": "attraction",
             "title": "x" * 1950,
@@ -78,13 +70,11 @@ class TestTrimToBudget:
         }
         result = trim_to_budget(metadata)
         assert result is not None
-        # Check size is within budget
         filterable = {k: v for k, v in result.items() if k in FILTERABLE_METADATA_KEYS}
         size = len(json.dumps(filterable, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
         assert size <= 2048
 
     def test_returns_none_when_cannot_fit(self) -> None:
-        # title alone exceeds budget — no amount of array trimming will help
         metadata = {
             "entity_type": "attraction",
             "title": "x" * 2100,
@@ -106,21 +96,17 @@ class TestTrimToBudget:
     def test_custom_budget(self) -> None:
         metadata = {"entity_type": "attraction", "title": "hello"}
         result = trim_to_budget(metadata, budget=10)
-        # This small budget can't fit, so should return None
         assert result is None
 
     def test_only_checks_filterable_keys(self) -> None:
-        # Non-filterable keys should not count toward the budget
+        large_non_filterable_uri = "s3://bucket/" + "x" * 3000
         metadata = {
             "entity_type": "attraction",
             "title": "short",
-            "raw_s3_uri": "s3://bucket/" + "x" * 3000,  # non-filterable, very large
+            "raw_s3_uri": large_non_filterable_uri,
         }
         result = trim_to_budget(metadata)
         assert result is not None
-
-
-# --- Tests for build_enriched_metadata ---
 
 
 def test_build_enriched_metadata_includes_enrichment_fields_when_succeeded() -> None:
@@ -161,13 +147,11 @@ def test_build_enriched_metadata_excludes_enrichment_fields_when_not_succeeded()
 
     result = build_enriched_metadata(item)
 
-    # Enrichment-derived fields excluded
     assert "indoor_outdoor" not in result
     assert "vibe_tags" not in result
     assert "experience_tags" not in result
     assert "companion_fit" not in result
     assert "schema_version" not in result
-    # attraction_subtype_code is NOT enrichment-derived, always included
     assert result["attraction_subtype_code"] == "NA010100"
     assert result["entity_type"] == "attraction"
 
