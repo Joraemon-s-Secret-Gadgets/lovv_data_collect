@@ -1,6 +1,6 @@
 # DynamoDB TourKoreaDomainDataV2 Query 사용 가이드
 
-이 문서는 2026-06-28 live AWS 조회 기준의 `TourKoreaDomainDataV2` 운영 조회 방법을 정리한다.
+이 문서는 2026-06-30 live AWS 조회 기준의 `TourKoreaDomainDataV2` 운영 조회 방법을 정리한다.
 
 ## 테이블 개요
 
@@ -8,8 +8,8 @@
 |---|---|
 | 테이블 이름 | `TourKoreaDomainDataV2` |
 | AWS account / region | `925273580929` / `us-east-1` |
-| 총 아이템 | 9,778 |
-| 테이블 크기 | 16,121,890 bytes |
+| 총 아이템 | 10,482 (`EntityTypeDomainIndex` live query 합계) |
+| 테이블 크기 | 19,517,818 bytes (`describe-table`, approximate) |
 | 과금 모드 | PAY_PER_REQUEST |
 | PITR | 활성화, 35일 |
 
@@ -17,13 +17,15 @@
 
 | entity_type | 아이템 수 | 비고 |
 |---|---:|---|
-| `city_metadata` | 211 | 도시 메타데이터 |
-| `attraction` | 6,335 | 관광지 |
-| `festival` | 328 | 축제 |
-| `visitor_statistics` | 2,904 | 242개 도시 x 2025년 12개월 |
-| **합계** | **9,778** | live scan count |
+| `city_metadata` | 240 | 도시 메타데이터 |
+| `attraction` | 7,024 | 관광지 |
+| `festival` | 398 | 축제 |
+| `visitor_statistics` | 2,820 | 235개 도시 x 2025년 12개월 |
+| **합계** | **10,482** | live GSI query count |
 
 현재 라이브 샘플에서 `CITY#GANGNEUNG`은 131건, `CITY#Gangneung`은 0건이다. `visitor_statistics`도 다른 도메인과 동일하게 대문자 `CITY#{영문 도시키}`를 사용한다.
+
+2026-06-30 방문자 통계 보완 후에도 `CITY#BUKJEJU`, `CITY#CHEONGWON-GUN`, `CITY#JINHAE`, `CITY#MASAN`, `CITY#NAMJEJU`는 현재 DataLab 원천 매칭이 없어 `visitor_statistics`가 없다.
 
 ## 연결 리소스
 
@@ -219,7 +221,7 @@ aws dynamodb query \
 ## 주의사항
 
 1. **PK 형식**: 모든 신규 운영 예시는 `CITY#{대문자 영문 도시키}` 형식을 사용한다. 예: `CITY#GANGNEUNG`.
-2. **방문자 통계**: `visitor_statistics`는 `SK=STAT#{YYYYMM}`, `domain_sort_key=STAT#{YYYYMM}`를 사용하고 `gsi_sk`는 없다.
+2. **방문자 통계**: `visitor_statistics`는 `SK=STAT#{YYYYMM}`, `domain_sort_key=STAT#{YYYYMM}`를 사용하고 `gsi_sk`는 없다. 현재 235개 도시가 2025년 12개월 통계를 가진다.
 3. **FestivalMonthIndex**: 월별 축제 조회 전용이다. `visitor_statistics`는 이 GSI에 포함되지 않는다.
 4. **페이지네이션**: GSI 쿼리 시 `LastEvaluatedKey`로 반복 조회 필요
 5. **visitor_statistics 제외**: 벡터 인덱스에는 포함되지 않음 (should_vectorize에서 제외)
