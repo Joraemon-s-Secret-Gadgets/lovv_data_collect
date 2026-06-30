@@ -65,9 +65,70 @@ variable "vector_bucket_name" {
 }
 
 variable "kr_vector_index_name" {
-  description = "S3 Vector index name for KR tourism domain data."
+  description = "S3 Vector index name for KR tourism domain data V2."
   type        = string
-  default     = "kr-tour-domain-v1"
+  default     = "kr-tour-domain-v2"
+}
+
+variable "kr_vector_index_data_type" {
+  description = "S3 Vector index vector data type for KR tourism domain data V2."
+  type        = string
+  default     = "float32"
+
+  validation {
+    condition     = contains(["float32"], var.kr_vector_index_data_type)
+    error_message = "KR vector index data type must be float32."
+  }
+}
+
+variable "kr_vector_index_dimension" {
+  description = "S3 Vector index embedding dimension for KR tourism domain data V2."
+  type        = number
+  default     = 1024
+
+  validation {
+    condition     = var.kr_vector_index_dimension > 0
+    error_message = "KR vector index dimension must be greater than 0."
+  }
+}
+
+variable "kr_vector_index_distance_metric" {
+  description = "S3 Vector index distance metric for KR tourism domain data V2."
+  type        = string
+  default     = "cosine"
+
+  validation {
+    condition     = contains(["cosine", "euclidean"], var.kr_vector_index_distance_metric)
+    error_message = "KR vector index distance metric must be cosine or euclidean."
+  }
+}
+
+variable "kr_vector_index_non_filterable_metadata_keys" {
+  description = "S3 Vector index metadata keys that should not be filterable for KR tourism domain data V2."
+  type        = list(string)
+  default     = ["raw_s3_uri", "ddb_pk", "ddb_sk", "embedding_model"]
+}
+
+variable "kr_vector_batch_size" {
+  description = "Maximum number of vectorizable DynamoDB items processed by one KR vector worker invocation."
+  type        = number
+  default     = 250
+
+  validation {
+    condition     = var.kr_vector_batch_size > 0 && var.kr_vector_batch_size <= 500
+    error_message = "KR vector batch size must be between 1 and 500."
+  }
+}
+
+variable "kr_vector_map_max_concurrency" {
+  description = "Maximum concurrent KR vector worker invocations in the Step Functions Map state."
+  type        = number
+  default     = 5
+
+  validation {
+    condition     = var.kr_vector_map_max_concurrency > 0 && var.kr_vector_map_max_concurrency <= 40
+    error_message = "KR vector map max concurrency must be between 1 and 40."
+  }
 }
 
 # -----------------------------------------------------------------------------

@@ -91,22 +91,19 @@ resource "aws_sfn_state_machine" "kr_data_pipeline" {
   }
 
   definition = jsonencode({
-    Comment = "KR Data Pipeline - E2E orchestration (Transform → Image → Load → Vector)"
+    Comment = "KR Data Pipeline - V2 load/vector orchestration"
     StartAt = "CheckSkipTransform"
     States = {
-      # -----------------------------------------------------------------
-      # Choice: skip_transform == true → skip directly to BuildCityList
-      # -----------------------------------------------------------------
       CheckSkipTransform = {
         Type = "Choice"
         Choices = [
           {
-            Variable      = "$.skip_transform"
+            Variable      = "$.run_legacy_transform"
             BooleanEquals = true
-            Next          = "BuildCityList"
+            Next          = "TransformStage"
           }
         ]
-        Default = "TransformStage"
+        Default = "BuildCityList"
       }
 
       # -----------------------------------------------------------------
@@ -223,10 +220,10 @@ resource "aws_sfn_state_machine" "kr_data_pipeline" {
           command         = "load"
           "bucket.$"      = "$.bucket"
           "ingest_date.$" = "$.ingest_date"
-          "table_name.$"  = "$.table_name"
+          table_name      = var.domain_dynamodb_table_name_v2
         }
         ResultPath = "$.load_results"
-        Next       = "VectorStage"
+        Next       = "VisitorStatsCoverageGate"
         Retry = [
           {
             ErrorEquals     = ["States.TaskFailed", "Lambda.ServiceException", "Lambda.SdkClientException"]
@@ -244,17 +241,158 @@ resource "aws_sfn_state_machine" "kr_data_pipeline" {
         ]
       }
 
-      # -----------------------------------------------------------------
-      # VectorStage: invoke kr-pipeline-loader (vector-build command)
-      # Failure is non-fatal — caught but routes to GenerateReport
-      # -----------------------------------------------------------------
-      VectorStage = {
+      VisitorStatsCoverageGate = {
         Type     = "Task"
-        Resource = aws_lambda_function.kr_pipeline_loader.arn
+        Resource = aws_lambda_function.kr_pipeline_vector.arn
         Parameters = {
-          command        = "vector-build"
-          "table_name.$" = "$.table_name"
-          rebuild_mode   = "full"
+          command           = "preflight"
+          table_name        = var.domain_dynamodb_table_name_v2
+          entity_index_name = "EntityTypeDomainIndex"
+        }
+        ResultPath = "$.data_gates"
+        Next       = "VisitorStatsCoverageChoice"
+        Retry = [
+          {
+            ErrorEquals     = ["States.TaskFailed", "Lambda.ServiceException", "Lambda.SdkClientException"]
+            MaxAttempts     = 2
+            IntervalSeconds = 5
+            BackoffRate     = 2
+          }
+        ]
+        Catch = [
+          {
+            ErrorEquals = ["States.ALL"]
+            ResultPath  = "$.error_info"
+            Next        = "HandleFailure"
+          }
+        ]
+      }
+
+      VisitorStatsCoverageChoice = {
+        Type = "Choice"
+        Choices = [
+          {
+            Variable      = "$.data_gates.summary.visitor_statistics.coverage_ok"
+            BooleanEquals = true
+            Next          = "EnrichmentFieldLoadingGate"
+          }
+        ]
+        Default = "VisitorStatsCoverageFailed"
+      }
+
+      EnrichmentFieldLoadingGate = {
+        Type = "Choice"
+        Choices = [
+          {
+            Variable     = "$.data_gates.summary.enrichment.mode"
+            StringEquals = "enrichment-complete"
+            Next         = "VectorPlanStage"
+          },
+          {
+            Variable     = "$.data_gates.summary.enrichment.mode"
+            StringEquals = "non-enrichment-complete"
+            Next         = "VectorPlanStage"
+          }
+        ]
+        Default = "EnrichmentFieldLoadingFailed"
+      }
+
+      EnrichmentFieldLoadingFailed = {
+        Type = "Pass"
+        Result = {
+          error = "EnrichmentFieldLoadingGateFailed"
+          cause = "enrichment field loading gate did not return a recognized mode"
+        }
+        ResultPath = "$.error_info"
+        Next       = "HandleFailure"
+      }
+
+      VisitorStatsCoverageFailed = {
+        Type = "Pass"
+        Result = {
+          error = "VisitorStatisticsCoverageFailed"
+          cause = "visitor_statistics coverage gate did not pass"
+        }
+        ResultPath = "$.error_info"
+        Next       = "HandleFailure"
+      }
+
+      VectorPlanStage = {
+        Type     = "Task"
+        Resource = aws_lambda_function.kr_pipeline_vector.arn
+        Parameters = {
+          command                            = "plan"
+          table_name                         = var.domain_dynamodb_table_name_v2
+          entity_index_name                  = "EntityTypeDomainIndex"
+          vector_bucket                      = var.vector_bucket_name
+          index_name                         = var.kr_vector_index_name
+          batch_size                         = var.kr_vector_batch_size
+          "enrichment_mode.$"                = "$.data_gates.summary.enrichment.mode"
+          "visitor_statistics_coverage_ok.$" = "$.data_gates.summary.visitor_statistics.coverage_ok"
+        }
+        ResultPath = "$.vector_plan"
+        Next       = "VectorBatchStage"
+        Retry = [
+          {
+            ErrorEquals     = ["States.TaskFailed", "Lambda.ServiceException", "Lambda.SdkClientException"]
+            MaxAttempts     = 2
+            IntervalSeconds = 5
+            BackoffRate     = 2
+          }
+        ]
+        Catch = [
+          {
+            ErrorEquals = ["States.ALL"]
+            ResultPath  = "$.vector_error"
+            Next        = "GenerateReport"
+          }
+        ]
+      }
+
+      VectorBatchStage = {
+        Type           = "Map"
+        ItemsPath      = "$.vector_plan.batches"
+        MaxConcurrency = var.kr_vector_map_max_concurrency
+        ResultPath     = "$.vector_batch_results"
+        Next           = "VectorAggregateStage"
+        Iterator = {
+          StartAt = "InvokeVectorWorker"
+          States = {
+            InvokeVectorWorker = {
+              Type     = "Task"
+              Resource = aws_lambda_function.kr_pipeline_vector.arn
+              Parameters = {
+                command   = "worker"
+                "batch.$" = "$"
+              }
+              End = true
+              Retry = [
+                {
+                  ErrorEquals     = ["States.TaskFailed", "Lambda.ServiceException", "Lambda.SdkClientException"]
+                  MaxAttempts     = 2
+                  IntervalSeconds = 5
+                  BackoffRate     = 2
+                }
+              ]
+            }
+          }
+        }
+        Catch = [
+          {
+            ErrorEquals = ["States.ALL"]
+            ResultPath  = "$.vector_error"
+            Next        = "GenerateReport"
+          }
+        ]
+      }
+
+      VectorAggregateStage = {
+        Type     = "Task"
+        Resource = aws_lambda_function.kr_pipeline_vector.arn
+        Parameters = {
+          command           = "aggregate"
+          "batch_results.$" = "$.vector_batch_results"
+          "entity_counts.$" = "$.vector_plan.summary.entity_counts"
         }
         ResultPath = "$.vector_results"
         Next       = "GenerateReport"
