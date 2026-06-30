@@ -214,15 +214,15 @@
     - Do not apply until the user explicitly approves
     - _Requirements: 5.6_
 
-- [ ] 7. Apply and smoke test after approval
+- [x] 7. Apply and smoke test after approval
   - Start from the next-session handoff package before any apply preflight: `docs/reports/kr_lambda_sfn_batch_reset_next_session_handoff_20260630.md`
-  - [ ] 7.1 Apply approved Terraform plan
+  - [x] 7.1 Apply approved Terraform plan
     - Command:
       `terraform -chdir=infrastructure/terraform apply .cache\terraform\kr-lambda-sfn-batch-reset.tfplan`
     - Capture output and failures
     - _Requirements: 5.1-5.6_
 
-  - [ ] 7.2 Verify live Lambda/SFN wiring
+  - [x] 7.2 Verify live Lambda/SFN wiring
     - Read Lambda configurations after apply
     - Read state machine definition after apply
     - Confirm `VectorBatchStage` Map exists
@@ -230,7 +230,7 @@
     - Confirm visitor/enrichment gates still precede vector rebuild
     - _Requirements: 3.1-3.9, 4.1-4.9, 8.5-8.7, 9.3_
 
-  - [ ] 7.3 Run vector planner smoke test
+  - [x] 7.3 Run vector planner smoke test
     - Use a small limit or one city/batch
     - Confirm batch descriptor output
     - Confirm no full rebuild has started
@@ -238,29 +238,32 @@
     - Report whether enrichment fields were expected in the sampled batch
     - _Requirements: 3.8, 4.6-4.8, 7.2, 7.10, 9.4_
 
-  - [ ] 7.4 Run vector worker smoke test
+  - [x] 7.4 Run vector worker smoke test
     - Execute one or two batches
     - Confirm no timeout
-    - Confirm vectors are upserted to the approved target index
+    - Confirm the worker targets the approved bucket/index; live upsert remains Task 8 unless separately approved
     - Confirm failed batch reporting works
     - Stop before full rebuild
+    - Completed as bounded dry-run smoke per `docs/specs/TASK7_APPLY_SMOKE_RUNBOOK.md`: `batch_id=kr-vector-000001`, `item_count=1`, `chunk_count=1`, `vector_success_count=0`, `failed_count=0`, no timeout, no live vector write
     - _Requirements: 7.5-7.10, 9.4_
 
-- [ ] 8. Full vector rebuild after smoke-test approval
-  - [ ] 8.1 Request approval for full VectorBatchStage execution
+- [x] 8. Full vector rebuild after smoke-test approval
+  - [x] 8.1 Request approval for full VectorBatchStage execution
     - Include smoke-test duration, count, failure, and cost-risk evidence
     - Confirm target index again
     - Confirm MaxConcurrency again
     - Reconfirm visitor statistics and enrichment loading gate results
+    - Approval recorded in `docs/reports/kr_lambda_sfn_batch_reset_full_rebuild_approval_20260630.md`: full Step Functions vector rebuild, non-dry-run S3 Vector writes, aggregate/manifest write, target `lovv-vector-dev` / `kr-tour-domain-v2`, `MaxConcurrency=5`, and no S3 Vector index delete/recreate
     - _Requirements: 3.1-3.9, 4.1-4.9, 7.4, 7.10_
 
-  - [ ] 8.2 Run full vector batch workflow
+  - [x] 8.2 Run full vector batch workflow
     - Start Step Functions execution
     - Monitor failed batches
     - Retry only failed batches where supported
+    - Execution `arn:aws:states:us-east-1:925273580929:execution:kr-data-pipeline-dev:task8-vector-rebuild-20260630-174818` succeeded after one redrive; initial failure was limited to final `GenerateReport` import packaging and was fixed by the image Lambda package source adjustment
     - _Requirements: 7.3-7.9_
 
-  - [ ] 8.3 Verify full rebuild output
+  - [x] 8.3 Verify full rebuild output
     - Count expected items
     - Count vectors
     - Verify sample query
@@ -268,19 +271,23 @@
     - Verify no protected data deletion occurred
     - Verify `visitor_statistics` vector count remains 0
     - Verify enrichment metadata rules when succeeded enrichment exists
+    - Aggregate summary: `batch_count=240`, `item_count=7662`, `vector_success_count=7662`, `failed_count=0`, manifest `s3://lovv-data-pipeline-dev-925273580929/processed/KR/vector/manifests/latest.json`
+    - Current S3 Vector unique list count: `7606` (`attraction=6973`, `city=240`, `festival=393`), `visitor_statistics_vectors=0`; 7,662 aggregate writes versus 7,606 current unique vectors remains a Task 9 explanation item
+    - Live verifier remains passed with `visitor_statistics_rows=2820`, `visitor_statistics_coverage_ok=true`, `enrichment_mode=non-enrichment-complete`
     - _Requirements: 1.1-1.6, 3.8, 4.6-4.8, 9.4-9.9_
 
-- [ ] 9. Completion report and review
-  - [ ] 9.1 Write Korean completion report
+- [x] 9. Completion report and review
+  - [x] 9.1 Write Korean completion report
     - Path: `docs/reports/kr_lambda_sfn_batch_reset_completion_YYYYMMDD.md`
     - Follow required evidence template: `docs/specs/TASK9_COMPLETION_REPORT_TEMPLATE.md`
     - Include baseline, plan, apply, smoke test, full rebuild status, and remaining risks
     - Include visitor statistics count, residual city PKs, and vector exclusion evidence
     - Include branch name and enrichment field counts
     - Do not mark active goal complete if `visitor_statistics` evidence, branch `investigate/enrichment-field-loading-20260628`, enrichment loading/backfill status, or protected DynamoDB/S3/S3 Vector evidence is missing
+    - Completed at `docs/reports/kr_lambda_sfn_batch_reset_completion_20260630.md`; report status is `partial` because `7662` aggregate writes versus `7606` current unique vectors remains a residual risk and enrichment live counts remain zero
     - _Requirements: 9.5-9.9_
 
-  - [ ] 9.2 Review completed task
+  - [x] 9.2 Review completed task
     - Review Terraform scope
     - Review Lambda responsibility split
     - Review Step Functions resource wiring
@@ -289,6 +296,7 @@
     - Review vector batch retry behavior
     - Review security-sensitive IAM changes
     - Stop for user confirmation before any follow-up cleanup
+    - Formal review appended to `docs/reports/kr_lambda_sfn_batch_reset_completion_20260630.md`; no Blocker findings remain; follow-up cleanup/reconciliation/backfill still requires separate approval
     - _Requirements: 3.1-3.9, 4.1-4.9, 8.1-8.7, 9.1-9.9_
 
 ## Stop Conditions

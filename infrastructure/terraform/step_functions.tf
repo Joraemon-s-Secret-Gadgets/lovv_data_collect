@@ -92,8 +92,20 @@ resource "aws_sfn_state_machine" "kr_data_pipeline" {
 
   definition = jsonencode({
     Comment = "KR Data Pipeline - V2 load/vector orchestration"
-    StartAt = "CheckSkipTransform"
+    StartAt = "CheckVectorOnly"
     States = {
+      CheckVectorOnly = {
+        Type = "Choice"
+        Choices = [
+          {
+            Variable      = "$.run_vector_only"
+            BooleanEquals = true
+            Next          = "VisitorStatsCoverageGate"
+          }
+        ]
+        Default = "CheckSkipTransform"
+      }
+
       CheckSkipTransform = {
         Type = "Choice"
         Choices = [

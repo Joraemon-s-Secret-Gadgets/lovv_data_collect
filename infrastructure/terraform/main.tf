@@ -359,6 +359,7 @@ resource "aws_iam_role_policy" "pipeline_lambda_policy" {
           "dynamodb:PutItem",
           "dynamodb:UpdateItem",
           "dynamodb:GetItem",
+          "dynamodb:Scan",
           "dynamodb:Query"
         ]
         Resource = aws_dynamodb_table.tourkorea_domain_data_v2.arn
